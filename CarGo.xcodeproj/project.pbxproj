@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E5CDC5B294F2021001F2524 /* CarGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CDC5A294F2021001F2524 /* CarGoApp.swift */; };
+		2E5CDC5D294F2021001F2524 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CDC5C294F2021001F2524 /* ContentView.swift */; };
+		2E5CDC5F294F2022001F2524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E5CDC5E294F2022001F2524 /* Assets.xcassets */; };
+		2E5CDC62294F2022001F2524 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E5CDC61294F2022001F2524 /* Preview Assets.xcassets */; };
+		2E5CDC64294F2022001F2524 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CDC63294F2022001F2524 /* Persistence.swift */; };
+		2E5CDC67294F2022001F2524 /* CarGo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CDC65294F2022001F2524 /* CarGo.xcdatamodeld */; };
+		2E5CDC71294F2022001F2524 /* CarGoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CDC70294F2022001F2524 /* CarGoTests.swift */; };
+		2E5CDC7B294F2022001F2524 /* CarGoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CDC7A294F2022001F2524 /* CarGoUITests.swift */; };
+		2E5CDC7D294F2022001F2524 /* CarGoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CDC7C294F2022001F2524 /* CarGoUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E5CDC6D294F2022001F2524 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E5CDC4F294F2021001F2524 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E5CDC56294F2021001F2524;
+			remoteInfo = CarGo;
+		};
+		2E5CDC77294F2022001F2524 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E5CDC4F294F2021001F2524 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E5CDC56294F2021001F2524;
+			remoteInfo = CarGo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2E5CDC57294F2021001F2524 /* CarGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E5CDC5A294F2021001F2524 /* CarGoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarGoApp.swift; sourceTree = "<group>"; };
+		2E5CDC5C294F2021001F2524 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2E5CDC5E294F2022001F2524 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E5CDC61294F2022001F2524 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2E5CDC63294F2022001F2524 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		2E5CDC66294F2022001F2524 /* CarGo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CarGo.xcdatamodel; sourceTree = "<group>"; };
+		2E5CDC6C294F2022001F2524 /* CarGoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E5CDC70294F2022001F2524 /* CarGoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarGoTests.swift; sourceTree = "<group>"; };
+		2E5CDC76294F2022001F2524 /* CarGoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarGoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E5CDC7A294F2022001F2524 /* CarGoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarGoUITests.swift; sourceTree = "<group>"; };
+		2E5CDC7C294F2022001F2524 /* CarGoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarGoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E5CDC54294F2021001F2524 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E5CDC69294F2022001F2524 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E5CDC73294F2022001F2524 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E5CDC4E294F2020001F2524 = {
+			isa = PBXGroup;
+			children = (
+				2E5CDC59294F2021001F2524 /* CarGo */,
+				2E5CDC6F294F2022001F2524 /* CarGoTests */,
+				2E5CDC79294F2022001F2524 /* CarGoUITests */,
+				2E5CDC58294F2021001F2524 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2E5CDC58294F2021001F2524 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E5CDC57294F2021001F2524 /* CarGo.app */,
+				2E5CDC6C294F2022001F2524 /* CarGoTests.xctest */,
+				2E5CDC76294F2022001F2524 /* CarGoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E5CDC59294F2021001F2524 /* CarGo */ = {
+			isa = PBXGroup;
+			children = (
+				2E5CDC5A294F2021001F2524 /* CarGoApp.swift */,
+				2E5CDC5C294F2021001F2524 /* ContentView.swift */,
+				2E5CDC5E294F2022001F2524 /* Assets.xcassets */,
+				2E5CDC63294F2022001F2524 /* Persistence.swift */,
+				2E5CDC65294F2022001F2524 /* CarGo.xcdatamodeld */,
+				2E5CDC60294F2022001F2524 /* Preview Content */,
+			);
+			path = CarGo;
+			sourceTree = "<group>";
+		};
+		2E5CDC60294F2022001F2524 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2E5CDC61294F2022001F2524 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2E5CDC6F294F2022001F2524 /* CarGoTests */ = {
+			isa = PBXGroup;
+			children = (
+				2E5CDC70294F2022001F2524 /* CarGoTests.swift */,
+			);
+			path = CarGoTests;
+			sourceTree = "<group>";
+		};
+		2E5CDC79294F2022001F2524 /* CarGoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2E5CDC7A294F2022001F2524 /* CarGoUITests.swift */,
+				2E5CDC7C294F2022001F2524 /* CarGoUITestsLaunchTests.swift */,
+			);
+			path = CarGoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E5CDC56294F2021001F2524 /* CarGo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E5CDC80294F2022001F2524 /* Build configuration list for PBXNativeTarget "CarGo" */;
+			buildPhases = (
+				2E5CDC53294F2021001F2524 /* Sources */,
+				2E5CDC54294F2021001F2524 /* Frameworks */,
+				2E5CDC55294F2021001F2524 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CarGo;
+			productName = CarGo;
+			productReference = 2E5CDC57294F2021001F2524 /* CarGo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2E5CDC6B294F2022001F2524 /* CarGoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E5CDC83294F2022001F2524 /* Build configuration list for PBXNativeTarget "CarGoTests" */;
+			buildPhases = (
+				2E5CDC68294F2022001F2524 /* Sources */,
+				2E5CDC69294F2022001F2524 /* Frameworks */,
+				2E5CDC6A294F2022001F2524 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E5CDC6E294F2022001F2524 /* PBXTargetDependency */,
+			);
+			name = CarGoTests;
+			productName = CarGoTests;
+			productReference = 2E5CDC6C294F2022001F2524 /* CarGoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2E5CDC75294F2022001F2524 /* CarGoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E5CDC86294F2022001F2524 /* Build configuration list for PBXNativeTarget "CarGoUITests" */;
+			buildPhases = (
+				2E5CDC72294F2022001F2524 /* Sources */,
+				2E5CDC73294F2022001F2524 /* Frameworks */,
+				2E5CDC74294F2022001F2524 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E5CDC78294F2022001F2524 /* PBXTargetDependency */,
+			);
+			name = CarGoUITests;
+			productName = CarGoUITests;
+			productReference = 2E5CDC76294F2022001F2524 /* CarGoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E5CDC4F294F2021001F2524 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					2E5CDC56294F2021001F2524 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					2E5CDC6B294F2022001F2524 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 2E5CDC56294F2021001F2524;
+					};
+					2E5CDC75294F2022001F2524 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 2E5CDC56294F2021001F2524;
+					};
+				};
+			};
+			buildConfigurationList = 2E5CDC52294F2021001F2524 /* Build configuration list for PBXProject "CarGo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E5CDC4E294F2020001F2524;
+			productRefGroup = 2E5CDC58294F2021001F2524 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E5CDC56294F2021001F2524 /* CarGo */,
+				2E5CDC6B294F2022001F2524 /* CarGoTests */,
+				2E5CDC75294F2022001F2524 /* CarGoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E5CDC55294F2021001F2524 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E5CDC62294F2022001F2524 /* Preview Assets.xcassets in Resources */,
+				2E5CDC5F294F2022001F2524 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E5CDC6A294F2022001F2524 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E5CDC74294F2022001F2524 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E5CDC53294F2021001F2524 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E5CDC64294F2022001F2524 /* Persistence.swift in Sources */,
+				2E5CDC5D294F2021001F2524 /* ContentView.swift in Sources */,
+				2E5CDC67294F2022001F2524 /* CarGo.xcdatamodeld in Sources */,
+				2E5CDC5B294F2021001F2524 /* CarGoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E5CDC68294F2022001F2524 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E5CDC71294F2022001F2524 /* CarGoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E5CDC72294F2022001F2524 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E5CDC7B294F2022001F2524 /* CarGoUITests.swift in Sources */,
+				2E5CDC7D294F2022001F2524 /* CarGoUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E5CDC6E294F2022001F2524 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E5CDC56294F2021001F2524 /* CarGo */;
+			targetProxy = 2E5CDC6D294F2022001F2524 /* PBXContainerItemProxy */;
+		};
+		2E5CDC78294F2022001F2524 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E5CDC56294F2021001F2524 /* CarGo */;
+			targetProxy = 2E5CDC77294F2022001F2524 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2E5CDC7E294F2022001F2524 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2E5CDC7F294F2022001F2524 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E5CDC81294F2022001F2524 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CarGo/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CarGo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E5CDC82294F2022001F2524 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CarGo/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CarGo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2E5CDC84294F2022001F2524 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CarGoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarGo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CarGo";
+			};
+			name = Debug;
+		};
+		2E5CDC85294F2022001F2524 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CarGoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarGo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CarGo";
+			};
+			name = Release;
+		};
+		2E5CDC87294F2022001F2524 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CarGoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CarGo;
+			};
+			name = Debug;
+		};
+		2E5CDC88294F2022001F2524 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CarGoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CarGo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E5CDC52294F2021001F2524 /* Build configuration list for PBXProject "CarGo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E5CDC7E294F2022001F2524 /* Debug */,
+				2E5CDC7F294F2022001F2524 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E5CDC80294F2022001F2524 /* Build configuration list for PBXNativeTarget "CarGo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E5CDC81294F2022001F2524 /* Debug */,
+				2E5CDC82294F2022001F2524 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E5CDC83294F2022001F2524 /* Build configuration list for PBXNativeTarget "CarGoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E5CDC84294F2022001F2524 /* Debug */,
+				2E5CDC85294F2022001F2524 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E5CDC86294F2022001F2524 /* Build configuration list for PBXNativeTarget "CarGoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E5CDC87294F2022001F2524 /* Debug */,
+				2E5CDC88294F2022001F2524 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2E5CDC65294F2022001F2524 /* CarGo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2E5CDC66294F2022001F2524 /* CarGo.xcdatamodel */,
+			);
+			currentVersion = 2E5CDC66294F2022001F2524 /* CarGo.xcdatamodel */;
+			path = CarGo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2E5CDC4F294F2021001F2524 /* Project object */;
+}
