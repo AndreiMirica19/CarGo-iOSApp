@@ -11,11 +11,10 @@
 		2E5CDC5D294F2021001F2524 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CDC5C294F2021001F2524 /* ContentView.swift */; };
 		2E5CDC5F294F2022001F2524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E5CDC5E294F2022001F2524 /* Assets.xcassets */; };
 		2E5CDC62294F2022001F2524 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E5CDC61294F2022001F2524 /* Preview Assets.xcassets */; };
-		2E5CDC64294F2022001F2524 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CDC63294F2022001F2524 /* Persistence.swift */; };
 		2E5CDC67294F2022001F2524 /* CarGo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CDC65294F2022001F2524 /* CarGo.xcdatamodeld */; };
-		2E5CDC71294F2022001F2524 /* CarGoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CDC70294F2022001F2524 /* CarGoTests.swift */; };
-		2E5CDC7B294F2022001F2524 /* CarGoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CDC7A294F2022001F2524 /* CarGoUITests.swift */; };
-		2E5CDC7D294F2022001F2524 /* CarGoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CDC7C294F2022001F2524 /* CarGoUITestsLaunchTests.swift */; };
+		316C7C20DF6A448DD73A33E2 /* Pods_CarGo_CarGoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FB057E3486CB2B0521ED8F /* Pods_CarGo_CarGoUITests.framework */; };
+		BA4021634B83DF14C96DFB9B /* Pods_CarGoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62447F8F3E6A72F776F07F9C /* Pods_CarGoTests.framework */; };
+		D576D3579D86D9091859224B /* Pods_CarGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFBCBA015E8B76AA55FA198 /* Pods_CarGo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,18 +35,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AE97BE8EB6C092F50BA3A7E /* Pods-CarGo-CarGoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarGo-CarGoUITests.release.xcconfig"; path = "Target Support Files/Pods-CarGo-CarGoUITests/Pods-CarGo-CarGoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1965C0BEDF433C762F6DB8EB /* Pods-CarGo-CarGoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarGo-CarGoUITests.debug.xcconfig"; path = "Target Support Files/Pods-CarGo-CarGoUITests/Pods-CarGo-CarGoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2E5CDC57294F2021001F2524 /* CarGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5CDC5A294F2021001F2524 /* CarGoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarGoApp.swift; sourceTree = "<group>"; };
 		2E5CDC5C294F2021001F2524 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2E5CDC5E294F2022001F2524 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E5CDC61294F2022001F2524 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2E5CDC63294F2022001F2524 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		2E5CDC66294F2022001F2524 /* CarGo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CarGo.xcdatamodel; sourceTree = "<group>"; };
 		2E5CDC6C294F2022001F2524 /* CarGoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E5CDC70294F2022001F2524 /* CarGoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarGoTests.swift; sourceTree = "<group>"; };
 		2E5CDC76294F2022001F2524 /* CarGoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarGoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E5CDC7A294F2022001F2524 /* CarGoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarGoUITests.swift; sourceTree = "<group>"; };
-		2E5CDC7C294F2022001F2524 /* CarGoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarGoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		54BCF711DE88C9164AD48204 /* Pods-CarGoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarGoTests.release.xcconfig"; path = "Target Support Files/Pods-CarGoTests/Pods-CarGoTests.release.xcconfig"; sourceTree = "<group>"; };
+		62447F8F3E6A72F776F07F9C /* Pods_CarGoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarGoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80FB057E3486CB2B0521ED8F /* Pods_CarGo_CarGoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarGo_CarGoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		861D0C88C988D032E6A2B7A2 /* Pods-CarGoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarGoTests.debug.xcconfig"; path = "Target Support Files/Pods-CarGoTests/Pods-CarGoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BEFBCBA015E8B76AA55FA198 /* Pods_CarGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C93542DC751FB58CC7C13795 /* Pods-CarGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarGo.release.xcconfig"; path = "Target Support Files/Pods-CarGo/Pods-CarGo.release.xcconfig"; sourceTree = "<group>"; };
+		FC814580E0BC437143919B9D /* Pods-CarGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarGo.debug.xcconfig"; path = "Target Support Files/Pods-CarGo/Pods-CarGo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D576D3579D86D9091859224B /* Pods_CarGo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA4021634B83DF14C96DFB9B /* Pods_CarGoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				316C7C20DF6A448DD73A33E2 /* Pods_CarGo_CarGoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +89,8 @@
 				2E5CDC6F294F2022001F2524 /* CarGoTests */,
 				2E5CDC79294F2022001F2524 /* CarGoUITests */,
 				2E5CDC58294F2021001F2524 /* Products */,
+				35E4CAAA0805A8BC47F8E7D2 /* Pods */,
+				626B205ED459ED8CAFEB3CF0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,7 +110,6 @@
 				2E5CDC5A294F2021001F2524 /* CarGoApp.swift */,
 				2E5CDC5C294F2021001F2524 /* ContentView.swift */,
 				2E5CDC5E294F2022001F2524 /* Assets.xcassets */,
-				2E5CDC63294F2022001F2524 /* Persistence.swift */,
 				2E5CDC65294F2022001F2524 /* CarGo.xcdatamodeld */,
 				2E5CDC60294F2022001F2524 /* Preview Content */,
 			);
@@ -119,7 +127,6 @@
 		2E5CDC6F294F2022001F2524 /* CarGoTests */ = {
 			isa = PBXGroup;
 			children = (
-				2E5CDC70294F2022001F2524 /* CarGoTests.swift */,
 			);
 			path = CarGoTests;
 			sourceTree = "<group>";
@@ -127,10 +134,31 @@
 		2E5CDC79294F2022001F2524 /* CarGoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				2E5CDC7A294F2022001F2524 /* CarGoUITests.swift */,
-				2E5CDC7C294F2022001F2524 /* CarGoUITestsLaunchTests.swift */,
 			);
 			path = CarGoUITests;
+			sourceTree = "<group>";
+		};
+		35E4CAAA0805A8BC47F8E7D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC814580E0BC437143919B9D /* Pods-CarGo.debug.xcconfig */,
+				C93542DC751FB58CC7C13795 /* Pods-CarGo.release.xcconfig */,
+				1965C0BEDF433C762F6DB8EB /* Pods-CarGo-CarGoUITests.debug.xcconfig */,
+				0AE97BE8EB6C092F50BA3A7E /* Pods-CarGo-CarGoUITests.release.xcconfig */,
+				861D0C88C988D032E6A2B7A2 /* Pods-CarGoTests.debug.xcconfig */,
+				54BCF711DE88C9164AD48204 /* Pods-CarGoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		626B205ED459ED8CAFEB3CF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEFBCBA015E8B76AA55FA198 /* Pods_CarGo.framework */,
+				80FB057E3486CB2B0521ED8F /* Pods_CarGo_CarGoUITests.framework */,
+				62447F8F3E6A72F776F07F9C /* Pods_CarGoTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +168,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E5CDC80294F2022001F2524 /* Build configuration list for PBXNativeTarget "CarGo" */;
 			buildPhases = (
+				E23F9A1AF80F819CF8D46E66 /* [CP] Check Pods Manifest.lock */,
 				2E5CDC53294F2021001F2524 /* Sources */,
 				2E5CDC54294F2021001F2524 /* Frameworks */,
 				2E5CDC55294F2021001F2524 /* Resources */,
+				2E248CFC294F25BE00F80ADB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -157,6 +187,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E5CDC83294F2022001F2524 /* Build configuration list for PBXNativeTarget "CarGoTests" */;
 			buildPhases = (
+				935047AEA27A46FDACC392A7 /* [CP] Check Pods Manifest.lock */,
 				2E5CDC68294F2022001F2524 /* Sources */,
 				2E5CDC69294F2022001F2524 /* Frameworks */,
 				2E5CDC6A294F2022001F2524 /* Resources */,
@@ -175,6 +206,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E5CDC86294F2022001F2524 /* Build configuration list for PBXNativeTarget "CarGoUITests" */;
 			buildPhases = (
+				42EA2A33BF0662B3844A2010 /* [CP] Check Pods Manifest.lock */,
 				2E5CDC72294F2022001F2524 /* Sources */,
 				2E5CDC73294F2022001F2524 /* Frameworks */,
 				2E5CDC74294F2022001F2524 /* Resources */,
@@ -258,12 +290,97 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2E248CFC294F25BE00F80ADB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n    ${PODS_ROOT}/SwiftLint/swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		42EA2A33BF0662B3844A2010 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarGo-CarGoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		935047AEA27A46FDACC392A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarGoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E23F9A1AF80F819CF8D46E66 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarGo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2E5CDC53294F2021001F2524 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E5CDC64294F2022001F2524 /* Persistence.swift in Sources */,
 				2E5CDC5D294F2021001F2524 /* ContentView.swift in Sources */,
 				2E5CDC67294F2022001F2524 /* CarGo.xcdatamodeld in Sources */,
 				2E5CDC5B294F2021001F2524 /* CarGoApp.swift in Sources */,
@@ -274,7 +391,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E5CDC71294F2022001F2524 /* CarGoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,8 +398,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E5CDC7B294F2022001F2524 /* CarGoUITests.swift in Sources */,
-				2E5CDC7D294F2022001F2524 /* CarGoUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +533,7 @@
 		};
 		2E5CDC81294F2022001F2524 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC814580E0BC437143919B9D /* Pods-CarGo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -447,6 +562,7 @@
 		};
 		2E5CDC82294F2022001F2524 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C93542DC751FB58CC7C13795 /* Pods-CarGo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -475,6 +591,7 @@
 		};
 		2E5CDC84294F2022001F2524 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 861D0C88C988D032E6A2B7A2 /* Pods-CarGoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +611,7 @@
 		};
 		2E5CDC85294F2022001F2524 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54BCF711DE88C9164AD48204 /* Pods-CarGoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -513,6 +631,7 @@
 		};
 		2E5CDC87294F2022001F2524 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1965C0BEDF433C762F6DB8EB /* Pods-CarGo-CarGoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -530,6 +649,7 @@
 		};
 		2E5CDC88294F2022001F2524 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AE97BE8EB6C092F50BA3A7E /* Pods-CarGo-CarGoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
