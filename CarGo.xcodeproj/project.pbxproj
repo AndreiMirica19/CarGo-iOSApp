@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E2119B12950A54D0009A0A4 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2119B02950A54D0009A0A4 /* SignUpView.swift */; };
+		2E2119B32950B2620009A0A4 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2119B22950B2620009A0A4 /* CustomTextView.swift */; };
+		2E2119B52950B5130009A0A4 /* PasswordTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2119B42950B5130009A0A4 /* PasswordTextView.swift */; };
+		2E2119BA2950C02E0009A0A4 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2119B92950C02E0009A0A4 /* StringExtension.swift */; };
 		2E5CDC5B294F2021001F2524 /* CarGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CDC5A294F2021001F2524 /* CarGoApp.swift */; };
 		2E5CDC5D294F2021001F2524 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CDC5C294F2021001F2524 /* ContentView.swift */; };
 		2E5CDC5F294F2022001F2524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E5CDC5E294F2022001F2524 /* Assets.xcassets */; };
 		2E5CDC62294F2022001F2524 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E5CDC61294F2022001F2524 /* Preview Assets.xcassets */; };
 		2E5CDC67294F2022001F2524 /* CarGo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CDC65294F2022001F2524 /* CarGo.xcdatamodeld */; };
+		2EE40790294F3C69005A6CCD /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE4078F294F3C69005A6CCD /* WelcomeView.swift */; };
 		316C7C20DF6A448DD73A33E2 /* Pods_CarGo_CarGoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FB057E3486CB2B0521ED8F /* Pods_CarGo_CarGoUITests.framework */; };
 		BA4021634B83DF14C96DFB9B /* Pods_CarGoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62447F8F3E6A72F776F07F9C /* Pods_CarGoTests.framework */; };
 		D576D3579D86D9091859224B /* Pods_CarGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFBCBA015E8B76AA55FA198 /* Pods_CarGo.framework */; };
@@ -37,6 +42,10 @@
 /* Begin PBXFileReference section */
 		0AE97BE8EB6C092F50BA3A7E /* Pods-CarGo-CarGoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarGo-CarGoUITests.release.xcconfig"; path = "Target Support Files/Pods-CarGo-CarGoUITests/Pods-CarGo-CarGoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1965C0BEDF433C762F6DB8EB /* Pods-CarGo-CarGoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarGo-CarGoUITests.debug.xcconfig"; path = "Target Support Files/Pods-CarGo-CarGoUITests/Pods-CarGo-CarGoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2E2119B02950A54D0009A0A4 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		2E2119B22950B2620009A0A4 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
+		2E2119B42950B5130009A0A4 /* PasswordTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextView.swift; sourceTree = "<group>"; };
+		2E2119B92950C02E0009A0A4 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		2E5CDC57294F2021001F2524 /* CarGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5CDC5A294F2021001F2524 /* CarGoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarGoApp.swift; sourceTree = "<group>"; };
 		2E5CDC5C294F2021001F2524 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +54,8 @@
 		2E5CDC66294F2022001F2524 /* CarGo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CarGo.xcdatamodel; sourceTree = "<group>"; };
 		2E5CDC6C294F2022001F2524 /* CarGoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5CDC76294F2022001F2524 /* CarGoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarGoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EDE7DB32950C68C008F9F31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2EE4078F294F3C69005A6CCD /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		54BCF711DE88C9164AD48204 /* Pods-CarGoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarGoTests.release.xcconfig"; path = "Target Support Files/Pods-CarGoTests/Pods-CarGoTests.release.xcconfig"; sourceTree = "<group>"; };
 		62447F8F3E6A72F776F07F9C /* Pods_CarGoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarGoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80FB057E3486CB2B0521ED8F /* Pods_CarGo_CarGoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarGo_CarGoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E2119B82950C0170009A0A4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2E2119B92950C02E0009A0A4 /* StringExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		2E5CDC4E294F2020001F2524 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +126,9 @@
 		2E5CDC59294F2021001F2524 /* CarGo */ = {
 			isa = PBXGroup;
 			children = (
+				2EDE7DB32950C68C008F9F31 /* Info.plist */,
+				2E2119B82950C0170009A0A4 /* Extension */,
+				2EE4078E294F3C44005A6CCD /* Views */,
 				2E5CDC5A294F2021001F2524 /* CarGoApp.swift */,
 				2E5CDC5C294F2021001F2524 /* ContentView.swift */,
 				2E5CDC5E294F2022001F2524 /* Assets.xcassets */,
@@ -136,6 +158,17 @@
 			children = (
 			);
 			path = CarGoUITests;
+			sourceTree = "<group>";
+		};
+		2EE4078E294F3C44005A6CCD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2EE4078F294F3C69005A6CCD /* WelcomeView.swift */,
+				2E2119B02950A54D0009A0A4 /* SignUpView.swift */,
+				2E2119B22950B2620009A0A4 /* CustomTextView.swift */,
+				2E2119B42950B5130009A0A4 /* PasswordTextView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		35E4CAAA0805A8BC47F8E7D2 /* Pods */ = {
@@ -382,7 +415,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E5CDC5D294F2021001F2524 /* ContentView.swift in Sources */,
+				2E2119B12950A54D0009A0A4 /* SignUpView.swift in Sources */,
+				2E2119B32950B2620009A0A4 /* CustomTextView.swift in Sources */,
 				2E5CDC67294F2022001F2524 /* CarGo.xcdatamodeld in Sources */,
+				2E2119BA2950C02E0009A0A4 /* StringExtension.swift in Sources */,
+				2E2119B52950B5130009A0A4 /* PasswordTextView.swift in Sources */,
+				2EE40790294F3C69005A6CCD /* WelcomeView.swift in Sources */,
 				2E5CDC5B294F2021001F2524 /* CarGoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,19 +578,23 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CarGo/Preview Content\"";
+				DEVELOPMENT_TEAM = 2X7QCM3SWG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CarGo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.CarGo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.CarGoThesis-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -569,19 +611,23 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CarGo/Preview Content\"";
+				DEVELOPMENT_TEAM = 2X7QCM3SWG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CarGo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.CarGo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.CarGoThesis-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

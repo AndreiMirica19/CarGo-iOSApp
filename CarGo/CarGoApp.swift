@@ -12,7 +12,7 @@ struct CarGoApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WelcomeView()
         }
     }
 }
