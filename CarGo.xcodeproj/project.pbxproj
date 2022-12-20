@@ -11,6 +11,7 @@
 		2E2119B32950B2620009A0A4 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2119B22950B2620009A0A4 /* CustomTextView.swift */; };
 		2E2119B52950B5130009A0A4 /* PasswordTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2119B42950B5130009A0A4 /* PasswordTextView.swift */; };
 		2E2119BA2950C02E0009A0A4 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2119B92950C02E0009A0A4 /* StringExtension.swift */; };
+		2E2C230A2951B508003929C1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E2C23092951B508003929C1 /* Launch Screen.storyboard */; };
 		2E5CDC5B294F2021001F2524 /* CarGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CDC5A294F2021001F2524 /* CarGoApp.swift */; };
 		2E5CDC5D294F2021001F2524 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CDC5C294F2021001F2524 /* ContentView.swift */; };
 		2E5CDC5F294F2022001F2524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E5CDC5E294F2022001F2524 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		2E2119B22950B2620009A0A4 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		2E2119B42950B5130009A0A4 /* PasswordTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextView.swift; sourceTree = "<group>"; };
 		2E2119B92950C02E0009A0A4 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		2E2C23092951B508003929C1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		2E5CDC57294F2021001F2524 /* CarGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5CDC5A294F2021001F2524 /* CarGoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarGoApp.swift; sourceTree = "<group>"; };
 		2E5CDC5C294F2021001F2524 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				2E5CDC5E294F2022001F2524 /* Assets.xcassets */,
 				2E5CDC65294F2022001F2524 /* CarGo.xcdatamodeld */,
 				2E5CDC60294F2022001F2524 /* Preview Content */,
+				2E2C23092951B508003929C1 /* Launch Screen.storyboard */,
 			);
 			path = CarGo;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E2C230A2951B508003929C1 /* Launch Screen.storyboard in Resources */,
 				2E5CDC62294F2022001F2524 /* Preview Assets.xcassets in Resources */,
 				2E5CDC5F294F2022001F2524 /* Assets.xcassets in Resources */,
 			);
@@ -585,6 +589,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -618,6 +623,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
