@@ -7,33 +7,220 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9C3E3AD7-25F5-4F76-B307-701AE90C67DE"
-            shouldBeEnabled = "Yes"
+            uuid = "31963046-C29F-4C23-B1F7-52C4628EC864"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CarGo/Views/SignUpView.swift"
+            filePath = "CarGo/Service/RegisterService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "validateFields()"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "register(registerData:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EC3D4AE3-860D-4B18-8F35-056E76E957CB"
-            shouldBeEnabled = "Yes"
+            uuid = "D685797A-CA54-4526-BBC6-6BAB772BD09E"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CarGo/Views/SignUpView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "validateFields()"
-            landmarkType = "7">
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F44D124C-9827-46E9-9C5B-6172FFC21AD2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarGo/Views/SignUpView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D3F97AF4-1507-4717-9703-42C1545A7E3C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarGo/Views/SignUpView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B53A222F-BD73-4E9C-9809-5244E5C91520"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarGo/Views/SignUpView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "SignUpView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "B53A222F-BD73-4E9C-9809-5244E5C91520 - 4bef996a539947ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of CarGo.SignUpView.succesfulRegistration : Swift.Bool"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/Views/SignUpView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "B53A222F-BD73-4E9C-9809-5244E5C91520 - 4cd0f7b842fb9a50"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarGo.SignUpView.succesfulRegistration.getter : Swift.Bool"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/Views/SignUpView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "B53A222F-BD73-4E9C-9809-5244E5C91520 - fc0cbaf1c928c264"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarGo.SignUpView.succesfulRegistration.setter : Swift.Bool"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/Views/SignUpView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "B53A222F-BD73-4E9C-9809-5244E5C91520 - e313a24f165bc457"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarGo.SignUpView.succesfulRegistration.modify : Swift.Bool"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/Views/SignUpView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "B53A222F-BD73-4E9C-9809-5244E5C91520 - 441800131ad19064"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarGo.SignUpView.succesfulRegistration.modify : Swift.Bool with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/Views/SignUpView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "B53A222F-BD73-4E9C-9809-5244E5C91520 - 7f5c0382fce10d1c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarGo.SignUpView.$succesfulRegistration.getter : SwiftUI.Binding&lt;Swift.Bool&gt;"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/Views/SignUpView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "B53A222F-BD73-4E9C-9809-5244E5C91520 - e5d4ef931f0fc19a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarGo.SignUpView.init() -&gt; CarGo.SignUpView"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/Views/SignUpView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "696">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5E1B5CF6-B0F8-44B0-A00F-B74F8DEF3EC5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarGo/Views/SignUpView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "232C9113-4F7C-441D-9D2A-771FE9A9DC20"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarGo/Views/SignUpView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
