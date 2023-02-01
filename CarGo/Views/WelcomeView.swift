@@ -8,11 +8,18 @@
 import SwiftUI
 import AuthenticationServices
 
-struct WelcomeView: View {
+struct LoginView: View {
     @Environment(\.colorScheme) private var colorScheme
-
+    @State var email = ""
+    @State var password = ""
+    @State var errorMessage = ""
+    @State var displayError = false
+    @ObservedObject var loginViewModel = LoginViewModel()
+    @State var keepMeLogin = false
+    @State var loginSuccessful = false
+    
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 Color("BackgroundOrange")
                     .ignoresSafeArea()
@@ -20,63 +27,89 @@ struct WelcomeView: View {
                     Image("porsche")
                         .resizable()
                         .scaledToFill()
-
+                    
                     Text("Welcome to CarGo!")
                         .font(.largeTitle)
                         .fontWeight(.heavy)
                         .foregroundColor(.black)
-
-                    Spacer()
-
-                    SignInWithAppleButton { request in
-                    } onCompletion: { result in
+                    
+                    VStack {
+                        CustomTextView(text: $email, imageName: "mail", placeHolder: "Email")
+                            .padding(.horizontal)
+                            .frame(maxWidth: 400)
+                        
+                        PasswordTextView(text: $password, placeHolder: "Password")
+                            .padding(.horizontal)
+                            .frame(maxWidth: 400)
+                        
+                        HStack {
+                            Image(systemName: keepMeLogin ? "checkmark.square.fill" : "square")
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                                .onTapGesture {
+                                    keepMeLogin.toggle()
+                                }
+                            
+                            Text("Keep me login")
+                                .fontWeight(.bold)
+                        }.padding(.top)
                     }
-                    .frame(maxWidth: 300, maxHeight: 50)
-                    .cornerRadius(8)
-
+                    
                     Button {
+                        if !email.isEmpty && !password.isEmpty {
+                            loginViewModel.login(loginData: LoginData(password: password, email: email), keepLogedIn: keepMeLogin)
+                        } else {
+                            errorMessage = "You must complete the fields."
+                            displayError = true
+                        }
                     } label: {
                         HStack {
-                            Image("google_logo")
-                            Text("Sign in with Google")
-                                .foregroundColor(colorScheme == .dark ? .black : .white)
+                            Image(systemName: "person.badge.plus")
+                                .foregroundColor(.white)
+                            Text("Login")
+                                .foregroundColor(.white)
+                                .font(.title3)
                                 .fontWeight(.semibold)
                         }
-                        .frame(maxWidth: 300, maxHeight: 50)
-
+                        .frame(minWidth: 300, minHeight: 44)
                     }
-                    .background(.black)
-                    .cornerRadius(8)
-
-                    Button {
-                    } label: {
-                        HStack {
-                            Image(systemName: "mail")
-                                .foregroundColor(colorScheme == .dark ? .black : .white)
-                            Text("Sign in with Email")
-                                .foregroundColor(colorScheme == .dark ? .black : .white)
-                                .fontWeight(.semibold)
+                    .alert("Error", isPresented: $displayError, actions: {}, message: {
+                        Text(errorMessage)
+                    })
+                    .onReceive(loginViewModel.$response, perform: { response in
+                        guard let userData = response.0 else {
+                            guard let error = response.1 else {
+                                return
+                            }
+                            errorMessage = error.getErrorMessage()
+                            displayError = true
+                            return
                         }
-                        .frame(maxWidth: 300, maxHeight: 50)
-                    }
+                        
+                        loginSuccessful = true
+                    })
                     .background(.black)
                     .cornerRadius(8)
-
+                    
                     HStack {
                         Text("Don't you have an account?")
                             .fontWeight(.bold)
                             .font(.title3)
                             .foregroundColor(.black)
-
+                        
                         NavigationLink(destination: SignUpView()) {
                             Text("Sign up")
                                 .fontWeight(.bold)
                                 .font(.title3)
                         }
                     }
-                   Spacer(minLength: 36)
+                    
+                    Spacer(minLength: 36)
                 }
                 Spacer()
+                
+            }.navigationDestination(isPresented: $loginSuccessful) {
+                RentingContentView()
             }
         }
     }
@@ -84,6 +117,6 @@ struct WelcomeView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomeView()
+        LoginView()
     }
 }

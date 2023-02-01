@@ -93,12 +93,17 @@ struct SignUpView: View {
                     .alert("Password do not match", isPresented: $notMatchingPasswordAlertIsShown) {
                         Button("OK", role: .cancel) { }
                     }
-                    .onChange(of: registerViewModel.response.0) { _ in
+                    .onReceive(registerViewModel.$response, perform: { response in
                         guard let response = registerViewModel.response.0 else {
-                            succesfulRegistration = false
+                            guard let error = registerViewModel.response.1 else {
+                                return
+                            }
+                            errorRegistration = true
+        
+                            displayedErrorMessage = error.getErrorMessage()
                             return
                         }
-
+                        
                         switch response.statusCode {
                         case 201:
                             succesfulRegistration = true
@@ -110,17 +115,7 @@ struct SignUpView: View {
                             displayedErrorMessage = response.message
                             
                         }
-                    }
-                    .onChange(of: registerViewModel.response.1) { _ in
-                        guard let networkError = registerViewModel.response.1 else {
-                            errorRegistration = false
-                            return
-                        }
-
-                        errorRegistration = true
-    
-                        displayedErrorMessage = networkError.getErrorMessage()
-                    }
+                    })
                     .alert("Registration Complete", isPresented: $succesfulRegistration) {
                         Button("Login", role: .cancel) { }
                     }

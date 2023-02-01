@@ -19,8 +19,10 @@ class RegisterViewModel: ObservableObject, Equatable {
     func register(registerData: RegisterData) {
         Task {
            let response = try await registerModel.register(registerData: registerData)
-            self.response = response
-            print(response)
+
+            DispatchQueue.main.async {
+                self.response = response
+            }
         }
     }
     

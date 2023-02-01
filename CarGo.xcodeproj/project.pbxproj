@@ -18,10 +18,21 @@
 		2E2119BA2950C02E0009A0A4 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2119B92950C02E0009A0A4 /* StringExtension.swift */; };
 		2E2C230A2951B508003929C1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E2C23092951B508003929C1 /* Launch Screen.storyboard */; };
 		2E5CDC5B294F2021001F2524 /* CarGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CDC5A294F2021001F2524 /* CarGoApp.swift */; };
-		2E5CDC5D294F2021001F2524 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CDC5C294F2021001F2524 /* ContentView.swift */; };
 		2E5CDC5F294F2022001F2524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E5CDC5E294F2022001F2524 /* Assets.xcassets */; };
 		2E5CDC62294F2022001F2524 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E5CDC61294F2022001F2524 /* Preview Assets.xcassets */; };
 		2E5CDC67294F2022001F2524 /* CarGo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CDC65294F2022001F2524 /* CarGo.xcdatamodeld */; };
+		2E6353262976A17F0016EC6E /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6353252976A17F0016EC6E /* LoginData.swift */; };
+		2E6353282976A2210016EC6E /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6353272976A2210016EC6E /* LoginProtocol.swift */; };
+		2E63532A2976A25C0016EC6E /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6353292976A25C0016EC6E /* LoginService.swift */; };
+		2E63532C2976A33E0016EC6E /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E63532B2976A33E0016EC6E /* LoginModel.swift */; };
+		2E63532E2976A3CA0016EC6E /* LoginDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E63532D2976A3CA0016EC6E /* LoginDTO.swift */; };
+		2E91E94B2981713C00B70C4B /* RentingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91E94A2981713C00B70C4B /* RentingContentView.swift */; };
+		2E91E94E298171DA00B70C4B /* SearchCarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91E94D298171DA00B70C4B /* SearchCarsView.swift */; };
+		2E91E950298171EC00B70C4B /* FavoriteCarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91E94F298171EC00B70C4B /* FavoriteCarsView.swift */; };
+		2E91E952298171FE00B70C4B /* MyBookingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91E951298171FE00B70C4B /* MyBookingsView.swift */; };
+		2E91E9542981720F00B70C4B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91E9532981720F00B70C4B /* ProfileView.swift */; };
+		2EA0D8BB2976CC9F005DE1D9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA0D8BA2976CC9F005DE1D9 /* LoginViewModel.swift */; };
+		2EAB174D2980051C001A153F /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAB174C2980051C001A153F /* ErrorResponse.swift */; };
 		2ECBAF472973FA90001FE86C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBAF462973FA90001FE86C /* RegisterViewModel.swift */; };
 		2EDFD6EA29755F0D00561C6E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDFD6E929755F0D00561C6E /* Response.swift */; };
 		2EE40790294F3C69005A6CCD /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE4078F294F3C69005A6CCD /* WelcomeView.swift */; };
@@ -62,12 +73,23 @@
 		2E2C23092951B508003929C1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		2E5CDC57294F2021001F2524 /* CarGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5CDC5A294F2021001F2524 /* CarGoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarGoApp.swift; sourceTree = "<group>"; };
-		2E5CDC5C294F2021001F2524 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2E5CDC5E294F2022001F2524 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E5CDC61294F2022001F2524 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2E5CDC66294F2022001F2524 /* CarGo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CarGo.xcdatamodel; sourceTree = "<group>"; };
 		2E5CDC6C294F2022001F2524 /* CarGoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5CDC76294F2022001F2524 /* CarGoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarGoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E6353252976A17F0016EC6E /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
+		2E6353272976A2210016EC6E /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
+		2E6353292976A25C0016EC6E /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		2E63532B2976A33E0016EC6E /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		2E63532D2976A3CA0016EC6E /* LoginDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDTO.swift; sourceTree = "<group>"; };
+		2E91E94A2981713C00B70C4B /* RentingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentingContentView.swift; sourceTree = "<group>"; };
+		2E91E94D298171DA00B70C4B /* SearchCarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCarsView.swift; sourceTree = "<group>"; };
+		2E91E94F298171EC00B70C4B /* FavoriteCarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCarsView.swift; sourceTree = "<group>"; };
+		2E91E951298171FE00B70C4B /* MyBookingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsView.swift; sourceTree = "<group>"; };
+		2E91E9532981720F00B70C4B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		2EA0D8BA2976CC9F005DE1D9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		2EAB174C2980051C001A153F /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		2ECBAF462973FA90001FE86C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		2EDE7DB32950C68C008F9F31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2EDFD6E929755F0D00561C6E /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
@@ -113,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				2E16785B2974154000184CB9 /* RegisterModel.swift */,
+				2E63532B2976A33E0016EC6E /* LoginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -122,6 +145,8 @@
 			children = (
 				2E16785D297417E600184CB9 /* RegisterProtocol.swift */,
 				2E16785F2974180B00184CB9 /* RegisterService.swift */,
+				2E6353272976A2210016EC6E /* LoginProtocol.swift */,
+				2E6353292976A25C0016EC6E /* LoginService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -138,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				2E16786529741B5000184CB9 /* RegisterData.swift */,
+				2E6353252976A17F0016EC6E /* LoginData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -185,7 +211,6 @@
 				2E2119B82950C0170009A0A4 /* Extension */,
 				2EE4078E294F3C44005A6CCD /* Views */,
 				2E5CDC5A294F2021001F2524 /* CarGoApp.swift */,
-				2E5CDC5C294F2021001F2524 /* ContentView.swift */,
 				2E5CDC5E294F2022001F2524 /* Assets.xcassets */,
 				2E5CDC65294F2022001F2524 /* CarGo.xcdatamodeld */,
 				2E5CDC60294F2022001F2524 /* Preview Content */,
@@ -216,10 +241,22 @@
 			path = CarGoUITests;
 			sourceTree = "<group>";
 		};
+		2E91E94C2981714200B70C4B /* RentingViews */ = {
+			isa = PBXGroup;
+			children = (
+				2E91E94D298171DA00B70C4B /* SearchCarsView.swift */,
+				2E91E94F298171EC00B70C4B /* FavoriteCarsView.swift */,
+				2E91E951298171FE00B70C4B /* MyBookingsView.swift */,
+				2E91E9532981720F00B70C4B /* ProfileView.swift */,
+			);
+			path = RentingViews;
+			sourceTree = "<group>";
+		};
 		2ECBAF452973FA7C001FE86C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				2ECBAF462973FA90001FE86C /* RegisterViewModel.swift */,
+				2EA0D8BA2976CC9F005DE1D9 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -228,6 +265,8 @@
 			isa = PBXGroup;
 			children = (
 				2EDFD6E929755F0D00561C6E /* Response.swift */,
+				2E63532D2976A3CA0016EC6E /* LoginDTO.swift */,
+				2EAB174C2980051C001A153F /* ErrorResponse.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -235,10 +274,12 @@
 		2EE4078E294F3C44005A6CCD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2E91E94C2981714200B70C4B /* RentingViews */,
 				2EE4078F294F3C69005A6CCD /* WelcomeView.swift */,
 				2E2119B02950A54D0009A0A4 /* SignUpView.swift */,
 				2E2119B22950B2620009A0A4 /* CustomTextView.swift */,
 				2E2119B42950B5130009A0A4 /* PasswordTextView.swift */,
+				2E91E94A2981713C00B70C4B /* RentingContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -487,21 +528,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E5CDC5D294F2021001F2524 /* ContentView.swift in Sources */,
+				2E63532C2976A33E0016EC6E /* LoginModel.swift in Sources */,
 				2E2119B12950A54D0009A0A4 /* SignUpView.swift in Sources */,
 				2E16785E297417E600184CB9 /* RegisterProtocol.swift in Sources */,
 				2E2119B32950B2620009A0A4 /* CustomTextView.swift in Sources */,
 				2EDFD6EA29755F0D00561C6E /* Response.swift in Sources */,
+				2E91E952298171FE00B70C4B /* MyBookingsView.swift in Sources */,
 				2E5CDC67294F2022001F2524 /* CarGo.xcdatamodeld in Sources */,
 				2E16785C2974154000184CB9 /* RegisterModel.swift in Sources */,
 				2E1678602974180B00184CB9 /* RegisterService.swift in Sources */,
+				2E91E9542981720F00B70C4B /* ProfileView.swift in Sources */,
 				2E2119BA2950C02E0009A0A4 /* StringExtension.swift in Sources */,
 				2E2119B52950B5130009A0A4 /* PasswordTextView.swift in Sources */,
+				2E91E950298171EC00B70C4B /* FavoriteCarsView.swift in Sources */,
+				2E91E94B2981713C00B70C4B /* RentingContentView.swift in Sources */,
+				2E6353282976A2210016EC6E /* LoginProtocol.swift in Sources */,
 				2EE40790294F3C69005A6CCD /* WelcomeView.swift in Sources */,
+				2E63532E2976A3CA0016EC6E /* LoginDTO.swift in Sources */,
 				2E16786629741B5000184CB9 /* RegisterData.swift in Sources */,
+				2E63532A2976A25C0016EC6E /* LoginService.swift in Sources */,
+				2E91E94E298171DA00B70C4B /* SearchCarsView.swift in Sources */,
 				2E167863297419DA00184CB9 /* NetworkError.swift in Sources */,
+				2E6353262976A17F0016EC6E /* LoginData.swift in Sources */,
 				2ECBAF472973FA90001FE86C /* RegisterViewModel.swift in Sources */,
+				2EAB174D2980051C001A153F /* ErrorResponse.swift in Sources */,
 				2E5CDC5B294F2021001F2524 /* CarGoApp.swift in Sources */,
+				2EA0D8BB2976CC9F005DE1D9 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

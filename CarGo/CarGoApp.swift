@@ -9,10 +9,17 @@ import SwiftUI
 
 @main
 struct CarGoApp: App {
-
+    
     var body: some Scene {
-        WindowGroup {
-            WelcomeView()
+        let userId = UserDefaults.standard.string(forKey: "userId")
+        return WindowGroup {
+            VStack {
+                if userId != nil {
+                    RentingContentView()
+                } else {
+                    LoginView()
+                }
+            }
         }
     }
 }
