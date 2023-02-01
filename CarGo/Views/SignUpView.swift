@@ -14,6 +14,8 @@ struct SignUpView: View {
     @State var succesfulRegistration = false
     @State var errorRegistration = false
     @State var displayedErrorMessage = ""
+    @State var agreeTerms = false
+    @State var showTerms = false
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
 
     @StateObject private var registerViewModel = RegisterViewModel()
@@ -25,7 +27,7 @@ struct SignUpView: View {
                     Color("BackgroundOrange")
                         .ignoresSafeArea()
                     VStack {
-                        Spacer(minLength: 80)
+                        Spacer(minLength: 16)
                         
                         CustomTextView(text: $name, imageName: "person", placeHolder: "Full name")
                         
@@ -36,6 +38,24 @@ struct SignUpView: View {
                         PasswordTextView(text: $password, placeHolder: "Password")
                         
                         PasswordTextView(text: $confirmPassword, placeHolder: "Confirm Password")
+                        
+                        HStack {
+                            Image(systemName: agreeTerms ? "checkmark.square.fill" : "square")
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                                .onTapGesture {
+                                    agreeTerms.toggle()
+                                }
+                            
+                            Text("Agree to")
+                                .font(.body)
+                            
+                            Button {
+                                showTerms = true
+                            } label: {
+                                Text("Terms and Conditions")
+                            }
+                        }.padding(.bottom, 32)
                         
                         Button {
                             if validateFields() {
@@ -75,8 +95,6 @@ struct SignUpView: View {
                             Text("Password should be at least 8 characters")
                         }
                         
-                        Spacer(minLength: 64)
-            
                         HStack {
                             Text("Already have an account?")
                                 .fontWeight(.bold)
@@ -88,7 +106,11 @@ struct SignUpView: View {
                                     .fontWeight(.bold)
                             }
                         }
+                        .padding(.top, 24)
                         
+                    }
+                    .sheet(isPresented: $showTerms) {
+                        TermsAndConditions()
                     }
                     .alert("Password do not match", isPresented: $notMatchingPasswordAlertIsShown) {
                         Button("OK", role: .cancel) { }

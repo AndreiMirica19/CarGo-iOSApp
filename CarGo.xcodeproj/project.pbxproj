@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E131540298AB04C008ED79D /* TermsAndConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E13153F298AB04C008ED79D /* TermsAndConditions.swift */; };
 		2E16785C2974154000184CB9 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E16785B2974154000184CB9 /* RegisterModel.swift */; };
 		2E16785E297417E600184CB9 /* RegisterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E16785D297417E600184CB9 /* RegisterProtocol.swift */; };
 		2E1678602974180B00184CB9 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E16785F2974180B00184CB9 /* RegisterService.swift */; };
@@ -61,6 +62,7 @@
 /* Begin PBXFileReference section */
 		0AE97BE8EB6C092F50BA3A7E /* Pods-CarGo-CarGoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarGo-CarGoUITests.release.xcconfig"; path = "Target Support Files/Pods-CarGo-CarGoUITests/Pods-CarGo-CarGoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1965C0BEDF433C762F6DB8EB /* Pods-CarGo-CarGoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarGo-CarGoUITests.debug.xcconfig"; path = "Target Support Files/Pods-CarGo-CarGoUITests/Pods-CarGo-CarGoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2E13153F298AB04C008ED79D /* TermsAndConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditions.swift; sourceTree = "<group>"; };
 		2E16785B2974154000184CB9 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		2E16785D297417E600184CB9 /* RegisterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProtocol.swift; sourceTree = "<group>"; };
 		2E16785F2974180B00184CB9 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				2E2119B22950B2620009A0A4 /* CustomTextView.swift */,
 				2E2119B42950B5130009A0A4 /* PasswordTextView.swift */,
 				2E91E94A2981713C00B70C4B /* RentingContentView.swift */,
+				2E13153F298AB04C008ED79D /* TermsAndConditions.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 				2E6353262976A17F0016EC6E /* LoginData.swift in Sources */,
 				2ECBAF472973FA90001FE86C /* RegisterViewModel.swift in Sources */,
 				2EAB174D2980051C001A153F /* ErrorResponse.swift in Sources */,
+				2E131540298AB04C008ED79D /* TermsAndConditions.swift in Sources */,
 				2E5CDC5B294F2021001F2524 /* CarGoApp.swift in Sources */,
 				2EA0D8BB2976CC9F005DE1D9 /* LoginViewModel.swift in Sources */,
 			);
