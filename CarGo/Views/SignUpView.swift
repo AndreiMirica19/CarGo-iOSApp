@@ -16,6 +16,7 @@ struct SignUpView: View {
     @State var displayedErrorMessage = ""
     @State var agreeTerms = false
     @State var showTerms = false
+    @State var termsNotCompleted = false
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
 
     @StateObject private var registerViewModel = RegisterViewModel()
@@ -107,7 +108,9 @@ struct SignUpView: View {
                             }
                         }
                         .padding(.top, 24)
-                        
+                        .alert("You must agree to terms and conditions", isPresented: $termsNotCompleted) {
+                            Button("OK", role: .cancel) { }
+                        }
                     }
                     .sheet(isPresented: $showTerms) {
                         TermsAndConditions()
@@ -179,6 +182,11 @@ struct SignUpView: View {
             notMatchingPasswordAlertIsShown = true
             return false
         }
+        
+        if !agreeTerms {
+            termsNotCompleted = true
+        }
+        
         return true
     }
 }

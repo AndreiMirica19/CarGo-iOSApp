@@ -21,7 +21,6 @@ struct TermsAndConditions: View {
                         .padding(.top)
                     
                     Text("Welcome to the Peer-to-Peer Car Sharing App (the \"App\"). The following terms and conditions (the \"Terms\") govern your use of the App and the services offered through the App (the\"Owners\") in accordance with the terms set forth in these Terms. By using the Services, you agree to be bound by these Terms. If you do not agree to these Terms, you should not use the Services.")
-
                     
                     Text("Ownership and Use of Vehicles:")
                         .font(.headline)
