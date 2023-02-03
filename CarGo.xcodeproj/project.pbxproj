@@ -38,6 +38,10 @@
 		2ECBAF472973FA90001FE86C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBAF462973FA90001FE86C /* RegisterViewModel.swift */; };
 		2EDFD6EA29755F0D00561C6E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDFD6E929755F0D00561C6E /* Response.swift */; };
 		2EE40790294F3C69005A6CCD /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE4078F294F3C69005A6CCD /* WelcomeView.swift */; };
+		2EF1CB19298BE2EB009F8626 /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF1CB18298BE2EB009F8626 /* EditProfile.swift */; };
+		2EF1CB1C298D442E009F8626 /* MultiSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF1CB1B298D442E009F8626 /* MultiSelector.swift */; };
+		2EF1CB1E298D46C2009F8626 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF1CB1D298D46C2009F8626 /* Languages.swift */; };
+		2EF1CB20298D4BD9009F8626 /* MultiSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF1CB1F298D4BD9009F8626 /* MultiSelectionView.swift */; };
 		316C7C20DF6A448DD73A33E2 /* Pods_CarGo_CarGoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FB057E3486CB2B0521ED8F /* Pods_CarGo_CarGoUITests.framework */; };
 		BA4021634B83DF14C96DFB9B /* Pods_CarGoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62447F8F3E6A72F776F07F9C /* Pods_CarGoTests.framework */; };
 		D576D3579D86D9091859224B /* Pods_CarGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFBCBA015E8B76AA55FA198 /* Pods_CarGo.framework */; };
@@ -98,6 +102,10 @@
 		2EDE7DB32950C68C008F9F31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2EDFD6E929755F0D00561C6E /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		2EE4078F294F3C69005A6CCD /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		2EF1CB18298BE2EB009F8626 /* EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
+		2EF1CB1B298D442E009F8626 /* MultiSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelector.swift; sourceTree = "<group>"; };
+		2EF1CB1D298D46C2009F8626 /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
+		2EF1CB1F298D4BD9009F8626 /* MultiSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectionView.swift; sourceTree = "<group>"; };
 		54BCF711DE88C9164AD48204 /* Pods-CarGoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarGoTests.release.xcconfig"; path = "Target Support Files/Pods-CarGoTests/Pods-CarGoTests.release.xcconfig"; sourceTree = "<group>"; };
 		62447F8F3E6A72F776F07F9C /* Pods_CarGoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarGoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80FB057E3486CB2B0521ED8F /* Pods_CarGo_CarGoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarGo_CarGoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				2E167862297419DA00184CB9 /* NetworkError.swift */,
+				2EF1CB1D298D46C2009F8626 /* Languages.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -251,8 +260,7 @@
 				2E91E94D298171DA00B70C4B /* SearchCarsView.swift */,
 				2E91E94F298171EC00B70C4B /* FavoriteCarsView.swift */,
 				2E91E951298171FE00B70C4B /* MyBookingsView.swift */,
-				2E91E9532981720F00B70C4B /* ProfileView.swift */,
-				2E131541298B8DB8008ED79D /* ProfileDetails.swift */,
+				2EF1CB17298BE2C0009F8626 /* Profile */,
 			);
 			path = RentingViews;
 			sourceTree = "<group>";
@@ -279,6 +287,7 @@
 		2EE4078E294F3C44005A6CCD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2EF1CB1A298D440E009F8626 /* Helpers */,
 				2E91E94C2981714200B70C4B /* RentingViews */,
 				2EE4078F294F3C69005A6CCD /* WelcomeView.swift */,
 				2E2119B02950A54D0009A0A4 /* SignUpView.swift */,
@@ -288,6 +297,25 @@
 				2E13153F298AB04C008ED79D /* TermsAndConditions.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2EF1CB17298BE2C0009F8626 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2E91E9532981720F00B70C4B /* ProfileView.swift */,
+				2E131541298B8DB8008ED79D /* ProfileDetails.swift */,
+				2EF1CB18298BE2EB009F8626 /* EditProfile.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		2EF1CB1A298D440E009F8626 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2EF1CB1B298D442E009F8626 /* MultiSelector.swift */,
+				2EF1CB1F298D4BD9009F8626 /* MultiSelectionView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		35E4CAAA0805A8BC47F8E7D2 /* Pods */ = {
@@ -540,6 +568,7 @@
 				2E2119B32950B2620009A0A4 /* CustomTextView.swift in Sources */,
 				2EDFD6EA29755F0D00561C6E /* Response.swift in Sources */,
 				2E91E952298171FE00B70C4B /* MyBookingsView.swift in Sources */,
+				2EF1CB1C298D442E009F8626 /* MultiSelector.swift in Sources */,
 				2E5CDC67294F2022001F2524 /* CarGo.xcdatamodeld in Sources */,
 				2E16785C2974154000184CB9 /* RegisterModel.swift in Sources */,
 				2E1678602974180B00184CB9 /* RegisterService.swift in Sources */,
@@ -547,6 +576,7 @@
 				2E2119BA2950C02E0009A0A4 /* StringExtension.swift in Sources */,
 				2E2119B52950B5130009A0A4 /* PasswordTextView.swift in Sources */,
 				2E131542298B8DB8008ED79D /* ProfileDetails.swift in Sources */,
+				2EF1CB19298BE2EB009F8626 /* EditProfile.swift in Sources */,
 				2E91E950298171EC00B70C4B /* FavoriteCarsView.swift in Sources */,
 				2E91E94B2981713C00B70C4B /* RentingContentView.swift in Sources */,
 				2E6353282976A2210016EC6E /* LoginProtocol.swift in Sources */,
@@ -556,12 +586,14 @@
 				2E63532A2976A25C0016EC6E /* LoginService.swift in Sources */,
 				2E91E94E298171DA00B70C4B /* SearchCarsView.swift in Sources */,
 				2E167863297419DA00184CB9 /* NetworkError.swift in Sources */,
+				2EF1CB1E298D46C2009F8626 /* Languages.swift in Sources */,
 				2E6353262976A17F0016EC6E /* LoginData.swift in Sources */,
 				2ECBAF472973FA90001FE86C /* RegisterViewModel.swift in Sources */,
 				2EAB174D2980051C001A153F /* ErrorResponse.swift in Sources */,
 				2E131540298AB04C008ED79D /* TermsAndConditions.swift in Sources */,
 				2E5CDC5B294F2021001F2524 /* CarGoApp.swift in Sources */,
 				2EA0D8BB2976CC9F005DE1D9 /* LoginViewModel.swift in Sources */,
+				2EF1CB20298D4BD9009F8626 /* MultiSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

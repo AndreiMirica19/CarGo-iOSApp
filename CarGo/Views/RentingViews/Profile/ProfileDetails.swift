@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProfileDetails: View {
+    @State var editProfile = false
+    
     var body: some View {
         NavigationStack {
             List {
@@ -78,13 +80,14 @@ struct ProfileDetails: View {
                     Text("Details")
                         .fontWeight(.bold)
                 }
-                
-                
+                .navigationDestination(isPresented: $editProfile) {
+                    EditProfile()
+                }
             }
             .listStyle(.plain)
             .toolbar {
                 Button {
-                    
+                    editProfile = true
                 } label: {
                     Image(systemName: "pencil")
                 }
