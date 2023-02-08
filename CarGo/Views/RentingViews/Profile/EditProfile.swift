@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct SpokenLanguages {
     var name: String
@@ -21,22 +22,71 @@ struct EditProfile: View {
     @State var city = ""
     @State var job = ""
     @State var task = SpokenLanguages(name: "", servingGoals: [])
+    @State var presentActionSheet = false
+    @State var presentGallery = false
+    @State private var selectedItem: PhotosPickerItem?
+    @State private var selectedImageData: Data?
+    @State private var profilePicture: UIImage?
+    @State private var showCamera = false
+
     var languages = Languages()
     
     var body: some View {
         ScrollView {
             VStack {
                 VStack(spacing: -28) {
-                    Image(systemName: "person.circle")
-                        .resizable()
-                        .frame(width: 128, height: 128)
-                        .foregroundColor(.gray)
+                    if let profilePicture = profilePicture {
+                        Image(uiImage: profilePicture)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 128, height: 128)
+                            .clipShape(Circle())
+                        
+                    } else {
+                        Image(systemName: "person.circle")
+                            .resizable()
+                            .frame(width: 128, height: 128)
+                            .foregroundColor(.gray)
+                            .clipShape(Circle())
+                    }
                     
                     Image(systemName: "pencil.circle")
                         .resizable()
                         .frame(width: 44, height: 44)
-                        .padding(.leading, 116)
+                        .padding(.leading, 128)
                         .foregroundColor(.blue)
+                        .onTapGesture {
+                            presentActionSheet = true
+                        }
+                        .confirmationDialog("", isPresented: $presentActionSheet) {
+                            Button("Camera") {
+                                showCamera = true
+                            }
+                            
+                            Button("Gallery") {
+                                presentGallery = true
+                            }
+                            
+                            Button("Remove photo", role: .destructive) {
+                                selectedImageData = nil
+                                profilePicture = nil
+                            }
+                        }
+                        .photosPicker(isPresented: $presentGallery, selection: $selectedItem, matching: .images)
+                        .sheet(isPresented: $showCamera) {
+                            ImagePicker(isShown: $showCamera, imageData: $selectedImageData, image: $profilePicture)
+                        }
+                        .onChange(of: selectedItem) { newItem in
+                            Task {
+                                if let data = try? await newItem?.loadTransferable(type: Data.self) {
+                                    selectedImageData = data
+                                    guard let selectedImageData = selectedImageData else {
+                                        return
+                                    }
+                                    profilePicture = UIImage(data: selectedImageData)
+                                }
+                            }
+                        }
                 }
                 
                 VStack(alignment: .leading) {
@@ -48,7 +98,10 @@ struct EditProfile: View {
                         .foregroundColor(aboutText == aboutPlaceholder ? .gray : .black)
                         .frame(height: 216)
                         .padding()
-                        .border(.black)
+                        .overlay(content: {
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color.black, lineWidth: 1)
+                        })
                         .onTapGesture {
                             if aboutText == aboutPlaceholder {
                                 aboutText = ""
@@ -75,36 +128,21 @@ struct EditProfile: View {
                         .font(.headline)
                         .padding(.top)
                     
-                    TextField(text: $country) {
-                        Text("Country")
-                    }
-                    .padding()
-                    .frame(height: 44)
-                    .border(.black)
+                    CustomTextField(text: $country, placeholder: "Country")
                     
-                    TextField(text: $city) {
-                        Text("City")
-                    }
-                    .padding()
-                    .frame(height: 44)
-                    .border(.black)
-                    .padding(.top, 24)
+                    CustomTextField(text: $city, placeholder: "City")
+                        .padding(.top)
                     
                     Text("What do you do for a living?")
                         .font(.headline)
                         .padding(.top)
                     
-                    TextField(text: $job) {
-                        Text("Current job")
-                    }
-                    .padding()
-                    .frame(height: 44)
-                    .border(.black)
+                    CustomTextField(text: $job, placeholder: "Current job")
                     
                     Text("What languages do you speak?")
                         .font(.headline)
                         .padding(.top)
-
+                    
                     MultiSelector(
                         label: Text("Spoken languages"),
                         options: languages.languagesList,
@@ -112,8 +150,25 @@ struct EditProfile: View {
                         selected: $task.servingGoals
                     )
                     .padding()
-                    .border(.black)
+                    .overlay(content: {
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.black, lineWidth: 1)
+                    })
                     .padding(.top)
+                    
+                    HStack {
+                        Spacer()
+                        
+                        Button {
+                            
+                        } label: {
+                            Text("Save")
+                        }
+                        .padding()
+                        .cornerRadius(8)
+                        .buttonStyle(OutlineBorder(color: .blue))
+                        Spacer()
+                    }
                 }
             }.padding()
         }
@@ -127,5 +182,19 @@ struct EditProfile: View {
 struct EditProfile_Previews: PreviewProvider {
     static var previews: some View {
         EditProfile()
+    }
+}
+
+struct OutlineBorder: ButtonStyle {
+
+    var color: Color
+
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .frame(maxWidth: .infinity)
+            .frame(height: 44)
+            .background(color)
+            .foregroundColor(.white)
+            .cornerRadius(8)
     }
 }

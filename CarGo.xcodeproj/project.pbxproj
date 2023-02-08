@@ -14,6 +14,9 @@
 		2E1678602974180B00184CB9 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E16785F2974180B00184CB9 /* RegisterService.swift */; };
 		2E167863297419DA00184CB9 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E167862297419DA00184CB9 /* NetworkError.swift */; };
 		2E16786629741B5000184CB9 /* RegisterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E16786529741B5000184CB9 /* RegisterData.swift */; };
+		2E19CE9229937ECE00499162 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19CE9129937ECE00499162 /* CustomTextField.swift */; };
+		2E19CE96299397EE00499162 /* PhotoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19CE95299397EE00499162 /* PhotoCaptureView.swift */; };
+		2E19CE982993A27900499162 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19CE972993A27900499162 /* ImagePicker.swift */; };
 		2E2119B12950A54D0009A0A4 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2119B02950A54D0009A0A4 /* SignUpView.swift */; };
 		2E2119B32950B2620009A0A4 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2119B22950B2620009A0A4 /* CustomTextView.swift */; };
 		2E2119B52950B5130009A0A4 /* PasswordTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2119B42950B5130009A0A4 /* PasswordTextView.swift */; };
@@ -74,6 +77,9 @@
 		2E16785F2974180B00184CB9 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		2E167862297419DA00184CB9 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		2E16786529741B5000184CB9 /* RegisterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterData.swift; sourceTree = "<group>"; };
+		2E19CE9129937ECE00499162 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		2E19CE95299397EE00499162 /* PhotoCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureView.swift; sourceTree = "<group>"; };
+		2E19CE972993A27900499162 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		2E2119B02950A54D0009A0A4 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		2E2119B22950B2620009A0A4 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		2E2119B42950B5130009A0A4 /* PasswordTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextView.swift; sourceTree = "<group>"; };
@@ -312,8 +318,11 @@
 		2EF1CB1A298D440E009F8626 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2E19CE972993A27900499162 /* ImagePicker.swift */,
 				2EF1CB1B298D442E009F8626 /* MultiSelector.swift */,
 				2EF1CB1F298D4BD9009F8626 /* MultiSelectionView.swift */,
+				2E19CE9129937ECE00499162 /* CustomTextField.swift */,
+				2E19CE95299397EE00499162 /* PhotoCaptureView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -570,6 +579,7 @@
 				2E91E952298171FE00B70C4B /* MyBookingsView.swift in Sources */,
 				2EF1CB1C298D442E009F8626 /* MultiSelector.swift in Sources */,
 				2E5CDC67294F2022001F2524 /* CarGo.xcdatamodeld in Sources */,
+				2E19CE96299397EE00499162 /* PhotoCaptureView.swift in Sources */,
 				2E16785C2974154000184CB9 /* RegisterModel.swift in Sources */,
 				2E1678602974180B00184CB9 /* RegisterService.swift in Sources */,
 				2E91E9542981720F00B70C4B /* ProfileView.swift in Sources */,
@@ -578,6 +588,7 @@
 				2E131542298B8DB8008ED79D /* ProfileDetails.swift in Sources */,
 				2EF1CB19298BE2EB009F8626 /* EditProfile.swift in Sources */,
 				2E91E950298171EC00B70C4B /* FavoriteCarsView.swift in Sources */,
+				2E19CE982993A27900499162 /* ImagePicker.swift in Sources */,
 				2E91E94B2981713C00B70C4B /* RentingContentView.swift in Sources */,
 				2E6353282976A2210016EC6E /* LoginProtocol.swift in Sources */,
 				2EE40790294F3C69005A6CCD /* WelcomeView.swift in Sources */,
@@ -585,6 +596,7 @@
 				2E16786629741B5000184CB9 /* RegisterData.swift in Sources */,
 				2E63532A2976A25C0016EC6E /* LoginService.swift in Sources */,
 				2E91E94E298171DA00B70C4B /* SearchCarsView.swift in Sources */,
+				2E19CE9229937ECE00499162 /* CustomTextField.swift in Sources */,
 				2E167863297419DA00184CB9 /* NetworkError.swift in Sources */,
 				2EF1CB1E298D46C2009F8626 /* Languages.swift in Sources */,
 				2E6353262976A17F0016EC6E /* LoginData.swift in Sources */,
@@ -754,6 +766,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CarGo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -788,6 +801,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CarGo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
