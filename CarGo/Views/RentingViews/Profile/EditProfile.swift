@@ -10,25 +10,30 @@ import PhotosUI
 
 struct SpokenLanguages {
     var name: String
-    var servingGoals: Set<Language>
+    var languages: Set<Language>
 }
 
 struct EditProfile: View {
-    
+    @Binding var userInfo: UserDetailsData?
     var aboutPlaceholder = "Write anything you might think that is useful to know about you."
+    let editProfileViewModel = EditProfileViewModel()
+    @Environment(\.presentationMode) private var mode: Binding<PresentationMode>
     @State var aboutText = ""
-    @FocusState private var aboutFocus: Bool
+    @FocusState var aboutFocus: Bool
     @State var country = ""
     @State var city = ""
     @State var job = ""
-    @State var task = SpokenLanguages(name: "", servingGoals: [])
+    @State var spokenLanguages = SpokenLanguages(name: "", languages: [])
     @State var presentActionSheet = false
     @State var presentGallery = false
-    @State private var selectedItem: PhotosPickerItem?
-    @State private var selectedImageData: Data?
-    @State private var profilePicture: UIImage?
-    @State private var showCamera = false
-
+    @State var selectedItem: PhotosPickerItem?
+    @State var selectedImageData: Data?
+    @State var profilePicture: UIImage?
+    @State var showCamera = false
+    @State var errorMessage = ""
+    @State var errorIsVisible = false
+    @State var editProfileSuccessful = false
+    
     var languages = Languages()
     
     var body: some View {
@@ -147,7 +152,7 @@ struct EditProfile: View {
                         label: Text("Spoken languages"),
                         options: languages.languagesList,
                         optionToString: { $0.name },
-                        selected: $task.servingGoals
+                        selected: $spokenLanguages.languages
                     )
                     .padding()
                     .overlay(content: {
@@ -160,7 +165,24 @@ struct EditProfile: View {
                         Spacer()
                         
                         Button {
+                            guard let selectedImageData = selectedImageData else {
+                                errorMessage = "You must complete all the fields"
+                                errorIsVisible = true
+                                return
+                            }
                             
+                            if profilePicture != nil, !aboutText.isEmpty, !country.isEmpty, !city.isEmpty, !job.isEmpty, !spokenLanguages.languages.isEmpty {
+                                
+                                let userDetails = UserDetailsData(about: aboutText, country: country, city: city, job: job, profileImage: selectedImageData, spokenLanguages: languages.languagesList.map({ $0.name }))
+                                
+                                profilePicture = nil
+                                self.selectedImageData = nil
+                                
+                                editProfileViewModel.editProfile(userDetails: userDetails)
+                            } else {
+                                errorMessage = "You must complete all the fields"
+                                errorIsVisible = true
+                            }
                         } label: {
                             Text("Save")
                         }
@@ -168,27 +190,84 @@ struct EditProfile: View {
                         .cornerRadius(8)
                         .buttonStyle(OutlineBorder(color: .blue))
                         Spacer()
+                    }.onReceive(editProfileViewModel.$response) { response in
+                        guard let userDetails = response.0 else {
+                            
+                            guard let error = response.1 else {
+                                return
+                            }
+                            
+                            errorMessage = error.getErrorMessage()
+                            errorIsVisible = true
+                            
+                            return
+                        }
+                        
+                        selectedImageData = userDetails.profileImage
+                        
+                        guard let selectedImageData = selectedImageData else {
+                            return
+                        }
+                        
+                        profilePicture = UIImage(data: selectedImageData)
+                        userInfo = userDetails
+                        editProfileSuccessful = true
+                        
+                    }
+                    .alert(errorMessage, isPresented: $errorIsVisible) {
+                        Button("OK", role: .cancel) { }
+                    }
+                    .alert("Edit successfully done", isPresented: $editProfileSuccessful) {
+                        Button("Ok", role: .cancel) {
+                        }
                     }
                 }
             }.padding()
         }
         .padding(.top, 4)
-        .onAppear {
-            aboutText = aboutPlaceholder
-        }
     }
+    
+    init(userInfo: Binding<UserDetailsData?>) {
+        _userInfo = userInfo
+        
+        guard let userInfo = self.userInfo else {
+            _aboutText = State(initialValue: aboutPlaceholder)
+            return
+        }
+        
+        _aboutText = State(initialValue: aboutPlaceholder)
+        
+        _selectedImageData = State(initialValue: userInfo.profileImage)
+        print(userInfo.profileImage)
+        guard let selectedImageData = self.selectedImageData else {
+            return
+        }
+        
+        _profilePicture = State(initialValue: UIImage(data: selectedImageData))
+        _city = State(initialValue: userInfo.city)
+        _country = State(initialValue: userInfo.country)
+        _job = State(initialValue: userInfo.job)
+        var userLanguages = Set<Language>()
+        
+        userInfo.spokenLanguages.forEach { language in
+            userLanguages.insert(Language(name: language))
+        }
+        
+        _spokenLanguages = State(initialValue: SpokenLanguages(name: "", languages: userLanguages))
+    }
+    
 }
 
 struct EditProfile_Previews: PreviewProvider {
     static var previews: some View {
-        EditProfile()
+        EditProfile(userInfo: .constant(nil))
     }
 }
 
 struct OutlineBorder: ButtonStyle {
-
+    
     var color: Color
-
+    
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .frame(maxWidth: .infinity)
