@@ -26,7 +26,7 @@ struct RentingContentView: View {
                     Label("Bookings", systemImage: "calendar.circle")
                 }
             
-            ProfileView()
+            ProfileContentView()
                 .tabItem {
                     Label("Profile", systemImage: "person.circle")
                 }

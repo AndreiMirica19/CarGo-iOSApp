@@ -14,7 +14,7 @@ struct SpokenLanguages {
 }
 
 struct EditProfile: View {
-    @Binding var userInfo: UserDetailsData?
+    @State var userInfo: UserDetailsData?
     var aboutPlaceholder = "Write anything you might think that is useful to know about you."
     let editProfileViewModel = EditProfileViewModel()
     @Environment(\.presentationMode) private var mode: Binding<PresentationMode>
@@ -33,6 +33,8 @@ struct EditProfile: View {
     @State var errorMessage = ""
     @State var errorIsVisible = false
     @State var editProfileSuccessful = false
+    @EnvironmentObject var profileViewModel: ProfileViewModel
+    @State private var viewDidLoad = false
     
     var languages = Languages()
     
@@ -171,9 +173,9 @@ struct EditProfile: View {
                                 return
                             }
                             
-                            if profilePicture != nil, !aboutText.isEmpty, !country.isEmpty, !city.isEmpty, !job.isEmpty, !spokenLanguages.languages.isEmpty {
+                            if profilePicture != nil, aboutText != aboutPlaceholder, !country.isEmpty, !city.isEmpty, !job.isEmpty, !spokenLanguages.languages.isEmpty {
                                 
-                                let userDetails = UserDetailsData(about: aboutText, country: country, city: city, job: job, profileImage: selectedImageData, spokenLanguages: languages.languagesList.map({ $0.name }))
+                                let userDetails = UserDetailsData(about: aboutText, country: country, city: city, job: job, profileImage: selectedImageData, spokenLanguages: spokenLanguages.languages.map { $0.name })
                                 
                                 profilePicture = nil
                                 self.selectedImageData = nil
@@ -210,8 +212,8 @@ struct EditProfile: View {
                         }
                         
                         profilePicture = UIImage(data: selectedImageData)
-                        userInfo = userDetails
                         editProfileSuccessful = true
+                        self.userInfo = userDetails
                         
                     }
                     .alert(errorMessage, isPresented: $errorIsVisible) {
@@ -225,42 +227,44 @@ struct EditProfile: View {
             }.padding()
         }
         .padding(.top, 4)
+        .onAppear {
+            print("onAppear")
+            if viewDidLoad == false {
+
+                viewDidLoad = true
+                userInfo = profileViewModel.response.0
+                
+                guard let userInfo = self.userInfo else {
+                    aboutText = aboutPlaceholder
+                    return
+                }
+                
+                aboutText = userInfo.about
+                
+                selectedImageData = userInfo.profileImage
+                guard let selectedImageData = self.selectedImageData else {
+                    return
+                }
+                
+                profilePicture = UIImage(data: selectedImageData)
+                city = userInfo.city
+                country = userInfo.country
+                job = userInfo.job
+                var userLanguages = Set<Language>()
+                
+                userInfo.spokenLanguages.forEach { language in
+                    userLanguages.insert(Language(name: language))
+                }
+                
+                spokenLanguages = SpokenLanguages(name: "", languages: userLanguages)
+            }
+        }
     }
-    
-    init(userInfo: Binding<UserDetailsData?>) {
-        _userInfo = userInfo
-        
-        guard let userInfo = self.userInfo else {
-            _aboutText = State(initialValue: aboutPlaceholder)
-            return
-        }
-        
-        _aboutText = State(initialValue: aboutPlaceholder)
-        
-        _selectedImageData = State(initialValue: userInfo.profileImage)
-        print(userInfo.profileImage)
-        guard let selectedImageData = self.selectedImageData else {
-            return
-        }
-        
-        _profilePicture = State(initialValue: UIImage(data: selectedImageData))
-        _city = State(initialValue: userInfo.city)
-        _country = State(initialValue: userInfo.country)
-        _job = State(initialValue: userInfo.job)
-        var userLanguages = Set<Language>()
-        
-        userInfo.spokenLanguages.forEach { language in
-            userLanguages.insert(Language(name: language))
-        }
-        
-        _spokenLanguages = State(initialValue: SpokenLanguages(name: "", languages: userLanguages))
-    }
-    
 }
 
 struct EditProfile_Previews: PreviewProvider {
     static var previews: some View {
-        EditProfile(userInfo: .constant(nil))
+        EditProfile()
     }
 }
 

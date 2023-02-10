@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ProfileViewModel {
+class ProfileViewModel: ObservableObject {
 
     @Published var response: (UserDetailsData?, NetworkError?) = (nil, nil)
     let userInfoModel = UserInfoModel()

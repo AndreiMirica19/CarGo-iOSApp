@@ -9,12 +9,12 @@ import SwiftUI
 
 struct ProfileDetails: View {
     @State var editProfile = false
-    @Binding var userInfo: UserDetailsData?
+    @EnvironmentObject var profileViewModel: ProfileViewModel
+    @EnvironmentObject var router: Router<ProfilePaths>
     
     var body: some View {
-        NavigationStack {
             VStack {
-                if let userInfo = userInfo {
+                if let userInfo = profileViewModel.response.0 {
                     List {
                         Section {
                             HStack {
@@ -70,10 +70,6 @@ struct ProfileDetails: View {
                             Text("Details")
                                 .fontWeight(.bold)
                         }
-                        .navigationDestination(isPresented: $editProfile) {
-                            EditProfile(userInfo: $userInfo)
-                        }
-
                     }
                     .listStyle(.plain)
                 } else {
@@ -81,17 +77,19 @@ struct ProfileDetails: View {
                 }
             }.toolbar {
                 Button {
-                    editProfile = true
+                    router.push(.editProfile)
                 } label: {
                     Image(systemName: "pencil")
                 }
             }
+            .onAppear {
+                profileViewModel.userInfo()
+            }
         }
-    }
 }
 
 struct ViewProfile_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileDetails(userInfo: .constant(nil))
+        ProfileDetails()
     }
 }
