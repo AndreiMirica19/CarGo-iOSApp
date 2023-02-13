@@ -10,14 +10,19 @@ import SwiftUI
 @main
 struct CarGoApp: App {
     let userId = UserDefaults.standard.string(forKey: "userId")
+    @State var loginSuccessful = false
     var body: some Scene {
  
         return WindowGroup {
             VStack {
                 if userId != nil {
-                    RentingContentView()
+                    RentingContentView(loginSuccessful: $loginSuccessful)
                 } else {
-                    LoginView()
+                    if loginSuccessful {
+                        RentingContentView(loginSuccessful: $loginSuccessful)
+                    } else {
+                        LoginView(loginSuccessful: $loginSuccessful)
+                    }
                 }
             }
         }

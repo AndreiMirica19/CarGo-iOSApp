@@ -15,6 +15,7 @@ struct ProfileView: View {
     @State var isRoot = false
     @State var viewProfileDetails = false
     @EnvironmentObject var profileViewModel: ProfileViewModel
+    @Binding var loginSuccessful: Bool
     
     var body: some View {
         List {
@@ -90,7 +91,7 @@ struct ProfileView: View {
             
             Button {
                 UserDefaults.standard.removeObject(forKey: "userId")
-                changeRootView()
+                loginSuccessful = false
             } label: {
                 Text("Logout")
                     .foregroundColor(.red)
@@ -100,22 +101,10 @@ struct ProfileView: View {
             }
         }
     }
-    
-    func changeRootView() {
-        let window = UIApplication
-            .shared
-            .connectedScenes
-            .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
-            .first { $0.isKeyWindow }
-        
-        window?.rootViewController = UIHostingController(rootView: LoginView())
-        window?.makeKeyAndVisible()
-        
-    }
 }
 
 struct PorfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView(loginSuccessful: .constant(false))
     }
 }

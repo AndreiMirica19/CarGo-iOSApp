@@ -391,8 +391,8 @@
             filePath = "CarGo/Views/RentingContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -821,8 +821,8 @@
             filePath = "CarGo/Views/RentingViews/Profile/ProfileContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -869,9 +869,9 @@
             filePath = "CarGo/Views/RentingViews/Profile/ProfileContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "init()"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "init(loginSuccessful:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

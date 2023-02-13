@@ -16,7 +16,7 @@ struct LoginView: View {
     @State var displayError = false
     @ObservedObject var loginViewModel = LoginViewModel()
     @State var keepMeLogin = false
-    @State var loginSuccessful = false
+    @Binding var loginSuccessful: Bool
     
     var body: some View {
         NavigationStack {
@@ -107,9 +107,6 @@ struct LoginView: View {
                     Spacer(minLength: 36)
                 }
                 Spacer()
-                
-            }.navigationDestination(isPresented: $loginSuccessful) {
-                RentingContentView()
             }
         }
     }
@@ -117,6 +114,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(loginSuccessful: .constant(false))
     }
 }
