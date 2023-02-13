@@ -58,7 +58,6 @@ struct ProfileView: View {
                     }
                 }
 
-                
                 NavigationLink(destination: EmptyView()) {
                     HStack {
                         Image(systemName: "car")
@@ -90,7 +89,7 @@ struct ProfileView: View {
             }
             
             Button {
-                // UserDefaults.standard.removeObject(forKey: "userId")
+                UserDefaults.standard.removeObject(forKey: "userId")
                 changeRootView()
             } label: {
                 Text("Logout")

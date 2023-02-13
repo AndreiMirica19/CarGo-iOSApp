@@ -8,7 +8,7 @@
 import Foundation
 
 class RegisterViewModel: ObservableObject, Equatable {
-    let registerModel = RegisterModel()
+    let userRepository = UserRepository()
     
     @Published var response: (Response?, NetworkError?) = (nil, nil)
 
@@ -18,7 +18,7 @@ class RegisterViewModel: ObservableObject, Equatable {
 
     func register(registerData: RegisterData) {
         Task {
-           let response = try await registerModel.register(registerData: registerData)
+           let response = try await userRepository.register(registerData: registerData)
 
             DispatchQueue.main.async {
                 self.response = response

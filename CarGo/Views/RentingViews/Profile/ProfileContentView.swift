@@ -16,10 +16,18 @@ struct ProfileContentView: View {
             ProfileView()
                 .navigationDestination(for: ProfilePaths.self) { path in
                     switch path {
-                    case .profileView: ProfileView()
-                    case .profileDetails: ProfileDetails().environmentObject(router).environmentObject(profileViewModel)
-                    case .editProfile: EditProfile().environmentObject(profileViewModel)
-                    case .account: Text("Accout")
+                    case .profileView:
+                        ProfileView()
+                        
+                    case .profileDetails:
+                        ProfileDetails().environmentObject(router)
+                            .environmentObject(profileViewModel)
+                        
+                    case .editProfile:
+                        EditProfile().environmentObject(profileViewModel)
+                        
+                    case .account:
+                        Text("Accout")
                     }
                 }
                 .environmentObject(router)

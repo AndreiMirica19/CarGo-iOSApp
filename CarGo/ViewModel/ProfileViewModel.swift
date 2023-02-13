@@ -10,14 +10,11 @@ import Foundation
 class ProfileViewModel: ObservableObject {
 
     @Published var response: (UserDetailsData?, NetworkError?) = (nil, nil)
-    let userInfoModel = UserInfoModel()
+    let userRepository = UserRepository()
     
     func userInfo() {
-        guard let userId = UserDefaults.standard.string(forKey: "userId") else {
-            return
-        }
         Task {
-            let response = try await userInfoModel.userInfo(userId: userId)
+            let response = try await userRepository.userInfo()
             
             DispatchQueue.main.async {
                 self.response = response

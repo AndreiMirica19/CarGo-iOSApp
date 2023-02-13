@@ -10,7 +10,7 @@ import Foundation
 class EditProfileViewModel {
     
     @Published var response: (UserDetailsData?, NetworkError?) = (nil, nil)
-    let editProfileModel = EditProfileModel()
+    let userRepository = UserRepository()
     
     func editProfile(userDetails: UserDetailsData) {
         Task {
@@ -18,7 +18,7 @@ class EditProfileViewModel {
             var userDet = userDetails
             userDet.id = UserDefaults.standard.string(forKey: "userId")
             
-            let response = try await editProfileModel.editProfile(userDetails: userDet)
+            let response = try await userRepository.editProfile(userDetails: userDet)
             
             DispatchQueue.main.async {
                 self.response = response

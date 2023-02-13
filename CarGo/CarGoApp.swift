@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct CarGoApp: App {
-    
+    let userId = UserDefaults.standard.string(forKey: "userId")
     var body: some Scene {
-        let userId = UserDefaults.standard.string(forKey: "userId")
+ 
         return WindowGroup {
             VStack {
                 if userId != nil {
@@ -20,6 +20,12 @@ struct CarGoApp: App {
                     LoginView()
                 }
             }
+        }
+    }
+    
+    init() {
+        if let userId = userId {
+            UserRepository.userId = userId
         }
     }
 }

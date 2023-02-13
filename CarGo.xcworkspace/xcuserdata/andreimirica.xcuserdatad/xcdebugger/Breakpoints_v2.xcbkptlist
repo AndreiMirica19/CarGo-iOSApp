@@ -259,7 +259,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "200B9116-CBA1-46CD-A7C5-F725E39ACCB4"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CarGo/ViewModel/RegisterViewModel.swift"
@@ -283,7 +283,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "21"
                   endingLineNumber = "21"
-                  offsetFromSymbolStart = "76">
+                  offsetFromSymbolStart = "64">
                </Location>
                <Location
                   uuid = "200B9116-CBA1-46CD-A7C5-F725E39ACCB4 - d8c26e0c831bdf7d"
@@ -298,7 +298,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "21"
                   endingLineNumber = "21"
-                  offsetFromSymbolStart = "64">
+                  offsetFromSymbolStart = "44">
                </Location>
                <Location
                   uuid = "200B9116-CBA1-46CD-A7C5-F725E39ACCB4 - eedf5503127b323"
@@ -313,7 +313,22 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "21"
                   endingLineNumber = "21"
-                  offsetFromSymbolStart = "140">
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "200B9116-CBA1-46CD-A7C5-F725E39ACCB4 - 8e56a2ce260b0d22"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in CarGo.RegisterViewModel.register(registerData: CarGo.RegisterData) -&gt; ()"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/ViewModel/RegisterViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "64">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -322,7 +337,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "85C76D99-09F4-4260-AD66-9F1E849369EE"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CarGo/ViewModel/RegisterViewModel.swift"
@@ -854,8 +869,8 @@
             filePath = "CarGo/Views/RentingViews/Profile/ProfileContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>

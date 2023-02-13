@@ -8,13 +8,13 @@
 import Foundation
 
 class LoginViewModel: ObservableObject {
-    let loginModel = LoginModel()
+    let userRepository = UserRepository()
     
     @Published var response: (LoginDTO?, NetworkError?) = (nil, nil)
     
     func login(loginData: LoginData, keepLogedIn: Bool) {
         Task {
-            let response = try await loginModel.login(loginData: loginData)
+            let response = try await userRepository.login(loginData: loginData)
             
             DispatchQueue.main.async {
                 self.response = response
