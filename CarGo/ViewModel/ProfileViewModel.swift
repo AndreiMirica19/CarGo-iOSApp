@@ -12,6 +12,7 @@ class ProfileViewModel: ObservableObject {
     @Published var response: (UserDetailsData?, NetworkError?) = (nil, nil)
     @Published var accountResponse: (UserDTO?, NetworkError?) = (nil, nil)
     @Published var changeEmailResponse: (Response?, NetworkError?) = (nil, nil)
+    @Published var changePhoneNumberResponse: (Response?, NetworkError?) = (nil, nil)
     
     let userRepository = UserRepository()
     
@@ -43,6 +44,17 @@ class ProfileViewModel: ObservableObject {
             
             DispatchQueue.main.async {
                 self.changeEmailResponse = response
+                
+            }
+        }
+    }
+    
+    func changePhoneNumber(phoneNumber: String) {
+        Task {
+            let response = try await userRepository.changePhoneNumber(phoneNumber: phoneNumber)
+            
+            DispatchQueue.main.async {
+                self.changePhoneNumberResponse = response
                 
             }
         }

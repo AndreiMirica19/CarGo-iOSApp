@@ -69,7 +69,7 @@ class UserRepository: ObservableObject {
                     return (nil, .unexpectedError)
                 }
                 
-                return (nil, .unexpectedError)
+                return (nil, error)
             }
             do {
                 let response = try JSONDecoder().decode(Response.self, from: data)
@@ -77,8 +77,7 @@ class UserRepository: ObservableObject {
             } catch {
                 return (nil, .jsonDecoder)
             }
-        }
-        catch {
+        } catch {
             return (nil, .unexpectedError)
         }
     }
@@ -163,6 +162,23 @@ class UserRepository: ObservableObject {
     
     func changeEmail(email: String) async throws -> (Response?, NetworkError?) {
         let (data, error) = try await ChangeEmailService.changeEmail(userId: UserRepository.shared.userId, email: email)
+        guard let data = data else {
+            guard let error = error else {
+                return (nil, .unexpectedError)
+            }
+            
+            return (nil, error)
+        }
+        do {
+            let response = try JSONDecoder().decode(Response.self, from: data)
+            return (response, nil)
+        } catch {
+            return (nil, .jsonDecoder)
+        }
+    }
+    
+    func changePhoneNumber(phoneNumber: String) async throws -> (Response?, NetworkError?) {
+        let (data, error) = try await ChangePhoneNumberService.changePhoneNumber(userId: userId, phoneNumber: phoneNumber)
         guard let data = data else {
             guard let error = error else {
                 return (nil, .unexpectedError)

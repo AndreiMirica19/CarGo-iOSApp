@@ -24,7 +24,7 @@ struct AccountInfo: View {
                     Text("Password")
                 }
                 
-                NavigationLink(destination: EmptyView()) {
+                NavigationLink(destination: ChangePhoneNumber().environmentObject(profileViewModel)) {
                     HStack {
                         Text("Phone number")
                         Spacer()
@@ -41,7 +41,7 @@ struct AccountInfo: View {
             }
         }
         .onAppear {
-
+            profileViewModel.accountInfo()
         }
     }
 }
