@@ -8,13 +8,12 @@
 import Foundation
 
 class LoginViewModel: ObservableObject {
-    let userRepository = UserRepository()
-    
+
     @Published var response: (UserDTO?, NetworkError?) = (nil, nil)
     
     func login(loginData: LoginData, keepLogedIn: Bool) {
         Task {
-            let response = try await userRepository.login(loginData: loginData)
+            let response = try await UserRepository.shared.login(loginData: loginData)
             
             DispatchQueue.main.async {
                 self.response = response
@@ -27,7 +26,7 @@ class LoginViewModel: ObservableObject {
                     UserDefaults.standard.set(userData.id, forKey: "userId")
                 }
                 
-                UserRepository.userId = userData.id
+                UserRepository.shared.userId = userData.id
             }
         }
     }

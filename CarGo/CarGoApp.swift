@@ -9,28 +9,27 @@ import SwiftUI
 
 @main
 struct CarGoApp: App {
-    let userId = UserDefaults.standard.string(forKey: "userId")
+    
+    @StateObject var userRepository = UserRepository.shared
     @State var loginSuccessful = false
+    
     var body: some Scene {
- 
-        return WindowGroup {
-            VStack {
-                if userId != nil {
-                    RentingContentView(loginSuccessful: $loginSuccessful)
-                } else {
-                    if loginSuccessful {
-                        RentingContentView(loginSuccessful: $loginSuccessful)
+            WindowGroup {
+                VStack {
+                    if userRepository.isLoggedIn {
+                        RentingContentView()
                     } else {
-                        LoginView(loginSuccessful: $loginSuccessful)
+                        if loginSuccessful {
+                            RentingContentView()
+                        } else {
+                            LoginView()
+                        }
+                    }
+                }.onReceive(userRepository.$isLoggedIn) { isLoggedIn in
+                    if !isLoggedIn {
+                        loginSuccessful = false
                     }
                 }
             }
         }
     }
-    
-    init() {
-        if let userId = userId {
-            UserRepository.userId = userId
-        }
-    }
-}

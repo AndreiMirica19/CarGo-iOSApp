@@ -7,8 +7,33 @@
 
 import Foundation
 
-class UserRepository {
-    static var userId = ""
+class UserRepository: ObservableObject {
+    var userId = ""
+    static let shared = UserRepository()
+    @Published var isLoggedIn: Bool {
+        didSet {
+            UserDefaults.standard.setValue(isLoggedIn, forKey: "logedIn")
+        }
+    }
+    
+    init() {
+        isLoggedIn = UserDefaults.standard.bool(forKey: "logedIn")
+        
+        guard let id = UserDefaults.standard.string(forKey: "userId") else {
+            return
+        }
+        
+        userId = id
+    }
+    
+    func login() {
+        isLoggedIn = true
+    }
+    
+    func logout() {
+        isLoggedIn = false
+        UserDefaults.standard.removeObject(forKey: "userId")
+    }
     
     func login(loginData: LoginData) async throws -> (UserDTO?, NetworkError?) {
         do {
@@ -86,7 +111,7 @@ class UserRepository {
     
     func userInfo() async throws -> (UserDetailsData?, NetworkError?) {
         do {
-            let(data, error) = await UserInfoService.userInfo(userId: UserRepository.userId)
+            let(data, error) = await UserInfoService.userInfo(userId: UserRepository.shared.userId)
             
             guard let data = data else {
                 guard let error = error else {
@@ -112,7 +137,7 @@ class UserRepository {
     
     func accountInfo() async throws -> (UserDTO?, NetworkError?) {
         do {
-            let(data, error) = try await AccountInfoService.accountInfo(userId: UserRepository.userId)
+            let(data, error) = try await AccountInfoService.accountInfo(userId: UserRepository.shared.userId)
             
             guard let data = data else {
                 guard let error = error else {
@@ -137,7 +162,7 @@ class UserRepository {
     }
     
     func changeEmail(email: String) async throws -> (Response?, NetworkError?) {
-        let (data, error) = try await ChangeEmailService.changeEmail(userId: UserRepository.userId, email: email)
+        let (data, error) = try await ChangeEmailService.changeEmail(userId: UserRepository.shared.userId, email: email)
         guard let data = data else {
             guard let error = error else {
                 return (nil, .unexpectedError)

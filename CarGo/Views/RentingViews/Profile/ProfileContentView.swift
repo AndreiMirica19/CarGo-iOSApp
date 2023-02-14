@@ -10,17 +10,16 @@ import SwiftUI
 struct ProfileContentView: View {
     @ObservedObject var router = Router<ProfilePaths>()
     @ObservedObject var profileViewModel = ProfileViewModel()
-    @Binding var loginSuccessful: Bool
     @State var displayError = false
     @State var errorMessage = ""
 
     var body: some View {
         NavigationStack(path: $router.paths) {
-            ProfileView(loginSuccessful: $loginSuccessful)
+            ProfileView()
                 .navigationDestination(for: ProfilePaths.self) { path in
                     switch path {
                     case .profileView:
-                        ProfileView(loginSuccessful: $loginSuccessful)
+                        ProfileView()
                         
                     case .profileDetails:
                         ProfileDetails().environmentObject(router)
@@ -48,8 +47,7 @@ struct ProfileContentView: View {
         }
     }
     
-    init(loginSuccessful: Binding<Bool>) {
-        _loginSuccessful = loginSuccessful
+    init() {
         profileViewModel.userInfo()
         profileViewModel.accountInfo()
     }
@@ -57,6 +55,6 @@ struct ProfileContentView: View {
 
 struct ProfileContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileContentView(loginSuccessful: .constant(false))
+        ProfileContentView()
     }
 }

@@ -16,13 +16,14 @@ struct LoginView: View {
     @State var displayError = false
     @ObservedObject var loginViewModel = LoginViewModel()
     @State var keepMeLogin = false
-    @Binding var loginSuccessful: Bool
     
     var body: some View {
         NavigationStack {
             ZStack {
+                
                 Color("BackgroundOrange")
                     .ignoresSafeArea()
+                
                 VStack(spacing: 32) {
                     Image("porsche")
                         .resizable()
@@ -87,7 +88,7 @@ struct LoginView: View {
                             return
                         }
                         
-                        loginSuccessful = true
+                        UserRepository.shared.login()
                     })
                     .background(.black)
                     .cornerRadius(8)
@@ -115,6 +116,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(loginSuccessful: .constant(false))
+        LoginView()
     }
 }

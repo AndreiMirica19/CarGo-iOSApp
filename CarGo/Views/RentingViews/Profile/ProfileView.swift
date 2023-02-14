@@ -15,7 +15,6 @@ struct ProfileView: View {
     @State var isRoot = false
     @State var viewProfileDetails = false
     @EnvironmentObject var profileViewModel: ProfileViewModel
-    @Binding var loginSuccessful: Bool
     
     var body: some View {
         List {
@@ -90,8 +89,7 @@ struct ProfileView: View {
             }
             
             Button {
-                UserDefaults.standard.removeObject(forKey: "userId")
-                loginSuccessful = false
+                UserRepository.shared.logout()
             } label: {
                 Text("Logout")
                     .foregroundColor(.red)
@@ -106,6 +104,6 @@ struct ProfileView: View {
 
 struct PorfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView(loginSuccessful: .constant(false))
+        ProfileView()
     }
 }

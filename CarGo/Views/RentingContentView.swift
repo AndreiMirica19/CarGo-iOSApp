@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RentingContentView: View {
-    @Binding var loginSuccessful: Bool
+
     var body: some View {
         TabView {
             
@@ -27,7 +27,7 @@ struct RentingContentView: View {
                     Label("Bookings", systemImage: "calendar.circle")
                 }
             
-            ProfileContentView(loginSuccessful: $loginSuccessful)
+            ProfileContentView()
                 .tabItem {
                     Label("Profile", systemImage: "person.circle")
                 }
@@ -37,6 +37,6 @@ struct RentingContentView: View {
 
 struct RentingContentView_Previews: PreviewProvider {
     static var previews: some View {
-        RentingContentView(loginSuccessful: .constant(false))
+        RentingContentView()
     }
 }
