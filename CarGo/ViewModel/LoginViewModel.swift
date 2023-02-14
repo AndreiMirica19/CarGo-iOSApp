@@ -19,13 +19,15 @@ class LoginViewModel: ObservableObject {
             DispatchQueue.main.async {
                 self.response = response
                 
+                guard let userData = response.0 else {
+                    return
+                }
+                
                 if keepLogedIn {
-                    guard let userData = response.0 else {
-                        return
-                    }
-                    
                     UserDefaults.standard.set(userData.id, forKey: "userId")
                 }
+                
+                UserRepository.userId = userData.id
             }
         }
     }
