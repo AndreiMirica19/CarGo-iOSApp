@@ -11,6 +11,8 @@ struct ProfileContentView: View {
     @ObservedObject var router = Router<ProfilePaths>()
     @ObservedObject var profileViewModel = ProfileViewModel()
     @Binding var loginSuccessful: Bool
+    @State var displayError = false
+    @State var errorMessage = ""
 
     var body: some View {
         NavigationStack(path: $router.paths) {
@@ -33,12 +35,23 @@ struct ProfileContentView: View {
                 }
                 .environmentObject(router)
                 .environmentObject(profileViewModel)
+                .onReceive(profileViewModel.$response) { response in
+                    if let errorResponse = response.1 {
+                        displayError = true
+                        errorMessage = errorResponse.getErrorMessage()
+                    }
+                }
+                .alert(errorMessage, isPresented: $displayError) {
+                    Button("Ok", role: .cancel) {
+                    }
+                }
         }
     }
     
     init(loginSuccessful: Binding<Bool>) {
         _loginSuccessful = loginSuccessful
         profileViewModel.userInfo()
+        profileViewModel.accountInfo()
     }
 }
 

@@ -10,7 +10,7 @@ import Foundation
 class LoginViewModel: ObservableObject {
     let userRepository = UserRepository()
     
-    @Published var response: (LoginDTO?, NetworkError?) = (nil, nil)
+    @Published var response: (UserDTO?, NetworkError?) = (nil, nil)
     
     func login(loginData: LoginData, keepLogedIn: Bool) {
         Task {

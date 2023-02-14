@@ -14,7 +14,7 @@ struct ProfileDetails: View {
     
     var body: some View {
             VStack {
-                if let userInfo = profileViewModel.response.0 {
+                if let userInfo = profileViewModel.response.0, let accountInfo = profileViewModel.accountResponse.0 {
                     List {
                         Section {
                             HStack {
@@ -25,7 +25,7 @@ struct ProfileDetails: View {
                                         .frame(width: 128, height: 128)
                                         .clipShape(Circle())
                                     
-                                    Text(userInfo.name)
+                                    Text(accountInfo.name)
                                         .font(.title)
                                         .fontWeight(.bold)
                                 }
@@ -84,6 +84,7 @@ struct ProfileDetails: View {
             }
             .onAppear {
                 profileViewModel.userInfo()
+                profileViewModel.accountInfo()
             }
         }
 }

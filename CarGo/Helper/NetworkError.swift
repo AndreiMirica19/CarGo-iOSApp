@@ -13,6 +13,7 @@ enum NetworkError: Error {
     case unexpectedError
     case jsonDecoder
     case invalidAccount
+    case serverDown
     
     func getErrorMessage() -> String {
         switch self {
@@ -22,6 +23,8 @@ enum NetworkError: Error {
             return "Data can't be decoded"
         case .invalidAccount:
             return "Invalid email/password"
+        case .serverDown:
+            return "Could not connect to the server.Please try again later"
         }
     }
 }

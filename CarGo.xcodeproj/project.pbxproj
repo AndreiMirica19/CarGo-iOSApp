@@ -29,11 +29,14 @@
 		2E6353262976A17F0016EC6E /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6353252976A17F0016EC6E /* LoginData.swift */; };
 		2E6353282976A2210016EC6E /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6353272976A2210016EC6E /* LoginProtocol.swift */; };
 		2E63532A2976A25C0016EC6E /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6353292976A25C0016EC6E /* LoginService.swift */; };
-		2E63532E2976A3CA0016EC6E /* LoginDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E63532D2976A3CA0016EC6E /* LoginDTO.swift */; };
+		2E63532E2976A3CA0016EC6E /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E63532D2976A3CA0016EC6E /* UserDTO.swift */; };
 		2E7205BD29964DEC006AED35 /* ProfileContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7205BC29964DEC006AED35 /* ProfileContentView.swift */; };
 		2E7205BF29964E22006AED35 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7205BE29964E22006AED35 /* Router.swift */; };
 		2E7205C12996759F006AED35 /* HowCarGoWorks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7205C02996759F006AED35 /* HowCarGoWorks.swift */; };
 		2E7205C3299677DD006AED35 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7205C2299677DD006AED35 /* Number.swift */; };
+		2E76413E299BA9A60016E941 /* ChangeEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76413D299BA9A60016E941 /* ChangeEmail.swift */; };
+		2E764140299BBC040016E941 /* ChangeEmailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76413F299BBC040016E941 /* ChangeEmailProtocol.swift */; };
+		2E764142299BBC520016E941 /* ChangeEmailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E764141299BBC520016E941 /* ChangeEmailService.swift */; };
 		2E91E94B2981713C00B70C4B /* RentingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91E94A2981713C00B70C4B /* RentingContentView.swift */; };
 		2E91E94E298171DA00B70C4B /* SearchCarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91E94D298171DA00B70C4B /* SearchCarsView.swift */; };
 		2E91E950298171EC00B70C4B /* FavoriteCarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91E94F298171EC00B70C4B /* FavoriteCarsView.swift */; };
@@ -42,6 +45,9 @@
 		2EA0D8BB2976CC9F005DE1D9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA0D8BA2976CC9F005DE1D9 /* LoginViewModel.swift */; };
 		2EAB174D2980051C001A153F /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAB174C2980051C001A153F /* ErrorResponse.swift */; };
 		2EBC7017299A0BA600084A48 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBC7016299A0BA600084A48 /* UserRepository.swift */; };
+		2EBC7019299A708B00084A48 /* AccountInfoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBC7018299A708B00084A48 /* AccountInfoProtocol.swift */; };
+		2EBC702E299A714000084A48 /* AccountInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBC702D299A714000084A48 /* AccountInfoService.swift */; };
+		2EBC7031299A7EEC00084A48 /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBC7030299A7EEC00084A48 /* AccountInfo.swift */; };
 		2ECBAF472973FA90001FE86C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBAF462973FA90001FE86C /* RegisterViewModel.swift */; };
 		2ED414A62994DAA4008B5356 /* UserDetailsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED414A52994DAA4008B5356 /* UserDetailsData.swift */; };
 		2ED414A82994DB3C008B5356 /* EditProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED414A72994DB3C008B5356 /* EditProfileProtocol.swift */; };
@@ -109,11 +115,14 @@
 		2E6353252976A17F0016EC6E /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 		2E6353272976A2210016EC6E /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
 		2E6353292976A25C0016EC6E /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
-		2E63532D2976A3CA0016EC6E /* LoginDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDTO.swift; sourceTree = "<group>"; };
+		2E63532D2976A3CA0016EC6E /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
 		2E7205BC29964DEC006AED35 /* ProfileContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContentView.swift; sourceTree = "<group>"; };
 		2E7205BE29964E22006AED35 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		2E7205C02996759F006AED35 /* HowCarGoWorks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowCarGoWorks.swift; sourceTree = "<group>"; };
 		2E7205C2299677DD006AED35 /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
+		2E76413D299BA9A60016E941 /* ChangeEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmail.swift; sourceTree = "<group>"; };
+		2E76413F299BBC040016E941 /* ChangeEmailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailProtocol.swift; sourceTree = "<group>"; };
+		2E764141299BBC520016E941 /* ChangeEmailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailService.swift; sourceTree = "<group>"; };
 		2E91E94A2981713C00B70C4B /* RentingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentingContentView.swift; sourceTree = "<group>"; };
 		2E91E94D298171DA00B70C4B /* SearchCarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCarsView.swift; sourceTree = "<group>"; };
 		2E91E94F298171EC00B70C4B /* FavoriteCarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCarsView.swift; sourceTree = "<group>"; };
@@ -122,6 +131,9 @@
 		2EA0D8BA2976CC9F005DE1D9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		2EAB174C2980051C001A153F /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		2EBC7016299A0BA600084A48 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		2EBC7018299A708B00084A48 /* AccountInfoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoProtocol.swift; sourceTree = "<group>"; };
+		2EBC702D299A714000084A48 /* AccountInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoService.swift; sourceTree = "<group>"; };
+		2EBC7030299A7EEC00084A48 /* AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
 		2ECBAF462973FA90001FE86C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		2ED414A52994DAA4008B5356 /* UserDetailsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsData.swift; sourceTree = "<group>"; };
 		2ED414A72994DB3C008B5356 /* EditProfileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileProtocol.swift; sourceTree = "<group>"; };
@@ -188,6 +200,10 @@
 				2ED414A92994DBA2008B5356 /* EditProfileService.swift */,
 				2ED414B129951CA2008B5356 /* UserInfoProtocol.swift */,
 				2ED414B329951D40008B5356 /* UserInfoService.swift */,
+				2EBC7018299A708B00084A48 /* AccountInfoProtocol.swift */,
+				2EBC702D299A714000084A48 /* AccountInfoService.swift */,
+				2E76413F299BBC040016E941 /* ChangeEmailProtocol.swift */,
+				2E764141299BBC520016E941 /* ChangeEmailService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -306,6 +322,15 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		2EBC702F299A7ED500084A48 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				2EBC7030299A7EEC00084A48 /* AccountInfo.swift */,
+				2E76413D299BA9A60016E941 /* ChangeEmail.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 		2ECBAF452973FA7C001FE86C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,7 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				2EDFD6E929755F0D00561C6E /* Response.swift */,
-				2E63532D2976A3CA0016EC6E /* LoginDTO.swift */,
+				2E63532D2976A3CA0016EC6E /* UserDTO.swift */,
 				2EAB174C2980051C001A153F /* ErrorResponse.swift */,
 			);
 			path = DTO;
@@ -345,6 +370,7 @@
 		2EF1CB17298BE2C0009F8626 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				2EBC702F299A7ED500084A48 /* Account */,
 				2E91E9532981720F00B70C4B /* ProfileView.swift */,
 				2E131541298B8DB8008ED79D /* ProfileDetails.swift */,
 				2EF1CB18298BE2EB009F8626 /* EditProfile.swift */,
@@ -614,13 +640,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E7205BF29964E22006AED35 /* Router.swift in Sources */,
+				2EBC7031299A7EEC00084A48 /* AccountInfo.swift in Sources */,
 				2EBC7017299A0BA600084A48 /* UserRepository.swift in Sources */,
 				2ED414A82994DB3C008B5356 /* EditProfileProtocol.swift in Sources */,
 				2E2119B12950A54D0009A0A4 /* SignUpView.swift in Sources */,
 				2E16785E297417E600184CB9 /* RegisterProtocol.swift in Sources */,
 				2E7205C12996759F006AED35 /* HowCarGoWorks.swift in Sources */,
 				2E2119B32950B2620009A0A4 /* CustomTextView.swift in Sources */,
+				2EBC7019299A708B00084A48 /* AccountInfoProtocol.swift in Sources */,
 				2E7205BD29964DEC006AED35 /* ProfileContentView.swift in Sources */,
+				2E764142299BBC520016E941 /* ChangeEmailService.swift in Sources */,
 				2EDFD6EA29755F0D00561C6E /* Response.swift in Sources */,
 				2E91E952298171FE00B70C4B /* MyBookingsView.swift in Sources */,
 				2EF1CB1C298D442E009F8626 /* MultiSelector.swift in Sources */,
@@ -630,6 +659,7 @@
 				2E19CE96299397EE00499162 /* PhotoCaptureView.swift in Sources */,
 				2E1678602974180B00184CB9 /* RegisterService.swift in Sources */,
 				2E91E9542981720F00B70C4B /* ProfileView.swift in Sources */,
+				2E76413E299BA9A60016E941 /* ChangeEmail.swift in Sources */,
 				2E2119BA2950C02E0009A0A4 /* StringExtension.swift in Sources */,
 				2E2119B52950B5130009A0A4 /* PasswordTextView.swift in Sources */,
 				2E131542298B8DB8008ED79D /* ProfileDetails.swift in Sources */,
@@ -641,14 +671,16 @@
 				2E91E94B2981713C00B70C4B /* RentingContentView.swift in Sources */,
 				2E6353282976A2210016EC6E /* LoginProtocol.swift in Sources */,
 				2EE40790294F3C69005A6CCD /* WelcomeView.swift in Sources */,
-				2E63532E2976A3CA0016EC6E /* LoginDTO.swift in Sources */,
+				2E63532E2976A3CA0016EC6E /* UserDTO.swift in Sources */,
 				2E7205C3299677DD006AED35 /* Number.swift in Sources */,
 				2E16786629741B5000184CB9 /* RegisterData.swift in Sources */,
 				2E63532A2976A25C0016EC6E /* LoginService.swift in Sources */,
 				2E91E94E298171DA00B70C4B /* SearchCarsView.swift in Sources */,
+				2EBC702E299A714000084A48 /* AccountInfoService.swift in Sources */,
 				2E19CE9229937ECE00499162 /* CustomTextField.swift in Sources */,
 				2E167863297419DA00184CB9 /* NetworkError.swift in Sources */,
 				2ED414B02994E196008B5356 /* EditProfileViewModel.swift in Sources */,
+				2E764140299BBC040016E941 /* ChangeEmailProtocol.swift in Sources */,
 				2EF1CB1E298D46C2009F8626 /* Languages.swift in Sources */,
 				2ED414AC2994DC0D008B5356 /* ApiEndpoint.swift in Sources */,
 				2ED414AA2994DBA2008B5356 /* EditProfileService.swift in Sources */,

@@ -25,7 +25,13 @@ struct LoginService: LoginProtocol {
 
             return (data, nil)
         } catch {
-            return (nil, .invalidBody)
+            let errorCode = (error as NSError).code
+            switch errorCode {
+            case -1004:
+                return (nil, .serverDown)
+            default:
+                return (nil, .unexpectedError)
+            }
         }
     }
 }

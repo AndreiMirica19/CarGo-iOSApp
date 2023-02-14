@@ -35,6 +35,7 @@ struct LoginView: View {
                     
                     VStack {
                         CustomTextView(text: $email, imageName: "mail", placeHolder: "Email")
+                            .padding()
                             .padding(.horizontal)
                             .frame(maxWidth: 400)
                         
@@ -77,7 +78,7 @@ struct LoginView: View {
                         Text(errorMessage)
                     })
                     .onReceive(loginViewModel.$response, perform: { response in
-                        guard let userData = response.0 else {
+                        guard response.0 != nil else {
                             guard let error = response.1 else {
                                 return
                             }

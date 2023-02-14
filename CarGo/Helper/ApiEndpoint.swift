@@ -14,4 +14,6 @@ enum ApiEndpoint: String {
     case login = "/login"
     case editProfile = "/editUserDetails"
     case userDetails = "/userDetails"
+    case accountInfo = "/accountInfo"
+    case changeEmail = "/changeEmail"
 }

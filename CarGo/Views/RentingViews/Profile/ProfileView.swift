@@ -31,8 +31,8 @@ struct ProfileView: View {
                     }
                     
                     VStack {
-                        if let userInfo = profileViewModel.response.0 {
-                            Text(userInfo.name)
+                        if let accountInfo = profileViewModel.accountResponse.0 {
+                            Text(accountInfo.name)
                                 .font(.headline)
                                 .fontWeight(.bold)
                             
@@ -52,7 +52,7 @@ struct ProfileView: View {
                     }
                 }
                 
-                NavigationLink(destination: EmptyView()) {
+                NavigationLink(destination: AccountInfo().environmentObject(profileViewModel)) {
                     HStack {
                         Image(systemName: "person")
                         Text("Account")
@@ -98,6 +98,7 @@ struct ProfileView: View {
             }
             .onAppear {
                 profileViewModel.userInfo()
+                profileViewModel.accountInfo()
             }
         }
     }

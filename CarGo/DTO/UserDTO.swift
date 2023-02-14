@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LoginDTO: Decodable, Equatable {
+struct UserDTO: Decodable, Equatable {
     let email: String
     let id: String
     let password: String

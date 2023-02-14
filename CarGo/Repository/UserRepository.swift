@@ -9,8 +9,8 @@ import Foundation
 
 class UserRepository {
     static var userId = ""
-        
-    func login(loginData: LoginData) async throws -> (LoginDTO?, NetworkError?) {
+    
+    func login(loginData: LoginData) async throws -> (UserDTO?, NetworkError?) {
         do {
             let(data, error) = try await LoginService.login(loginData: loginData)
             
@@ -23,7 +23,7 @@ class UserRepository {
             }
             
             do {
-                let response = try JSONDecoder().decode(LoginDTO.self, from: data)
+                let response = try JSONDecoder().decode(UserDTO.self, from: data)
                 return (response, nil)
             } catch {
                 do {
@@ -38,12 +38,12 @@ class UserRepository {
     
     func register(registerData: RegisterData) async throws -> (Response?, NetworkError?) {
         do {
-          let (data, error) = try await RegisterService.register(registerData: registerData)
+            let (data, error) = try await RegisterService.register(registerData: registerData)
             guard let data = data else {
                 guard let error = error else {
                     return (nil, .unexpectedError)
                 }
-
+                
                 return (nil, .unexpectedError)
             }
             do {
@@ -109,4 +109,48 @@ class UserRepository {
             }
         }
     }
+    
+    func accountInfo() async throws -> (UserDTO?, NetworkError?) {
+        do {
+            let(data, error) = try await AccountInfoService.accountInfo(userId: UserRepository.userId)
+            
+            guard let data = data else {
+                guard let error = error else {
+                    return (nil, .unexpectedError)
+                }
+                
+                return (nil, error)
+            }
+            
+            do {
+                let response = try JSONDecoder().decode(UserDTO.self, from: data)
+                return (response, nil)
+            } catch {
+                do {
+                    _ = try JSONDecoder().decode(ErrorResponse.self, from: data)
+                    return (nil, .invalidAccount)
+                } catch {
+                    return (nil, .jsonDecoder)
+                }
+            }
+        }
+    }
+    
+    func changeEmail(email: String) async throws -> (Response?, NetworkError?) {
+        let (data, error) = try await ChangeEmailService.changeEmail(userId: UserRepository.userId, email: email)
+        guard let data = data else {
+            guard let error = error else {
+                return (nil, .unexpectedError)
+            }
+            
+            return (nil, error)
+        }
+        do {
+            let response = try JSONDecoder().decode(Response.self, from: data)
+            return (response, nil)
+        } catch {
+            return (nil, .jsonDecoder)
+        }
+    }
+    
 }

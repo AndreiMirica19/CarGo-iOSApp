@@ -21,7 +21,7 @@ struct CustomTextView: View {
         }
         .background(.white)
         .cornerRadius(50)
-        .padding()
+
     }
 }
 
