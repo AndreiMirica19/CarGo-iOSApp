@@ -10,6 +10,7 @@
 		2E0C3D2F299CAE0500B67972 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C3D2E299CAE0500B67972 /* ChangePassword.swift */; };
 		2E0C3D31299CBCA100B67972 /* ChangePasswordProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C3D30299CBCA100B67972 /* ChangePasswordProtocol.swift */; };
 		2E0C3D33299CBCE300B67972 /* ChangePasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C3D32299CBCE300B67972 /* ChangePasswordService.swift */; };
+		2E0C3D38299CC50B00B67972 /* HTTPURLResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C3D37299CC50B00B67972 /* HTTPURLResponseExtension.swift */; };
 		2E131540298AB04C008ED79D /* TermsAndConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E13153F298AB04C008ED79D /* TermsAndConditions.swift */; };
 		2E131542298B8DB8008ED79D /* ProfileDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E131541298B8DB8008ED79D /* ProfileDetails.swift */; };
 		2E16785E297417E600184CB9 /* RegisterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E16785D297417E600184CB9 /* RegisterProtocol.swift */; };
@@ -99,6 +100,7 @@
 		2E0C3D2E299CAE0500B67972 /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
 		2E0C3D30299CBCA100B67972 /* ChangePasswordProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordProtocol.swift; sourceTree = "<group>"; };
 		2E0C3D32299CBCE300B67972 /* ChangePasswordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordService.swift; sourceTree = "<group>"; };
+		2E0C3D37299CC50B00B67972 /* HTTPURLResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPURLResponseExtension.swift; sourceTree = "<group>"; };
 		2E13153F298AB04C008ED79D /* TermsAndConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditions.swift; sourceTree = "<group>"; };
 		2E131541298B8DB8008ED79D /* ProfileDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetails.swift; sourceTree = "<group>"; };
 		2E16785D297417E600184CB9 /* RegisterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProtocol.swift; sourceTree = "<group>"; };
@@ -201,17 +203,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2E16785A2974152700184CB9 /* Service */ = {
+		2E0C3D34299CC28400B67972 /* AuthentificationServices */ = {
 			isa = PBXGroup;
 			children = (
 				2E16785D297417E600184CB9 /* RegisterProtocol.swift */,
 				2E16785F2974180B00184CB9 /* RegisterService.swift */,
 				2E6353272976A2210016EC6E /* LoginProtocol.swift */,
 				2E6353292976A25C0016EC6E /* LoginService.swift */,
+			);
+			path = AuthentificationServices;
+			sourceTree = "<group>";
+		};
+		2E0C3D35299CC2AE00B67972 /* UserServices */ = {
+			isa = PBXGroup;
+			children = (
 				2ED414A72994DB3C008B5356 /* EditProfileProtocol.swift */,
 				2ED414A92994DBA2008B5356 /* EditProfileService.swift */,
 				2ED414B129951CA2008B5356 /* UserInfoProtocol.swift */,
 				2ED414B329951D40008B5356 /* UserInfoService.swift */,
+			);
+			path = UserServices;
+			sourceTree = "<group>";
+		};
+		2E0C3D36299CC2FE00B67972 /* AccountServices */ = {
+			isa = PBXGroup;
+			children = (
 				2EBC7018299A708B00084A48 /* AccountInfoProtocol.swift */,
 				2EBC702D299A714000084A48 /* AccountInfoService.swift */,
 				2E76413F299BBC040016E941 /* ChangeEmailProtocol.swift */,
@@ -220,6 +236,16 @@
 				2E764147299BDF6E0016E941 /* ChangePhoneNumberService.swift */,
 				2E0C3D30299CBCA100B67972 /* ChangePasswordProtocol.swift */,
 				2E0C3D32299CBCE300B67972 /* ChangePasswordService.swift */,
+			);
+			path = AccountServices;
+			sourceTree = "<group>";
+		};
+		2E16785A2974152700184CB9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2E0C3D36299CC2FE00B67972 /* AccountServices */,
+				2E0C3D35299CC2AE00B67972 /* UserServices */,
+				2E0C3D34299CC28400B67972 /* AuthentificationServices */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -231,6 +257,7 @@
 				2EF1CB1D298D46C2009F8626 /* Languages.swift */,
 				2ED414AB2994DC0D008B5356 /* ApiEndpoint.swift */,
 				2E7205BE29964E22006AED35 /* Router.swift */,
+				2E0C3D37299CC50B00B67972 /* HTTPURLResponseExtension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -695,6 +722,7 @@
 				2E0C3D33299CBCE300B67972 /* ChangePasswordService.swift in Sources */,
 				2E16786629741B5000184CB9 /* RegisterData.swift in Sources */,
 				2E764144299BDE0F0016E941 /* ChangePhoneNumber.swift in Sources */,
+				2E0C3D38299CC50B00B67972 /* HTTPURLResponseExtension.swift in Sources */,
 				2E63532A2976A25C0016EC6E /* LoginService.swift in Sources */,
 				2E0C3D31299CBCA100B67972 /* ChangePasswordProtocol.swift in Sources */,
 				2E91E94E298171DA00B70C4B /* SearchCarsView.swift in Sources */,

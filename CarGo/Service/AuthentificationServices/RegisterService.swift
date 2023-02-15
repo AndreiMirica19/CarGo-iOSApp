@@ -12,6 +12,8 @@ struct RegisterService: RegisterProtocol {
         guard let url = URL(string: "http://localhost:8080/register") else {
             return (nil, .invalidURL )
         }
+        
+        var networkError: NetworkError?
         var request = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
@@ -19,14 +21,19 @@ struct RegisterService: RegisterProtocol {
         do {
             let jsonData = try JSONEncoder().encode(registerData)
             request.httpBody = jsonData
-            let (data, _) = try await URLSession.shared.data(for: request)
+            let (data, response) = try await URLSession.shared.data(for: request)
             
-            return (data, nil)
+            if let httpResponse = response as? HTTPURLResponse {
+                networkError = httpResponse.toNetworkError()
+              }
+
+            return (data, networkError)
         } catch {
             let errorCode = (error as NSError).code
             switch errorCode {
             case -1004:
                 return (nil, .serverDown)
+                
             default:
                 return (nil, .unexpectedError)
             }
