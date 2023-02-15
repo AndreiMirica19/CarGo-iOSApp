@@ -50,7 +50,7 @@ struct HowCarGoWorks: View {
             
             HStack {
                 Number(number: "3")
-                VStack() {
+                VStack {
                     Text("Hit the road")
                         .font(.headline)
                         .fontWeight(.semibold)

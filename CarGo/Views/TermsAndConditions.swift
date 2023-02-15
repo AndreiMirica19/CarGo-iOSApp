@@ -41,7 +41,6 @@ struct TermsAndConditions: View {
                     Text("Renters are responsible for the safe and proper operation of the vehicles rented through the Services, and for returning the vehicles in the same condition as when received, reasonable wear and tear excepted. Renters must comply with all applicable laws and regulations while using the vehicles, and must not engage in any illegal or dangerous activities while using the vehicles. Renters are also responsible for any damage to or loss of the vehicles, up to the amount specified in the App.")
                 }
                 
-  
                 Group {
                     Text("Fees and Payments:")
                         .font(.headline)
@@ -64,7 +63,6 @@ struct TermsAndConditions: View {
                     Text("Indemnification:")
                         .font(.headline)
                         .padding(.top)
-                    
                     
                     Text("You agree to indemnify, defend and hold harmless the App and its affiliates, and their respective officers, directors, agents, and employees, from any and all claims, liabilities, damages, and expenses, including reasonable attorneys' fees.")
                 }

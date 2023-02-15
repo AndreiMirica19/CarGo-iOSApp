@@ -10,7 +10,9 @@ struct MultiSelectionView<Selectable: Identifiable & Hashable>: View {
     var body: some View {
         List {
             ForEach(options) { selectable in
-                Button(action: { toggleSelection(selectable: selectable) }) {
+                Button {
+                    toggleSelection(selectable: selectable)
+                } label: {
                     HStack {
                         Text(optionToString(selectable)).foregroundColor(.black)
 

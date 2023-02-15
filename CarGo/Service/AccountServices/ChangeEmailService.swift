@@ -41,6 +41,7 @@ struct ChangeEmailService: ChangeEmailProtocol {
             switch errorCode {
             case -1004:
                 return (nil, .serverDown)
+                
             default:
                 return (nil, .unexpectedError)
             }
