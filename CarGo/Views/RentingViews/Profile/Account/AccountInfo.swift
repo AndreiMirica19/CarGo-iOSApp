@@ -49,7 +49,7 @@ struct AccountInfo: View {
                     }
                 }
                 .onReceive(profileViewModel.$deleteAccountResonse) { apiResponse in
-                    guard let _ = apiResponse.0 else {
+                    guard apiResponse.0 != nil else {
                         
                         guard let error = apiResponse.1 else {
                             return

@@ -58,7 +58,7 @@ struct ProfileView: View {
                     }
                 }
 
-                NavigationLink(destination: EmptyView()) {
+                NavigationLink(destination: HowCarGoWorks()) {
                     HStack {
                         Image(systemName: "car")
                         Text("How CarGo works")
