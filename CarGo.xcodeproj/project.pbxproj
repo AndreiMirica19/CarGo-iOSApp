@@ -11,6 +11,8 @@
 		2E0C3D31299CBCA100B67972 /* ChangePasswordProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C3D30299CBCA100B67972 /* ChangePasswordProtocol.swift */; };
 		2E0C3D33299CBCE300B67972 /* ChangePasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C3D32299CBCE300B67972 /* ChangePasswordService.swift */; };
 		2E0C3D38299CC50B00B67972 /* HTTPURLResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C3D37299CC50B00B67972 /* HTTPURLResponseExtension.swift */; };
+		2E0C3D3A299CCD9D00B67972 /* DeleteAccountProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C3D39299CCD9D00B67972 /* DeleteAccountProtocol.swift */; };
+		2E0C3D3C299CCE0F00B67972 /* DeleteAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C3D3B299CCE0F00B67972 /* DeleteAccountService.swift */; };
 		2E131540298AB04C008ED79D /* TermsAndConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E13153F298AB04C008ED79D /* TermsAndConditions.swift */; };
 		2E131542298B8DB8008ED79D /* ProfileDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E131541298B8DB8008ED79D /* ProfileDetails.swift */; };
 		2E16785E297417E600184CB9 /* RegisterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E16785D297417E600184CB9 /* RegisterProtocol.swift */; };
@@ -101,6 +103,8 @@
 		2E0C3D30299CBCA100B67972 /* ChangePasswordProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordProtocol.swift; sourceTree = "<group>"; };
 		2E0C3D32299CBCE300B67972 /* ChangePasswordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordService.swift; sourceTree = "<group>"; };
 		2E0C3D37299CC50B00B67972 /* HTTPURLResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPURLResponseExtension.swift; sourceTree = "<group>"; };
+		2E0C3D39299CCD9D00B67972 /* DeleteAccountProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountProtocol.swift; sourceTree = "<group>"; };
+		2E0C3D3B299CCE0F00B67972 /* DeleteAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountService.swift; sourceTree = "<group>"; };
 		2E13153F298AB04C008ED79D /* TermsAndConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditions.swift; sourceTree = "<group>"; };
 		2E131541298B8DB8008ED79D /* ProfileDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetails.swift; sourceTree = "<group>"; };
 		2E16785D297417E600184CB9 /* RegisterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProtocol.swift; sourceTree = "<group>"; };
@@ -236,6 +240,8 @@
 				2E764147299BDF6E0016E941 /* ChangePhoneNumberService.swift */,
 				2E0C3D30299CBCA100B67972 /* ChangePasswordProtocol.swift */,
 				2E0C3D32299CBCE300B67972 /* ChangePasswordService.swift */,
+				2E0C3D39299CCD9D00B67972 /* DeleteAccountProtocol.swift */,
+				2E0C3D3B299CCE0F00B67972 /* DeleteAccountService.swift */,
 			);
 			path = AccountServices;
 			sourceTree = "<group>";
@@ -722,6 +728,7 @@
 				2E0C3D33299CBCE300B67972 /* ChangePasswordService.swift in Sources */,
 				2E16786629741B5000184CB9 /* RegisterData.swift in Sources */,
 				2E764144299BDE0F0016E941 /* ChangePhoneNumber.swift in Sources */,
+				2E0C3D3C299CCE0F00B67972 /* DeleteAccountService.swift in Sources */,
 				2E0C3D38299CC50B00B67972 /* HTTPURLResponseExtension.swift in Sources */,
 				2E63532A2976A25C0016EC6E /* LoginService.swift in Sources */,
 				2E0C3D31299CBCA100B67972 /* ChangePasswordProtocol.swift in Sources */,
@@ -731,6 +738,7 @@
 				2E167863297419DA00184CB9 /* NetworkError.swift in Sources */,
 				2ED414B02994E196008B5356 /* EditProfileViewModel.swift in Sources */,
 				2E764140299BBC040016E941 /* ChangeEmailProtocol.swift in Sources */,
+				2E0C3D3A299CCD9D00B67972 /* DeleteAccountProtocol.swift in Sources */,
 				2EF1CB1E298D46C2009F8626 /* Languages.swift in Sources */,
 				2ED414AC2994DC0D008B5356 /* ApiEndpoint.swift in Sources */,
 				2ED414AA2994DBA2008B5356 /* EditProfileService.swift in Sources */,

@@ -9,6 +9,11 @@ import SwiftUI
 
 struct AccountInfo: View {
     @EnvironmentObject var profileViewModel: ProfileViewModel
+    @State var deleteAccountAlert = false
+    @State var deleteSuccessfulAlert = false
+    @State var errorAlert = false
+    @State var errorMessage = ""
+    
     var body: some View {
         List {
             if let accountInfo = profileViewModel.accountResponse.0 {
@@ -33,10 +38,40 @@ struct AccountInfo: View {
                 }
                 
                 Button {
-                    
+                    deleteAccountAlert = true
                 } label: {
                     Text("Remove account")
                         .foregroundColor(.red)
+                }
+                .alert("Are you sure you want to delete your account?", isPresented: $deleteAccountAlert) {
+                    Button("Delete account", role: .destructive) {
+                        profileViewModel.deleteAccount()
+                    }
+                }
+                .onReceive(profileViewModel.$deleteAccountResonse) { apiResponse in
+                    guard let _ = apiResponse.0 else {
+                        
+                        guard let error = apiResponse.1 else {
+                            return
+                        }
+                        
+                        errorAlert = true
+                        errorMessage = error.getErrorMessage()
+                        return
+                    }
+                    
+                    deleteSuccessfulAlert = true
+                }
+                .alert(errorMessage, isPresented: $errorAlert) {
+                    Button("Ok", role: .cancel) {
+                        
+                    }
+                }
+                
+                .alert("Delete was succesfully done.You will be loged out", isPresented: $deleteSuccessfulAlert) {
+                    Button("Ok", role: .cancel) {
+                        UserRepository.shared.logout()
+                    }
                 }
             }
         }

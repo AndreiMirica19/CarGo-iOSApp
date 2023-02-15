@@ -30,8 +30,8 @@
             filePath = "CarGo/Views/SignUpView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -901,8 +901,8 @@
             filePath = "CarGo/ViewModel/ProfileViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "accountInfo()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1055,7 +1055,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "16FA42C7-F3D2-43C3-BEBD-618AA8954960"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CarGo/Repository/UserRepository.swift"
@@ -1285,8 +1285,8 @@
             filePath = "CarGo/ViewModel/ProfileViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "changePassword(password:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1353,6 +1353,133 @@
             endingLineNumber = "23"
             landmarkName = "accountInfo(userId:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FA4633AB-7CB1-417A-830B-753C5AADAA14"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarGo/Repository/UserRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "accountInfo()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FA4633AB-7CB1-417A-830B-753C5AADAA14 - e4f0da3106b0b6fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for CarGo.UserRepository.accountInfo() async throws -&gt; (Swift.Optional&lt;CarGo.UserDTO&gt;, Swift.Optional&lt;CarGo.NetworkError&gt;)"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/Repository/UserRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "FA4633AB-7CB1-417A-830B-753C5AADAA14 - f1650eb77ad14fd5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for CarGo.UserRepository.accountInfo() async throws -&gt; (Swift.Optional&lt;CarGo.UserDTO&gt;, Swift.Optional&lt;CarGo.NetworkError&gt;)"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/Repository/UserRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "FA4633AB-7CB1-417A-830B-753C5AADAA14 - 633cdb873ff6d0f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for CarGo.UserRepository.accountInfo() async throws -&gt; (Swift.Optional&lt;CarGo.UserDTO&gt;, Swift.Optional&lt;CarGo.NetworkError&gt;)"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/Repository/UserRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE21E1CB-09B1-4815-9E12-12D9446AA345"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarGo/Repository/UserRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "accountInfo()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "720460E6-9131-4F49-9B3D-C48BB45F7335"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarGo/Repository/UserRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "userInfo()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7EDAE995-6199-48B4-9A1C-C2F5E604506A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarGo/Service/AccountServices/DeleteAccountService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "deleteAccount(userId:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "18DE9E12-F315-4DAC-A15B-66F31A937522"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarGo/Service/AccountServices/DeleteAccountService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "deleteAccount(userId:)"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

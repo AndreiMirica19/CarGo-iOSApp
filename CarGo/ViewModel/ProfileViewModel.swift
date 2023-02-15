@@ -14,6 +14,7 @@ class ProfileViewModel: ObservableObject {
     @Published var changeEmailResponse: (Response?, NetworkError?) = (nil, nil)
     @Published var changePhoneNumberResponse: (Response?, NetworkError?) = (nil, nil)
     @Published var changePasswordResponse: (Response?, NetworkError?) = (nil, nil)
+    @Published var deleteAccountResonse: (Response?, NetworkError?) = (nil, nil)
     
     let userRepository = UserRepository()
     
@@ -71,4 +72,16 @@ class ProfileViewModel: ObservableObject {
             }
         }
     }
+    
+    func deleteAccount() {
+        Task {
+            let response = try await userRepository.deleteAccount()
+            
+            DispatchQueue.main.async {
+                self.deleteAccountResonse = response
+                
+            }
+        }
+    }
+    
 }

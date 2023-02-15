@@ -31,14 +31,19 @@ struct SignUpView: View {
                         Spacer(minLength: 16)
                         
                         CustomTextView(text: $name, imageName: "person", placeHolder: "Full name")
+                            .padding()
                         
                         CustomTextView(text: $email, imageName: "mail", placeHolder: "Email")
+                            .padding()
                         
                         CustomTextView(text: $phoneNumber, imageName: "phone", placeHolder: "Phone number").keyboardType(.numberPad)
+                            .padding()
                         
                         PasswordTextView(text: $password, placeHolder: "Password")
+                            .padding()
                         
                         PasswordTextView(text: $confirmPassword, placeHolder: "Confirm Password")
+                            .padding()
                         
                         HStack {
                             Image(systemName: agreeTerms ? "checkmark.square.fill" : "square")

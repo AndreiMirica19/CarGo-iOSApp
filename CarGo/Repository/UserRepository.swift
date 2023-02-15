@@ -211,4 +211,22 @@ class UserRepository: ObservableObject {
         }
     }
     
+    func deleteAccount() async throws -> (Response?, NetworkError?) {
+        let (data, error) = try await DeleteAccountService.deleteAccount(userId: userId)
+        
+        guard let data = data else {
+            guard let error = error else {
+                return (nil, .unexpectedError)
+            }
+            
+            return (nil, error)
+        }
+        do {
+            let response = try JSONDecoder().decode(Response.self, from: data)
+            return (response, nil)
+        } catch {
+            return (nil, .jsonDecoder)
+        }
+    }
+    
 }
