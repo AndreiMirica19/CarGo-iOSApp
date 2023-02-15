@@ -52,8 +52,8 @@ class UserRepository: ObservableObject {
                 return (response, nil)
             } catch {
                 do {
-                    _ = try JSONDecoder().decode(ErrorResponse.self, from: data)
-                    return (nil, .invalidAccount)
+                    let errorResponse = try JSONDecoder().decode(Response.self, from: data)
+                    return (nil, errorResponse.toNetworkError())
                 } catch {
                     return (nil, .jsonDecoder)
                 }
@@ -125,8 +125,13 @@ class UserRepository: ObservableObject {
                 return (response, nil)
             } catch {
                 do {
-                    _ = try JSONDecoder().decode(ErrorResponse.self, from: data)
-                    return (nil, .invalidAccount)
+                    let responseError = try JSONDecoder().decode(Response.self, from: data)
+                    
+                    if responseError.statusCode == 404 {
+                        return (nil, nil)
+                    }
+                    
+                    return (nil, responseError.toNetworkError())
                 } catch {
                     return (nil, .jsonDecoder)
                 }

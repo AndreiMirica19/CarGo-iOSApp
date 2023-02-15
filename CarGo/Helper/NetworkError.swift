@@ -19,6 +19,7 @@ enum NetworkError: Error {
     case forbidden
     case notfound
     case internalError
+    case encodeError
     
     func getErrorMessage() -> String {
         switch self {
@@ -30,7 +31,7 @@ enum NetworkError: Error {
             return "Invalid email/password"
         case .serverDown:
             return "Could not connect to the server.Please try again later"
-        case .badRequest, .unauthorized, .forbidden, .notfound, .internalError:
+        case .badRequest, .unauthorized, .forbidden, .notfound, .internalError, .encodeError:
             return "There are some problems with the request.Please try again later"
         }
     }
