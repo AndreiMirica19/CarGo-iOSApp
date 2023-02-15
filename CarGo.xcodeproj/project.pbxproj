@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E0C3D2F299CAE0500B67972 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C3D2E299CAE0500B67972 /* ChangePassword.swift */; };
+		2E0C3D31299CBCA100B67972 /* ChangePasswordProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C3D30299CBCA100B67972 /* ChangePasswordProtocol.swift */; };
+		2E0C3D33299CBCE300B67972 /* ChangePasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C3D32299CBCE300B67972 /* ChangePasswordService.swift */; };
 		2E131540298AB04C008ED79D /* TermsAndConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E13153F298AB04C008ED79D /* TermsAndConditions.swift */; };
 		2E131542298B8DB8008ED79D /* ProfileDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E131541298B8DB8008ED79D /* ProfileDetails.swift */; };
 		2E16785E297417E600184CB9 /* RegisterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E16785D297417E600184CB9 /* RegisterProtocol.swift */; };
@@ -93,6 +96,9 @@
 /* Begin PBXFileReference section */
 		0AE97BE8EB6C092F50BA3A7E /* Pods-CarGo-CarGoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarGo-CarGoUITests.release.xcconfig"; path = "Target Support Files/Pods-CarGo-CarGoUITests/Pods-CarGo-CarGoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1965C0BEDF433C762F6DB8EB /* Pods-CarGo-CarGoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarGo-CarGoUITests.debug.xcconfig"; path = "Target Support Files/Pods-CarGo-CarGoUITests/Pods-CarGo-CarGoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2E0C3D2E299CAE0500B67972 /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
+		2E0C3D30299CBCA100B67972 /* ChangePasswordProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordProtocol.swift; sourceTree = "<group>"; };
+		2E0C3D32299CBCE300B67972 /* ChangePasswordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordService.swift; sourceTree = "<group>"; };
 		2E13153F298AB04C008ED79D /* TermsAndConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditions.swift; sourceTree = "<group>"; };
 		2E131541298B8DB8008ED79D /* ProfileDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetails.swift; sourceTree = "<group>"; };
 		2E16785D297417E600184CB9 /* RegisterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProtocol.swift; sourceTree = "<group>"; };
@@ -212,6 +218,8 @@
 				2E764141299BBC520016E941 /* ChangeEmailService.swift */,
 				2E764145299BDF180016E941 /* ChangePhoneNumberProtocol.swift */,
 				2E764147299BDF6E0016E941 /* ChangePhoneNumberService.swift */,
+				2E0C3D30299CBCA100B67972 /* ChangePasswordProtocol.swift */,
+				2E0C3D32299CBCE300B67972 /* ChangePasswordService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -336,6 +344,7 @@
 				2EBC7030299A7EEC00084A48 /* AccountInfo.swift */,
 				2E76413D299BA9A60016E941 /* ChangeEmail.swift */,
 				2E764143299BDE0F0016E941 /* ChangePhoneNumber.swift */,
+				2E0C3D2E299CAE0500B67972 /* ChangePassword.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -683,9 +692,11 @@
 				2E63532E2976A3CA0016EC6E /* UserDTO.swift in Sources */,
 				2E764146299BDF180016E941 /* ChangePhoneNumberProtocol.swift in Sources */,
 				2E7205C3299677DD006AED35 /* Number.swift in Sources */,
+				2E0C3D33299CBCE300B67972 /* ChangePasswordService.swift in Sources */,
 				2E16786629741B5000184CB9 /* RegisterData.swift in Sources */,
 				2E764144299BDE0F0016E941 /* ChangePhoneNumber.swift in Sources */,
 				2E63532A2976A25C0016EC6E /* LoginService.swift in Sources */,
+				2E0C3D31299CBCA100B67972 /* ChangePasswordProtocol.swift in Sources */,
 				2E91E94E298171DA00B70C4B /* SearchCarsView.swift in Sources */,
 				2EBC702E299A714000084A48 /* AccountInfoService.swift in Sources */,
 				2E19CE9229937ECE00499162 /* CustomTextField.swift in Sources */,
@@ -706,6 +717,7 @@
 				2E5CDC5B294F2021001F2524 /* CarGoApp.swift in Sources */,
 				2EA0D8BB2976CC9F005DE1D9 /* LoginViewModel.swift in Sources */,
 				2EF1CB20298D4BD9009F8626 /* MultiSelectionView.swift in Sources */,
+				2E0C3D2F299CAE0500B67972 /* ChangePassword.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

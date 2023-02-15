@@ -13,6 +13,7 @@ class ProfileViewModel: ObservableObject {
     @Published var accountResponse: (UserDTO?, NetworkError?) = (nil, nil)
     @Published var changeEmailResponse: (Response?, NetworkError?) = (nil, nil)
     @Published var changePhoneNumberResponse: (Response?, NetworkError?) = (nil, nil)
+    @Published var changePasswordResponse: (Response?, NetworkError?) = (nil, nil)
     
     let userRepository = UserRepository()
     
@@ -55,6 +56,17 @@ class ProfileViewModel: ObservableObject {
             
             DispatchQueue.main.async {
                 self.changePhoneNumberResponse = response
+                
+            }
+        }
+    }
+    
+    func changePassword(password: String) {
+        Task {
+            let response = try await userRepository.changePassowed(password: password)
+            
+            DispatchQueue.main.async {
+                self.changePasswordResponse = response
                 
             }
         }

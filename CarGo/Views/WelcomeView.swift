@@ -41,6 +41,7 @@ struct LoginView: View {
                             .frame(maxWidth: 400)
                         
                         PasswordTextView(text: $password, placeHolder: "Password")
+                            .padding()
                             .padding(.horizontal)
                             .frame(maxWidth: 400)
                         

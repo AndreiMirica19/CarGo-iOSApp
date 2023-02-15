@@ -36,7 +36,12 @@ struct ChangeEmail: View {
                 Spacer()
                 
                 Button {
-                    profileViewModel.changeEmail(email: email)
+                    if email.isValidEmail() {
+                        profileViewModel.changeEmail(email: email)
+                    } else {
+                        alertIsPresent = true
+                        alertMessage = "Invalid email format."
+                    }
                 } label: {
                     Text("Change email")
                         .foregroundColor(.white)
@@ -71,8 +76,13 @@ struct ChangeEmail: View {
             }
         }
         .padding()
-        .navigationTitle(Text("Email"))
-        .navigationBarTitleDisplayMode(.large)
+        .navigationTitle(Text("Change Email"))
+        .navigationBarTitleDisplayMode(.automatic)
+        .onDisappear {
+            alertMessage = ""
+            alertIsPresent = false
+        }
+
     }
 }
 

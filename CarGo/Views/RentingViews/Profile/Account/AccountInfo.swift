@@ -20,7 +20,7 @@ struct AccountInfo: View {
                     }
                 }
                 
-                NavigationLink(destination: EmptyView()) {
+                NavigationLink(destination: ChangePassword().environmentObject(profileViewModel)) {
                     Text("Password")
                 }
                 
