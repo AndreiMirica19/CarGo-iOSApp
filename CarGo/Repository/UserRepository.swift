@@ -10,6 +10,7 @@ import Foundation
 class UserRepository: ObservableObject {
     var userId = ""
     static let shared = UserRepository()
+    @Published var isRenterViewActive = false
     @Published var isLoggedIn: Bool {
         didSet {
             UserDefaults.standard.setValue(isLoggedIn, forKey: "logedIn")
@@ -33,6 +34,14 @@ class UserRepository: ObservableObject {
     func logout() {
         isLoggedIn = false
         UserDefaults.standard.removeObject(forKey: "userId")
+    }
+    
+    func switchToRenterContentView() {
+        isRenterViewActive = true
+    }
+    
+    func switchToRentingContentView() {
+        isRenterViewActive = false
     }
     
     func login(loginData: LoginData) async throws -> (UserDTO?, NetworkError?) {

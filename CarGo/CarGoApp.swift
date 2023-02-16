@@ -17,10 +17,18 @@ struct CarGoApp: App {
             WindowGroup {
                 VStack {
                     if userRepository.isLoggedIn {
-                        RentingContentView()
+                        if userRepository.isRenterViewActive {
+                            RenterContentView()
+                        } else {
+                            RentingContentView()
+                        }
                     } else {
                         if loginSuccessful {
-                            RentingContentView()
+                            if userRepository.isRenterViewActive {
+                                RenterContentView()
+                            } else {
+                                RentingContentView()
+                            }
                         } else {
                             LoginView()
                         }

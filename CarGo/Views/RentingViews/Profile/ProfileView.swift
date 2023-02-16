@@ -15,6 +15,7 @@ struct ProfileView: View {
     @State var isRoot = false
     @State var viewProfileDetails = false
     @EnvironmentObject var profileViewModel: ProfileViewModel
+    let userRepository = UserRepository.shared
     
     var body: some View {
         List {
@@ -82,9 +83,9 @@ struct ProfileView: View {
                 }
                 
                 Button {
-                    
+                    userRepository.isRenterViewActive ? userRepository.switchToRentingContentView() : userRepository.switchToRenterContentView()
                 } label: {
-                    Text("Switch to renter")
+                    Text("Switch to \(userRepository.isRenterViewActive ? "renting" : "renter")")
                 }
             }
             
