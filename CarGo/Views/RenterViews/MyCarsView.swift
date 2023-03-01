@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct MyCarsView: View {
+    @State private var displayAddCar = false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            List {
+                
+            }
+            .toolbar {
+                Button("Add Car") {
+                    displayAddCar = true
+                }
+            }
+            .sheet(isPresented: $displayAddCar) {
+                AddCarContentView()
+            }
+        }
     }
 }
 

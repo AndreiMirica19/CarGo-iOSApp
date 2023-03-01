@@ -16,7 +16,7 @@ struct RenterContentView: View {
                     Label("Performance", systemImage: "speedometer")
                 }
             
-            MyBookingsView()
+            MyCarsView()
                 .tabItem {
                     Label("My cars", systemImage: "car.2")
                 }

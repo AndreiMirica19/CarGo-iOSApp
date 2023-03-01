@@ -60,6 +60,10 @@
 		2EBC7019299A708B00084A48 /* AccountInfoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBC7018299A708B00084A48 /* AccountInfoProtocol.swift */; };
 		2EBC702E299A714000084A48 /* AccountInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBC702D299A714000084A48 /* AccountInfoService.swift */; };
 		2EBC7031299A7EEC00084A48 /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBC7030299A7EEC00084A48 /* AccountInfo.swift */; };
+		2EC80D1C29ADEFEA00244F6D /* AddCarNumberPlate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC80D1B29ADEFEA00244F6D /* AddCarNumberPlate.swift */; };
+		2EC80D1E29ADF0BA00244F6D /* AddCarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC80D1D29ADF0BA00244F6D /* AddCarContentView.swift */; };
+		2EC80D2029ADF82A00244F6D /* CarNumberPlateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC80D1F29ADF82A00244F6D /* CarNumberPlateView.swift */; };
+		2EC80D2229AE087F00244F6D /* RomanianCounty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC80D2129AE087F00244F6D /* RomanianCounty.swift */; };
 		2ECBAF472973FA90001FE86C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBAF462973FA90001FE86C /* RegisterViewModel.swift */; };
 		2ED414A62994DAA4008B5356 /* UserDetailsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED414A52994DAA4008B5356 /* UserDetailsData.swift */; };
 		2ED414A82994DB3C008B5356 /* EditProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED414A72994DB3C008B5356 /* EditProfileProtocol.swift */; };
@@ -158,6 +162,10 @@
 		2EBC7018299A708B00084A48 /* AccountInfoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoProtocol.swift; sourceTree = "<group>"; };
 		2EBC702D299A714000084A48 /* AccountInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoService.swift; sourceTree = "<group>"; };
 		2EBC7030299A7EEC00084A48 /* AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
+		2EC80D1B29ADEFEA00244F6D /* AddCarNumberPlate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarNumberPlate.swift; sourceTree = "<group>"; };
+		2EC80D1D29ADF0BA00244F6D /* AddCarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarContentView.swift; sourceTree = "<group>"; };
+		2EC80D1F29ADF82A00244F6D /* CarNumberPlateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNumberPlateView.swift; sourceTree = "<group>"; };
+		2EC80D2129AE087F00244F6D /* RomanianCounty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanianCounty.swift; sourceTree = "<group>"; };
 		2ECBAF462973FA90001FE86C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		2ED414A52994DAA4008B5356 /* UserDetailsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsData.swift; sourceTree = "<group>"; };
 		2ED414A72994DB3C008B5356 /* EditProfileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileProtocol.swift; sourceTree = "<group>"; };
@@ -270,6 +278,7 @@
 				2ED414AB2994DC0D008B5356 /* ApiEndpoint.swift */,
 				2E7205BE29964E22006AED35 /* Router.swift */,
 				2E0C3D37299CC50B00B67972 /* HTTPURLResponseExtension.swift */,
+				2EC80D2129AE087F00244F6D /* RomanianCounty.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -372,6 +381,7 @@
 		2EB9FB04299E238A007C097E /* RenterViews */ = {
 			isa = PBXGroup;
 			children = (
+				2EC80D1A29ADEF6900244F6D /* Add Car */,
 				2EB9FB05299E23D5007C097E /* PerformanceView.swift */,
 				2EB9FB07299E249A007C097E /* MyCarsView.swift */,
 			);
@@ -395,6 +405,16 @@
 				2E0C3D2E299CAE0500B67972 /* ChangePassword.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		2EC80D1A29ADEF6900244F6D /* Add Car */ = {
+			isa = PBXGroup;
+			children = (
+				2EC80D1B29ADEFEA00244F6D /* AddCarNumberPlate.swift */,
+				2EC80D1D29ADF0BA00244F6D /* AddCarContentView.swift */,
+				2EC80D1F29ADF82A00244F6D /* CarNumberPlateView.swift */,
+			);
+			path = "Add Car";
 			sourceTree = "<group>";
 		};
 		2ECBAF452973FA7C001FE86C /* ViewModel */ = {
@@ -715,6 +735,7 @@
 				2E16785E297417E600184CB9 /* RegisterProtocol.swift in Sources */,
 				2E7205C12996759F006AED35 /* HowCarGoWorks.swift in Sources */,
 				2E2119B32950B2620009A0A4 /* CustomTextView.swift in Sources */,
+				2EC80D1E29ADF0BA00244F6D /* AddCarContentView.swift in Sources */,
 				2EBC7019299A708B00084A48 /* AccountInfoProtocol.swift in Sources */,
 				2E7205BD29964DEC006AED35 /* ProfileContentView.swift in Sources */,
 				2E764142299BBC520016E941 /* ChangeEmailService.swift in Sources */,
@@ -727,10 +748,12 @@
 				2E5CDC67294F2022001F2524 /* CarGo.xcdatamodeld in Sources */,
 				2E19CE96299397EE00499162 /* PhotoCaptureView.swift in Sources */,
 				2E1678602974180B00184CB9 /* RegisterService.swift in Sources */,
+				2EC80D1C29ADEFEA00244F6D /* AddCarNumberPlate.swift in Sources */,
 				2E91E9542981720F00B70C4B /* ProfileView.swift in Sources */,
 				2E76413E299BA9A60016E941 /* ChangeEmail.swift in Sources */,
 				2E2119BA2950C02E0009A0A4 /* StringExtension.swift in Sources */,
 				2E2119B52950B5130009A0A4 /* PasswordTextView.swift in Sources */,
+				2EC80D2229AE087F00244F6D /* RomanianCounty.swift in Sources */,
 				2E131542298B8DB8008ED79D /* ProfileDetails.swift in Sources */,
 				2E2426A72996151D005A72C2 /* IncompleteProfile.swift in Sources */,
 				2EF1CB19298BE2EB009F8626 /* EditProfile.swift in Sources */,
@@ -770,6 +793,7 @@
 				2EB9FB08299E249A007C097E /* MyCarsView.swift in Sources */,
 				2ED414A62994DAA4008B5356 /* UserDetailsData.swift in Sources */,
 				2E131540298AB04C008ED79D /* TermsAndConditions.swift in Sources */,
+				2EC80D2029ADF82A00244F6D /* CarNumberPlateView.swift in Sources */,
 				2E5CDC5B294F2021001F2524 /* CarGoApp.swift in Sources */,
 				2EA0D8BB2976CC9F005DE1D9 /* LoginViewModel.swift in Sources */,
 				2EF1CB20298D4BD9009F8626 /* MultiSelectionView.swift in Sources */,

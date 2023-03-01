@@ -21,3 +21,11 @@ enum ProfilePaths {
     case editProfile
     case account
 }
+
+enum AddCarPaths {
+    case addCarNumberPlate
+    case addCarDetails
+    case addCarLocation
+    case addCarPhotos
+    case addCarPrice
+}
