@@ -37,7 +37,7 @@ struct AddCarNumberPlate: View {
             .padding()
             .cornerRadius(8)
             .buttonStyle(OutlineBorder(color: numberPlate.isValidNumberPlate() ? .blue : .gray))
-            .disabled(numberPlate.isValidNumberPlate())
+            .disabled(!numberPlate.isValidNumberPlate())
         }
     }
 }
