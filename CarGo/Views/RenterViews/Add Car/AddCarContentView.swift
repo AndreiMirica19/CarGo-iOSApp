@@ -20,7 +20,7 @@ struct AddCarContentView: View {
                         AddCarNumberPlate()
                         
                     case .addCarDetails:
-                        EmptyView()
+                        AddCarDetails()
                         
                     case .addCarLocation:
                         EmptyView()

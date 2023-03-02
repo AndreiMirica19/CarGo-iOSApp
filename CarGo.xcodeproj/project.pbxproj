@@ -40,6 +40,13 @@
 		2E7205BF29964E22006AED35 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7205BE29964E22006AED35 /* Router.swift */; };
 		2E7205C12996759F006AED35 /* HowCarGoWorks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7205C02996759F006AED35 /* HowCarGoWorks.swift */; };
 		2E7205C3299677DD006AED35 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7205C2299677DD006AED35 /* Number.swift */; };
+		2E733BF729AF5E81000E4F29 /* AddCarDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E733BF629AF5E81000E4F29 /* AddCarDetails.swift */; };
+		2E733BF929AF635B000E4F29 /* PickerAndTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E733BF829AF635B000E4F29 /* PickerAndTitle.swift */; };
+		2E733BFC29AF6A17000E4F29 /* FetchCarsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E733BFB29AF6A17000E4F29 /* FetchCarsProtocol.swift */; };
+		2E733BFE29AF6A91000E4F29 /* FetchCarsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E733BFD29AF6A91000E4F29 /* FetchCarsService.swift */; };
+		2E733C0029AF6B94000E4F29 /* CarRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E733BFF29AF6B94000E4F29 /* CarRepository.swift */; };
+		2E733C0229AF6C26000E4F29 /* CarDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E733C0129AF6C26000E4F29 /* CarDTO.swift */; };
+		2E733C0429AF6D78000E4F29 /* AddCarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E733C0329AF6D78000E4F29 /* AddCarViewModel.swift */; };
 		2E76413E299BA9A60016E941 /* ChangeEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76413D299BA9A60016E941 /* ChangeEmail.swift */; };
 		2E764140299BBC040016E941 /* ChangeEmailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76413F299BBC040016E941 /* ChangeEmailProtocol.swift */; };
 		2E764142299BBC520016E941 /* ChangeEmailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E764141299BBC520016E941 /* ChangeEmailService.swift */; };
@@ -53,6 +60,11 @@
 		2E91E9542981720F00B70C4B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91E9532981720F00B70C4B /* ProfileView.swift */; };
 		2EA0D8BB2976CC9F005DE1D9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA0D8BA2976CC9F005DE1D9 /* LoginViewModel.swift */; };
 		2EAB174D2980051C001A153F /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAB174C2980051C001A153F /* ErrorResponse.swift */; };
+		2EB1A04929B07CB3006E79A8 /* CalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB1A04829B07CB3006E79A8 /* CalendarExtension.swift */; };
+		2EB1A04B29B07ED9006E79A8 /* CarTransmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB1A04A29B07ED9006E79A8 /* CarTransmission.swift */; };
+		2EB1A04D29B07F71006E79A8 /* CarFuel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB1A04C29B07F71006E79A8 /* CarFuel.swift */; };
+		2EB1A04F29B0801B006E79A8 /* CarType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB1A04E29B0801B006E79A8 /* CarType.swift */; };
+		2EB1A05129B080B0006E79A8 /* CarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB1A05029B080B0006E79A8 /* CarColor.swift */; };
 		2EB9FB03299E18CD007C097E /* RenterContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9FB02299E18CD007C097E /* RenterContentView.swift */; };
 		2EB9FB06299E23D5007C097E /* PerformanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9FB05299E23D5007C097E /* PerformanceView.swift */; };
 		2EB9FB08299E249A007C097E /* MyCarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9FB07299E249A007C097E /* MyCarsView.swift */; };
@@ -142,6 +154,13 @@
 		2E7205BE29964E22006AED35 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		2E7205C02996759F006AED35 /* HowCarGoWorks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowCarGoWorks.swift; sourceTree = "<group>"; };
 		2E7205C2299677DD006AED35 /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
+		2E733BF629AF5E81000E4F29 /* AddCarDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarDetails.swift; sourceTree = "<group>"; };
+		2E733BF829AF635B000E4F29 /* PickerAndTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerAndTitle.swift; sourceTree = "<group>"; };
+		2E733BFB29AF6A17000E4F29 /* FetchCarsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCarsProtocol.swift; sourceTree = "<group>"; };
+		2E733BFD29AF6A91000E4F29 /* FetchCarsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCarsService.swift; sourceTree = "<group>"; };
+		2E733BFF29AF6B94000E4F29 /* CarRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepository.swift; sourceTree = "<group>"; };
+		2E733C0129AF6C26000E4F29 /* CarDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDTO.swift; sourceTree = "<group>"; };
+		2E733C0329AF6D78000E4F29 /* AddCarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarViewModel.swift; sourceTree = "<group>"; };
 		2E76413D299BA9A60016E941 /* ChangeEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmail.swift; sourceTree = "<group>"; };
 		2E76413F299BBC040016E941 /* ChangeEmailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailProtocol.swift; sourceTree = "<group>"; };
 		2E764141299BBC520016E941 /* ChangeEmailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailService.swift; sourceTree = "<group>"; };
@@ -155,6 +174,11 @@
 		2E91E9532981720F00B70C4B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2EA0D8BA2976CC9F005DE1D9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		2EAB174C2980051C001A153F /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		2EB1A04829B07CB3006E79A8 /* CalendarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtension.swift; sourceTree = "<group>"; };
+		2EB1A04A29B07ED9006E79A8 /* CarTransmission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTransmission.swift; sourceTree = "<group>"; };
+		2EB1A04C29B07F71006E79A8 /* CarFuel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarFuel.swift; sourceTree = "<group>"; };
+		2EB1A04E29B0801B006E79A8 /* CarType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarType.swift; sourceTree = "<group>"; };
+		2EB1A05029B080B0006E79A8 /* CarColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarColor.swift; sourceTree = "<group>"; };
 		2EB9FB02299E18CD007C097E /* RenterContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenterContentView.swift; sourceTree = "<group>"; };
 		2EB9FB05299E23D5007C097E /* PerformanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceView.swift; sourceTree = "<group>"; };
 		2EB9FB07299E249A007C097E /* MyCarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCarsView.swift; sourceTree = "<group>"; };
@@ -263,6 +287,7 @@
 		2E16785A2974152700184CB9 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				2E733BFA29AF68D1000E4F29 /* CarService */,
 				2E0C3D36299CC2FE00B67972 /* AccountServices */,
 				2E0C3D35299CC2AE00B67972 /* UserServices */,
 				2E0C3D34299CC28400B67972 /* AuthentificationServices */,
@@ -279,6 +304,10 @@
 				2E7205BE29964E22006AED35 /* Router.swift */,
 				2E0C3D37299CC50B00B67972 /* HTTPURLResponseExtension.swift */,
 				2EC80D2129AE087F00244F6D /* RomanianCounty.swift */,
+				2EB1A04A29B07ED9006E79A8 /* CarTransmission.swift */,
+				2EB1A04C29B07F71006E79A8 /* CarFuel.swift */,
+				2EB1A04E29B0801B006E79A8 /* CarType.swift */,
+				2EB1A05029B080B0006E79A8 /* CarColor.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -298,6 +327,7 @@
 			children = (
 				2E2119B92950C02E0009A0A4 /* StringExtension.swift */,
 				2ED414B9299521DD008B5356 /* DataExtension.swift */,
+				2EB1A04829B07CB3006E79A8 /* CalendarExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -367,6 +397,15 @@
 			path = CarGoUITests;
 			sourceTree = "<group>";
 		};
+		2E733BFA29AF68D1000E4F29 /* CarService */ = {
+			isa = PBXGroup;
+			children = (
+				2E733BFB29AF6A17000E4F29 /* FetchCarsProtocol.swift */,
+				2E733BFD29AF6A91000E4F29 /* FetchCarsService.swift */,
+			);
+			path = CarService;
+			sourceTree = "<group>";
+		};
 		2E91E94C2981714200B70C4B /* RentingViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				2EBC7016299A0BA600084A48 /* UserRepository.swift */,
+				2E733BFF29AF6B94000E4F29 /* CarRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -413,6 +453,7 @@
 				2EC80D1B29ADEFEA00244F6D /* AddCarNumberPlate.swift */,
 				2EC80D1D29ADF0BA00244F6D /* AddCarContentView.swift */,
 				2EC80D1F29ADF82A00244F6D /* CarNumberPlateView.swift */,
+				2E733BF629AF5E81000E4F29 /* AddCarDetails.swift */,
 			);
 			path = "Add Car";
 			sourceTree = "<group>";
@@ -424,6 +465,7 @@
 				2EA0D8BA2976CC9F005DE1D9 /* LoginViewModel.swift */,
 				2ED414AF2994E196008B5356 /* EditProfileViewModel.swift */,
 				2ED414B729951F05008B5356 /* ProfileViewModel.swift */,
+				2E733C0329AF6D78000E4F29 /* AddCarViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -434,6 +476,7 @@
 				2EDFD6E929755F0D00561C6E /* Response.swift */,
 				2E63532D2976A3CA0016EC6E /* UserDTO.swift */,
 				2EAB174C2980051C001A153F /* ErrorResponse.swift */,
+				2E733C0129AF6C26000E4F29 /* CarDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -479,6 +522,7 @@
 				2E19CE95299397EE00499162 /* PhotoCaptureView.swift */,
 				2ED414BB29952571008B5356 /* EmptyProfileImage.swift */,
 				2E7205C2299677DD006AED35 /* Number.swift */,
+				2E733BF829AF635B000E4F29 /* PickerAndTitle.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -727,6 +771,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EB1A04B29B07ED9006E79A8 /* CarTransmission.swift in Sources */,
 				2E7205BF29964E22006AED35 /* Router.swift in Sources */,
 				2EBC7031299A7EEC00084A48 /* AccountInfo.swift in Sources */,
 				2EBC7017299A0BA600084A48 /* UserRepository.swift in Sources */,
@@ -742,8 +787,10 @@
 				2EDFD6EA29755F0D00561C6E /* Response.swift in Sources */,
 				2E91E952298171FE00B70C4B /* MyBookingsView.swift in Sources */,
 				2EF1CB1C298D442E009F8626 /* MultiSelector.swift in Sources */,
+				2E733C0429AF6D78000E4F29 /* AddCarViewModel.swift in Sources */,
 				2EB9FB03299E18CD007C097E /* RenterContentView.swift in Sources */,
 				2ED414BC29952571008B5356 /* EmptyProfileImage.swift in Sources */,
+				2EB1A04929B07CB3006E79A8 /* CalendarExtension.swift in Sources */,
 				2ED414B429951D40008B5356 /* UserInfoService.swift in Sources */,
 				2E5CDC67294F2022001F2524 /* CarGo.xcdatamodeld in Sources */,
 				2E19CE96299397EE00499162 /* PhotoCaptureView.swift in Sources */,
@@ -751,8 +798,11 @@
 				2EC80D1C29ADEFEA00244F6D /* AddCarNumberPlate.swift in Sources */,
 				2E91E9542981720F00B70C4B /* ProfileView.swift in Sources */,
 				2E76413E299BA9A60016E941 /* ChangeEmail.swift in Sources */,
+				2EB1A05129B080B0006E79A8 /* CarColor.swift in Sources */,
 				2E2119BA2950C02E0009A0A4 /* StringExtension.swift in Sources */,
+				2E733BF929AF635B000E4F29 /* PickerAndTitle.swift in Sources */,
 				2E2119B52950B5130009A0A4 /* PasswordTextView.swift in Sources */,
+				2E733C0229AF6C26000E4F29 /* CarDTO.swift in Sources */,
 				2EC80D2229AE087F00244F6D /* RomanianCounty.swift in Sources */,
 				2E131542298B8DB8008ED79D /* ProfileDetails.swift in Sources */,
 				2E2426A72996151D005A72C2 /* IncompleteProfile.swift in Sources */,
@@ -776,7 +826,9 @@
 				2E0C3D31299CBCA100B67972 /* ChangePasswordProtocol.swift in Sources */,
 				2E91E94E298171DA00B70C4B /* SearchCarsView.swift in Sources */,
 				2EBC702E299A714000084A48 /* AccountInfoService.swift in Sources */,
+				2E733BFC29AF6A17000E4F29 /* FetchCarsProtocol.swift in Sources */,
 				2E19CE9229937ECE00499162 /* CustomTextField.swift in Sources */,
+				2EB1A04F29B0801B006E79A8 /* CarType.swift in Sources */,
 				2E167863297419DA00184CB9 /* NetworkError.swift in Sources */,
 				2ED414B02994E196008B5356 /* EditProfileViewModel.swift in Sources */,
 				2E764140299BBC040016E941 /* ChangeEmailProtocol.swift in Sources */,
@@ -785,7 +837,9 @@
 				2ED414AC2994DC0D008B5356 /* ApiEndpoint.swift in Sources */,
 				2ED414AA2994DBA2008B5356 /* EditProfileService.swift in Sources */,
 				2E764148299BDF6E0016E941 /* ChangePhoneNumberService.swift in Sources */,
+				2E733C0029AF6B94000E4F29 /* CarRepository.swift in Sources */,
 				2E6353262976A17F0016EC6E /* LoginData.swift in Sources */,
+				2E733BF729AF5E81000E4F29 /* AddCarDetails.swift in Sources */,
 				2ECBAF472973FA90001FE86C /* RegisterViewModel.swift in Sources */,
 				2EAB174D2980051C001A153F /* ErrorResponse.swift in Sources */,
 				2ED414B229951CA2008B5356 /* UserInfoProtocol.swift in Sources */,
@@ -793,7 +847,9 @@
 				2EB9FB08299E249A007C097E /* MyCarsView.swift in Sources */,
 				2ED414A62994DAA4008B5356 /* UserDetailsData.swift in Sources */,
 				2E131540298AB04C008ED79D /* TermsAndConditions.swift in Sources */,
+				2E733BFE29AF6A91000E4F29 /* FetchCarsService.swift in Sources */,
 				2EC80D2029ADF82A00244F6D /* CarNumberPlateView.swift in Sources */,
+				2EB1A04D29B07F71006E79A8 /* CarFuel.swift in Sources */,
 				2E5CDC5B294F2021001F2524 /* CarGoApp.swift in Sources */,
 				2EA0D8BB2976CC9F005DE1D9 /* LoginViewModel.swift in Sources */,
 				2EF1CB20298D4BD9009F8626 /* MultiSelectionView.swift in Sources */,
