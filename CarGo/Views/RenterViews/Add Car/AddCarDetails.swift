@@ -80,7 +80,7 @@ struct AddCarDetails: View {
                 Spacer()
                 
                 Button {
-                    router.push(.addCarDetails)
+                    router.push(.addCarLocation)
                 } label: {
                     Text("Next")
                 }

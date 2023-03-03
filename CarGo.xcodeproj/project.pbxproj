@@ -65,6 +65,8 @@
 		2EB1A04D29B07F71006E79A8 /* CarFuel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB1A04C29B07F71006E79A8 /* CarFuel.swift */; };
 		2EB1A04F29B0801B006E79A8 /* CarType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB1A04E29B0801B006E79A8 /* CarType.swift */; };
 		2EB1A05129B080B0006E79A8 /* CarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB1A05029B080B0006E79A8 /* CarColor.swift */; };
+		2EB1A05329B0945C006E79A8 /* AddCarLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB1A05229B0945C006E79A8 /* AddCarLocation.swift */; };
+		2EB1A05529B09DDF006E79A8 /* CustomInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB1A05429B09DDF006E79A8 /* CustomInputView.swift */; };
 		2EB9FB03299E18CD007C097E /* RenterContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9FB02299E18CD007C097E /* RenterContentView.swift */; };
 		2EB9FB06299E23D5007C097E /* PerformanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9FB05299E23D5007C097E /* PerformanceView.swift */; };
 		2EB9FB08299E249A007C097E /* MyCarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9FB07299E249A007C097E /* MyCarsView.swift */; };
@@ -77,6 +79,7 @@
 		2EC80D2029ADF82A00244F6D /* CarNumberPlateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC80D1F29ADF82A00244F6D /* CarNumberPlateView.swift */; };
 		2EC80D2229AE087F00244F6D /* RomanianCounty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC80D2129AE087F00244F6D /* RomanianCounty.swift */; };
 		2ECBAF472973FA90001FE86C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBAF462973FA90001FE86C /* RegisterViewModel.swift */; };
+		2ECC473229B0DA630001AA04 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECC473129B0DA630001AA04 /* LocationManager.swift */; };
 		2ED414A62994DAA4008B5356 /* UserDetailsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED414A52994DAA4008B5356 /* UserDetailsData.swift */; };
 		2ED414A82994DB3C008B5356 /* EditProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED414A72994DB3C008B5356 /* EditProfileProtocol.swift */; };
 		2ED414AA2994DBA2008B5356 /* EditProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED414A92994DBA2008B5356 /* EditProfileService.swift */; };
@@ -179,6 +182,8 @@
 		2EB1A04C29B07F71006E79A8 /* CarFuel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarFuel.swift; sourceTree = "<group>"; };
 		2EB1A04E29B0801B006E79A8 /* CarType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarType.swift; sourceTree = "<group>"; };
 		2EB1A05029B080B0006E79A8 /* CarColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarColor.swift; sourceTree = "<group>"; };
+		2EB1A05229B0945C006E79A8 /* AddCarLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarLocation.swift; sourceTree = "<group>"; };
+		2EB1A05429B09DDF006E79A8 /* CustomInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputView.swift; sourceTree = "<group>"; };
 		2EB9FB02299E18CD007C097E /* RenterContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenterContentView.swift; sourceTree = "<group>"; };
 		2EB9FB05299E23D5007C097E /* PerformanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceView.swift; sourceTree = "<group>"; };
 		2EB9FB07299E249A007C097E /* MyCarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCarsView.swift; sourceTree = "<group>"; };
@@ -191,6 +196,7 @@
 		2EC80D1F29ADF82A00244F6D /* CarNumberPlateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNumberPlateView.swift; sourceTree = "<group>"; };
 		2EC80D2129AE087F00244F6D /* RomanianCounty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanianCounty.swift; sourceTree = "<group>"; };
 		2ECBAF462973FA90001FE86C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		2ECC473129B0DA630001AA04 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		2ED414A52994DAA4008B5356 /* UserDetailsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsData.swift; sourceTree = "<group>"; };
 		2ED414A72994DB3C008B5356 /* EditProfileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileProtocol.swift; sourceTree = "<group>"; };
 		2ED414A92994DBA2008B5356 /* EditProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileService.swift; sourceTree = "<group>"; };
@@ -308,6 +314,7 @@
 				2EB1A04C29B07F71006E79A8 /* CarFuel.swift */,
 				2EB1A04E29B0801B006E79A8 /* CarType.swift */,
 				2EB1A05029B080B0006E79A8 /* CarColor.swift */,
+				2ECC473129B0DA630001AA04 /* LocationManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -454,6 +461,7 @@
 				2EC80D1D29ADF0BA00244F6D /* AddCarContentView.swift */,
 				2EC80D1F29ADF82A00244F6D /* CarNumberPlateView.swift */,
 				2E733BF629AF5E81000E4F29 /* AddCarDetails.swift */,
+				2EB1A05229B0945C006E79A8 /* AddCarLocation.swift */,
 			);
 			path = "Add Car";
 			sourceTree = "<group>";
@@ -523,6 +531,7 @@
 				2ED414BB29952571008B5356 /* EmptyProfileImage.swift */,
 				2E7205C2299677DD006AED35 /* Number.swift */,
 				2E733BF829AF635B000E4F29 /* PickerAndTitle.swift */,
+				2EB1A05429B09DDF006E79A8 /* CustomInputView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -778,6 +787,7 @@
 				2ED414A82994DB3C008B5356 /* EditProfileProtocol.swift in Sources */,
 				2E2119B12950A54D0009A0A4 /* SignUpView.swift in Sources */,
 				2E16785E297417E600184CB9 /* RegisterProtocol.swift in Sources */,
+				2EB1A05329B0945C006E79A8 /* AddCarLocation.swift in Sources */,
 				2E7205C12996759F006AED35 /* HowCarGoWorks.swift in Sources */,
 				2E2119B32950B2620009A0A4 /* CustomTextView.swift in Sources */,
 				2EC80D1E29ADF0BA00244F6D /* AddCarContentView.swift in Sources */,
@@ -816,6 +826,7 @@
 				2E63532E2976A3CA0016EC6E /* UserDTO.swift in Sources */,
 				2E764146299BDF180016E941 /* ChangePhoneNumberProtocol.swift in Sources */,
 				2E7205C3299677DD006AED35 /* Number.swift in Sources */,
+				2ECC473229B0DA630001AA04 /* LocationManager.swift in Sources */,
 				2E0C3D33299CBCE300B67972 /* ChangePasswordService.swift in Sources */,
 				2E16786629741B5000184CB9 /* RegisterData.swift in Sources */,
 				2E764144299BDE0F0016E941 /* ChangePhoneNumber.swift in Sources */,
@@ -833,6 +844,7 @@
 				2ED414B02994E196008B5356 /* EditProfileViewModel.swift in Sources */,
 				2E764140299BBC040016E941 /* ChangeEmailProtocol.swift in Sources */,
 				2E0C3D3A299CCD9D00B67972 /* DeleteAccountProtocol.swift in Sources */,
+				2EB1A05529B09DDF006E79A8 /* CustomInputView.swift in Sources */,
 				2EF1CB1E298D46C2009F8626 /* Languages.swift in Sources */,
 				2ED414AC2994DC0D008B5356 /* ApiEndpoint.swift in Sources */,
 				2ED414AA2994DBA2008B5356 /* EditProfileService.swift in Sources */,
@@ -1015,6 +1027,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CarGo/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1050,6 +1063,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CarGo/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

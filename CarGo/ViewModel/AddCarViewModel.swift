@@ -6,10 +6,27 @@
 //
 
 import Foundation
+import CoreLocation
+import MapKit
+
+struct IdentifiablePlace: Identifiable {
+    let id: UUID
+    let location: CLLocationCoordinate2D
+    
+    init(id: UUID = UUID(), lat: Double, long: Double) {
+        self.id = id
+        self.location = CLLocationCoordinate2D(
+            latitude: lat,
+            longitude: long
+        )
+    }
+}
 
 class AddCarViewModel: ObservableObject {
     
     @Published var carListResponse: ([CarDto]?, NetworkError?) = (nil, nil)
+    @Published var region: (region: MKCoordinateRegion?, Error?)
+    var places: [IdentifiablePlace] = []
     
     func fetchCars() {
         Task {
@@ -17,7 +34,7 @@ class AddCarViewModel: ObservableObject {
             
             DispatchQueue.main.async {
                 self.carListResponse = response
-
+                
             }
         }
     }
@@ -47,5 +64,33 @@ class AddCarViewModel: ObservableObject {
         models.append("-")
         
         return models.sorted()
+    }
+    
+    func updateLocation(address: String) {
+        let geoCoder = CLGeocoder()
+        
+        geoCoder.geocodeAddressString(address) { (placemarks, error) in
+            guard
+                let placemarks = placemarks,
+                let location = placemarks.first?.location
+            else {
+                self.region = (nil, error)
+                return
+            }
+            
+            let coordinateRegion = MKCoordinateRegion(
+                center: CLLocationCoordinate2D(
+                    latitude: location.coordinate.latitude,
+                    longitude: location.coordinate.longitude
+                ),
+                span: MKCoordinateSpan(
+                    latitudeDelta: 0.01,
+                    longitudeDelta: 0.01
+                )
+            )
+            
+            self.places = [IdentifiablePlace(lat: location.coordinate.latitude, long: location.coordinate.longitude)]
+            self.region = (coordinateRegion, nil)
+        }
     }
 }

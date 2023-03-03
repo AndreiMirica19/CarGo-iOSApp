@@ -20,10 +20,10 @@ struct AddCarContentView: View {
                         AddCarNumberPlate()
                         
                     case .addCarDetails:
-                        AddCarDetails()
+                        AddCarDetails().environmentObject(router)
                         
                     case .addCarLocation:
-                        EmptyView()
+                        AddCarLocation().environmentObject(router)
                         
                     case .addCarPhotos:
                         EmptyView()

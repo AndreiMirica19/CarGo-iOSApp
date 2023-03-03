@@ -1732,8 +1732,8 @@
             filePath = "CarGo/ViewModel/AddCarViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "fetchCars()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1780,8 +1780,8 @@
             filePath = "CarGo/ViewModel/AddCarViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "fetchCars()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1796,8 +1796,8 @@
             filePath = "CarGo/ViewModel/AddCarViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "getCarModels(carManufacturer:)"
             landmarkType = "7">
             <Locations>
@@ -1876,8 +1876,8 @@
             filePath = "CarGo/ViewModel/AddCarViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "getCarModels(carManufacturer:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1892,8 +1892,8 @@
             filePath = "CarGo/ViewModel/AddCarViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "getCarModels(carManufacturer:)"
             landmarkType = "7">
             <Locations>
@@ -2020,9 +2020,137 @@
             filePath = "CarGo/ViewModel/AddCarViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "getCarModels(carManufacturer:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D11F618D-46AA-4AC0-B47A-13D67667B58D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarGo/ViewModel/AddCarViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "updateLocation(address:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D50C17D-306D-479E-8C8F-0FF67B98F9F8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarGo/Views/RenterViews/Add Car/AddCarLocation.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "838DEED6-7F28-49AF-9000-1848915433F1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarGo/Helper/LocationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "updateLocation(address:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "838DEED6-7F28-49AF-9000-1848915433F1 - ae72e92de8a73175"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarGo.LocationManager.updateLocation(address: Swift.String) -&gt; ()"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/Helper/LocationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "838DEED6-7F28-49AF-9000-1848915433F1 - fe2a59e4c6330081"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;__C.CLPlacemark&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in CarGo.LocationManager.updateLocation(address: Swift.String) -&gt; ()"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/Helper/LocationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "84D494AE-C21B-44BA-99F7-4DD346AE2554"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarGo/Helper/LocationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "updateLocation(address:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "51B834AB-2EF0-4338-8C15-4CB6AE9D8E99"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarGo/Helper/LocationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "updateLocation(address:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3A81822B-A950-4499-8C86-C3D82174B12C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarGo/Helper/LocationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "updateLocation(address:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
