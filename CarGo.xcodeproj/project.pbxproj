@@ -82,6 +82,7 @@
 		2ECC473229B0DA630001AA04 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECC473129B0DA630001AA04 /* LocationManager.swift */; };
 		2ECC473429B1E0130001AA04 /* AddCarPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECC473329B1E0130001AA04 /* AddCarPhotos.swift */; };
 		2ECC473629B1F6320001AA04 /* AddedCarPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECC473529B1F6320001AA04 /* AddedCarPhotoCell.swift */; };
+		2ECC473829B206C40001AA04 /* AddCarPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECC473729B206C40001AA04 /* AddCarPrice.swift */; };
 		2ED414A62994DAA4008B5356 /* UserDetailsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED414A52994DAA4008B5356 /* UserDetailsData.swift */; };
 		2ED414A82994DB3C008B5356 /* EditProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED414A72994DB3C008B5356 /* EditProfileProtocol.swift */; };
 		2ED414AA2994DBA2008B5356 /* EditProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED414A92994DBA2008B5356 /* EditProfileService.swift */; };
@@ -201,6 +202,7 @@
 		2ECC473129B0DA630001AA04 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		2ECC473329B1E0130001AA04 /* AddCarPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarPhotos.swift; sourceTree = "<group>"; };
 		2ECC473529B1F6320001AA04 /* AddedCarPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedCarPhotoCell.swift; sourceTree = "<group>"; };
+		2ECC473729B206C40001AA04 /* AddCarPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarPrice.swift; sourceTree = "<group>"; };
 		2ED414A52994DAA4008B5356 /* UserDetailsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsData.swift; sourceTree = "<group>"; };
 		2ED414A72994DB3C008B5356 /* EditProfileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileProtocol.swift; sourceTree = "<group>"; };
 		2ED414A92994DBA2008B5356 /* EditProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileService.swift; sourceTree = "<group>"; };
@@ -467,6 +469,7 @@
 				2E733BF629AF5E81000E4F29 /* AddCarDetails.swift */,
 				2EB1A05229B0945C006E79A8 /* AddCarLocation.swift */,
 				2ECC473329B1E0130001AA04 /* AddCarPhotos.swift */,
+				2ECC473729B206C40001AA04 /* AddCarPrice.swift */,
 			);
 			path = "Add Car";
 			sourceTree = "<group>";
@@ -856,6 +859,7 @@
 				2EF1CB1E298D46C2009F8626 /* Languages.swift in Sources */,
 				2ED414AC2994DC0D008B5356 /* ApiEndpoint.swift in Sources */,
 				2ED414AA2994DBA2008B5356 /* EditProfileService.swift in Sources */,
+				2ECC473829B206C40001AA04 /* AddCarPrice.swift in Sources */,
 				2E764148299BDF6E0016E941 /* ChangePhoneNumberService.swift in Sources */,
 				2E733C0029AF6B94000E4F29 /* CarRepository.swift in Sources */,
 				2E6353262976A17F0016EC6E /* LoginData.swift in Sources */,
