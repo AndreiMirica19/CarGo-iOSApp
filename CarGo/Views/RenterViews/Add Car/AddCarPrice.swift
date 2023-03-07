@@ -9,7 +9,6 @@ import SwiftUI
 
 struct AddCarPrice: View {
     @EnvironmentObject var carData: CarData
-
     @State var price = ""
     @State var currency = 0
     @State var durationDiscount = false
@@ -18,6 +17,7 @@ struct AddCarPrice: View {
     @State var carAddedErrorIsShown = false
     @State var errorMessage = ""
     var dismissSheet: () -> Void
+
     var body: some View {
         VStack(alignment: .leading) {
             CustomInputView(text: $price, label: "Price per day", onCommit: {})

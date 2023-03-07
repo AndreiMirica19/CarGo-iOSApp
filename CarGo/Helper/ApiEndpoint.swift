@@ -22,4 +22,5 @@ enum ApiEndpoint: String {
     
     case carList = "/cars"
     case addCar = "/addCar"
+    case ownedCars = "/ownedCars"
 }

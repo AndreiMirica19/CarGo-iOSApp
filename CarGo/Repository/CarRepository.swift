@@ -52,4 +52,25 @@ struct CarRepository {
             }
         }
     }
+    
+    func ownedCars() async throws -> ([CarInfoDTO]?, NetworkError?) {
+        do {
+            let (data, error) = try await OwnedCarsService.ownedCars(ownerId: UserRepository.shared.userId)
+            
+            guard let data = data else {
+                guard let error = error else {
+                    return (nil, .unexpectedError)
+                }
+                
+                return (nil, error)
+            }
+            
+            do {
+                let response = try JSONDecoder().decode([CarInfoDTO].self, from: data)
+                return (response, nil)
+            } catch {
+                return (nil, .unexpectedError)
+            }
+        }
+    }
 }
