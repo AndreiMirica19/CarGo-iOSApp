@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AddCarDetails: View {
     @EnvironmentObject var router: Router<AddCarPaths>
+    @EnvironmentObject var carData: CarData
     @State private var manufacturer = "-"
     @State private var carModel = "-"
     @State private var year = "2023"
@@ -80,6 +81,13 @@ struct AddCarDetails: View {
                 Spacer()
                 
                 Button {
+                    carData.manufacturer = manufacturer
+                    carData.model = carModel
+                    carData.manufactureYear = year
+                    carData.color = color
+                    carData.transmission = transmission
+                    carData.fuel = fuel
+                    carData.numberSeats = numberOfSeats
                     router.push(.addCarLocation)
                 } label: {
                     Text("Next")

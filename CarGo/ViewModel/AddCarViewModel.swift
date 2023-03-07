@@ -26,6 +26,7 @@ class AddCarViewModel: ObservableObject {
     
     @Published var carListResponse: ([CarDto]?, NetworkError?) = (nil, nil)
     @Published var region: (region: MKCoordinateRegion?, Error?)
+    @Published var addCarResponse: (Response?, NetworkError?) = (nil, nil)
     var places: [IdentifiablePlace] = []
     
     func fetchCars() {
@@ -66,31 +67,13 @@ class AddCarViewModel: ObservableObject {
         return models.sorted()
     }
     
-    func updateLocation(address: String) {
-        let geoCoder = CLGeocoder()
-        
-        geoCoder.geocodeAddressString(address) { (placemarks, error) in
-            guard
-                let placemarks = placemarks,
-                let location = placemarks.first?.location
-            else {
-                self.region = (nil, error)
-                return
+    func addCar(carData: CarData) {
+        Task {
+            let response = try await CarRepository.shared.addCar(carData: carData)
+            
+            DispatchQueue.main.async {
+                self.addCarResponse = response
             }
-            
-            let coordinateRegion = MKCoordinateRegion(
-                center: CLLocationCoordinate2D(
-                    latitude: location.coordinate.latitude,
-                    longitude: location.coordinate.longitude
-                ),
-                span: MKCoordinateSpan(
-                    latitudeDelta: 0.01,
-                    longitudeDelta: 0.01
-                )
-            )
-            
-            self.places = [IdentifiablePlace(lat: location.coordinate.latitude, long: location.coordinate.longitude)]
-            self.region = (coordinateRegion, nil)
         }
     }
 }

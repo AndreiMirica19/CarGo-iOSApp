@@ -11,6 +11,7 @@ import MapKit
 struct AddCarLocation: View {
     
     @EnvironmentObject var router: Router<AddCarPaths>
+    @EnvironmentObject var carData: CarData
     @State private var street = ""
     @State private var city = ""
     @State private var country = ""
@@ -50,6 +51,9 @@ struct AddCarLocation: View {
                 .padding(.bottom)
                 
                 Button {
+                    carData.street = street
+                    carData.city = city
+                    carData.country = country
                     router.push(.addCarPhotos)
                 } label: {
                     Text("Next")

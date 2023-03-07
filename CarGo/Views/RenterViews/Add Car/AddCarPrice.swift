@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct AddCarPrice: View {
+    @EnvironmentObject var carData: CarData
+
     @State var price = ""
     @State var currency = 0
     @State var durationDiscount = false
+    @StateObject var addCarViewModel = AddCarViewModel()
+    @State var carAddedAlertIsShown = false
+    @State var carAddedErrorIsShown = false
+    @State var errorMessage = ""
+    var dismissSheet: () -> Void
     var body: some View {
         VStack(alignment: .leading) {
             CustomInputView(text: $price, label: "Price per day", onCommit: {})
@@ -40,6 +47,10 @@ struct AddCarPrice: View {
 
             Button {
                 // router.push(.addCarPrice)
+                carData.price = price
+                carData.currency = currency == 0 ? "RON" : "EUR"
+                carData.discount = durationDiscount
+                addCarViewModel.addCar(carData: carData)
             } label: {
                 Text("Next")
             }
@@ -48,6 +59,34 @@ struct AddCarPrice: View {
             .cornerRadius(8)
             .buttonStyle(OutlineBorder(color: !price.isEmpty ? .blue : .gray))
             .disabled(price.isEmpty)
+            .onReceive(addCarViewModel.$addCarResponse) { apiResponse in
+                guard let response = apiResponse.0 else {
+                    guard let error = apiResponse.1 else {
+                        return
+                    }
+                    
+                    errorMessage = error.getErrorMessage()
+                    carAddedErrorIsShown = true
+                    return
+                }
+                
+                if response.statusCode == 201 {
+                    carAddedAlertIsShown = true
+                } else {
+                    errorMessage = response.message
+                    carAddedErrorIsShown = true
+                }
+  
+            }
+            .alert("Car added successfully", isPresented: $carAddedAlertIsShown) {
+                Button("Ok", role: .cancel) {
+                    dismissSheet()
+                }
+            }
+            .alert(errorMessage, isPresented: $carAddedErrorIsShown) {
+                Button("Ok", role: .cancel) {
+                }
+            }
             
         }.padding(.horizontal, 24)
     }
@@ -55,6 +94,6 @@ struct AddCarPrice: View {
 
 struct AddCarPrice_Previews: PreviewProvider {
     static var previews: some View {
-        AddCarPrice()
+        AddCarPrice {}
     }
 }

@@ -9,8 +9,9 @@ import SwiftUI
 
 struct AddCarNumberPlate: View {
     @EnvironmentObject var router: Router<AddCarPaths>
+    @EnvironmentObject var carData: CarData
     @State var numberPlate = ""
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             
@@ -30,6 +31,7 @@ struct AddCarNumberPlate: View {
             Spacer()
             
             Button {
+                carData.numberPlate = numberPlate
                 router.push(.addCarDetails)
             } label: {
                 Text("Next")

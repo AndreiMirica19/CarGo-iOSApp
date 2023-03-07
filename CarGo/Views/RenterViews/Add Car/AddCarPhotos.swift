@@ -11,8 +11,10 @@ import _PhotosUI_SwiftUI
 struct AddCarPhotos: View {
     
     @EnvironmentObject var router: Router<AddCarPaths>
+    @EnvironmentObject var carData: CarData
     private var columnGrid: [GridItem] = [GridItem(.adaptive(minimum: 116)), GridItem(.adaptive(minimum: 116)), GridItem(.adaptive(minimum: 80))]
     @State var addedPhotos: [UIImage] = []
+    @State var addedPhotosData: [Data] = []
     @State var presentActionSheet = false
     @State var presentGallery = false
     @State var selectedItem: PhotosPickerItem?
@@ -55,6 +57,7 @@ struct AddCarPhotos: View {
                 .padding(.top)
                 
                 Button {
+                    carData.photos = addedPhotosData
                     router.push(.addCarPrice)
                 } label: {
                     Text("Next")
@@ -89,6 +92,8 @@ struct AddCarPhotos: View {
                             guard let selectedUIImage = UIImage(data: selectedImageData) else {
                                 return
                             }
+                            
+                            addedPhotosData.append(selectedImageData)
                             addedPhotos.append(selectedUIImage)
                         }
                     }

@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct AddCarContentView: View {
-    
+    @Environment(\.dismiss) var dismiss
     @ObservedObject var router = Router<AddCarPaths>()
+    @ObservedObject var carData = CarData()
     
     var body: some View {
         NavigationStack(path: $router.paths) {
@@ -21,18 +22,25 @@ struct AddCarContentView: View {
                         
                     case .addCarDetails:
                         AddCarDetails().environmentObject(router)
+                            .environmentObject(carData)
                         
                     case .addCarLocation:
                         AddCarLocation().environmentObject(router)
+                            .environmentObject(carData)
                         
                     case .addCarPhotos:
                         AddCarPhotos().environmentObject(router)
+                            .environmentObject(carData)
                         
                     case .addCarPrice:
-                        EmptyView()
+                        AddCarPrice(dismissSheet: {
+                            dismiss()
+                        }).environmentObject(router)
+                            .environmentObject(carData)
                     }
                 }
             .environmentObject(router)
+            .environmentObject(carData)
             .navigationTitle("Add car")
             .navigationBarTitleDisplayMode(.inline)
         }

@@ -30,4 +30,26 @@ struct CarRepository {
             }
         }
     }
+    
+    func addCar(carData: CarData) async throws -> (Response?, NetworkError?) {
+        do {
+            carData.ownerId = UserRepository.shared.userId
+            let (data, error) = try await AddCarService.addCar(carData: carData)
+            
+            guard let data = data else {
+                guard let error = error else {
+                    return (nil, .unexpectedError)
+                }
+                
+                return (nil, error)
+            }
+            
+            do {
+                let response = try JSONDecoder().decode(Response.self, from: data)
+                return (response, nil)
+            } catch {
+                return (nil, .unexpectedError)
+            }
+        }
+    }
 }

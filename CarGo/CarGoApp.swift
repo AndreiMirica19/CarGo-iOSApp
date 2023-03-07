@@ -16,24 +16,23 @@ struct CarGoApp: App {
     var body: some Scene {
             WindowGroup {
                 VStack {
-                    AddCarPrice()
-//                    if userRepository.isLoggedIn {
-//                        if userRepository.isRenterViewActive {
-//                            RenterContentView()
-//                        } else {
-//                            RentingContentView()
-//                        }
-//                    } else {
-//                        if loginSuccessful {
-//                            if userRepository.isRenterViewActive {
-//                                RenterContentView()
-//                            } else {
-//                                RentingContentView()
-//                            }
-//                        } else {
-//                            LoginView()
-//                        }
-//                    }
+                    if userRepository.isLoggedIn {
+                        if userRepository.isRenterViewActive {
+                            RenterContentView()
+                        } else {
+                            RentingContentView()
+                        }
+                    } else {
+                        if loginSuccessful {
+                            if userRepository.isRenterViewActive {
+                                RenterContentView()
+                            } else {
+                                RentingContentView()
+                            }
+                        } else {
+                            LoginView()
+                        }
+                    }
                 }.onReceive(userRepository.$isLoggedIn) { isLoggedIn in
                     if !isLoggedIn {
                         loginSuccessful = false
