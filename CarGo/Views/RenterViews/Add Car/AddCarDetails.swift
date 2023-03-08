@@ -17,6 +17,7 @@ struct AddCarDetails: View {
     @State private var color = "-"
     @State private var fuel = "-"
     @State private var numberOfSeats = "1"
+    @State private var carType = ""
     @StateObject var addCarViewModel = AddCarViewModel()
     @State var manufacturers: [String] = []
     @State var models: [String] = []
@@ -45,6 +46,11 @@ struct AddCarDetails: View {
                     Divider()
                     
                     PickerAndTitle(selectedItem: $carModel, items: addCarViewModel.getCarModels(carManufacturer: manufacturer), title: "Select the car model")
+                        .padding(.top)
+                    
+                    Divider()
+                    
+                    PickerAndTitle(selectedItem: $carType, items: CarType.allCases.map { $0.rawValue }, title: "Select the car model")
                         .padding(.top)
                     
                     Divider()
@@ -88,6 +94,7 @@ struct AddCarDetails: View {
                     carData.transmission = transmission
                     carData.fuel = fuel
                     carData.numberSeats = numberOfSeats
+                    carData.carType = carType
                     router.push(.addCarDescription)
                 } label: {
                     Text("Next")

@@ -13,6 +13,7 @@ struct CarInfoDTO: Codable {
     var numberPlate: String
     var manufacturer: String
     var model: String
+    var carType: String
     var manufactureYear: String
     var transmission: String
     var color: String

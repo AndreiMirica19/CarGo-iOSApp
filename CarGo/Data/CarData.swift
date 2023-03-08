@@ -13,6 +13,7 @@ class CarData: Codable, ObservableObject {
     var manufacturer = ""
     var model = ""
     var manufactureYear = ""
+    var carType = ""
     var transmission = ""
     var color = ""
     var fuel = ""
