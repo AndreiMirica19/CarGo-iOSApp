@@ -18,6 +18,7 @@ struct CarInfoDTO: Codable {
     var color: String
     var fuel: String
     var numberSeats: String
+    var description: String
     var street: String
     var city: String
     var country: String

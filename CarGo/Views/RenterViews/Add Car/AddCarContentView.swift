@@ -23,6 +23,10 @@ struct AddCarContentView: View {
                     case .addCarDetails:
                         AddCarDetails().environmentObject(router)
                             .environmentObject(carData)
+                    
+                    case .addCarDescription:
+                        AddCarDescription().environmentObject(router)
+                            .environmentObject(carData)
                         
                     case .addCarLocation:
                         AddCarLocation().environmentObject(router)

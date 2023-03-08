@@ -88,7 +88,7 @@ struct AddCarDetails: View {
                     carData.transmission = transmission
                     carData.fuel = fuel
                     carData.numberSeats = numberOfSeats
-                    router.push(.addCarLocation)
+                    router.push(.addCarDescription)
                 } label: {
                     Text("Next")
                 }

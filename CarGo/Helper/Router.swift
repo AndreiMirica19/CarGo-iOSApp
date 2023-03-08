@@ -25,6 +25,7 @@ enum ProfilePaths {
 enum AddCarPaths {
     case addCarNumberPlate
     case addCarDetails
+    case addCarDescription
     case addCarLocation
     case addCarPhotos
     case addCarPrice
