@@ -19,7 +19,8 @@ struct MyCarsView: View {
             List(carList, id: \.id) { car in
                 if let carImageData = car.photos.first {
                     if let carImage = UIImage(data: carImageData) {
-                        NavigationLink(destination: EmptyView()) {
+                        NavigationLink(destination: CarDetailsView(carData: car)) {
+                            
                             OwnedCarView(carName: "\(car.manufacturer) \(car.model)", location: car.street, numberPlate: car.numberPlate, image: carImage)
                         }
  

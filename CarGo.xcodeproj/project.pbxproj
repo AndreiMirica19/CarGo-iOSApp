@@ -37,6 +37,7 @@
 		2E2D2EB329B7333C0030F604 /* CarInfoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D2EB229B7333C0030F604 /* CarInfoDTO.swift */; };
 		2E2D2EB529B7356F0030F604 /* OwnedCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D2EB429B7356F0030F604 /* OwnedCarView.swift */; };
 		2E2D2EB929B862410030F604 /* AddCarDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D2EB829B862410030F604 /* AddCarDescription.swift */; };
+		2E2D2EBB29B8835B0030F604 /* CarDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D2EBA29B8835B0030F604 /* CarDetailsView.swift */; };
 		2E5CDC5B294F2021001F2524 /* CarGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CDC5A294F2021001F2524 /* CarGoApp.swift */; };
 		2E5CDC5F294F2022001F2524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E5CDC5E294F2022001F2524 /* Assets.xcassets */; };
 		2E5CDC62294F2022001F2524 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E5CDC61294F2022001F2524 /* Preview Assets.xcassets */; };
@@ -62,6 +63,8 @@
 		2E764144299BDE0F0016E941 /* ChangePhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E764143299BDE0F0016E941 /* ChangePhoneNumber.swift */; };
 		2E764146299BDF180016E941 /* ChangePhoneNumberProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E764145299BDF180016E941 /* ChangePhoneNumberProtocol.swift */; };
 		2E764148299BDF6E0016E941 /* ChangePhoneNumberService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E764147299BDF6E0016E941 /* ChangePhoneNumberService.swift */; };
+		2E900A2A29BDC645007516BA /* CarInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E900A2929BDC645007516BA /* CarInfoView.swift */; };
+		2E900A2C29BDC7FB007516BA /* CarBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E900A2B29BDC7FB007516BA /* CarBasic.swift */; };
 		2E91E94B2981713C00B70C4B /* RentingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91E94A2981713C00B70C4B /* RentingContentView.swift */; };
 		2E91E94E298171DA00B70C4B /* SearchCarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91E94D298171DA00B70C4B /* SearchCarsView.swift */; };
 		2E91E950298171EC00B70C4B /* FavoriteCarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91E94F298171EC00B70C4B /* FavoriteCarsView.swift */; };
@@ -163,6 +166,7 @@
 		2E2D2EB229B7333C0030F604 /* CarInfoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoDTO.swift; sourceTree = "<group>"; };
 		2E2D2EB429B7356F0030F604 /* OwnedCarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnedCarView.swift; sourceTree = "<group>"; };
 		2E2D2EB829B862410030F604 /* AddCarDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarDescription.swift; sourceTree = "<group>"; };
+		2E2D2EBA29B8835B0030F604 /* CarDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailsView.swift; sourceTree = "<group>"; };
 		2E5CDC57294F2021001F2524 /* CarGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5CDC5A294F2021001F2524 /* CarGoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarGoApp.swift; sourceTree = "<group>"; };
 		2E5CDC5E294F2022001F2524 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -191,6 +195,8 @@
 		2E764143299BDE0F0016E941 /* ChangePhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePhoneNumber.swift; sourceTree = "<group>"; };
 		2E764145299BDF180016E941 /* ChangePhoneNumberProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePhoneNumberProtocol.swift; sourceTree = "<group>"; };
 		2E764147299BDF6E0016E941 /* ChangePhoneNumberService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePhoneNumberService.swift; sourceTree = "<group>"; };
+		2E900A2929BDC645007516BA /* CarInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoView.swift; sourceTree = "<group>"; };
+		2E900A2B29BDC7FB007516BA /* CarBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBasic.swift; sourceTree = "<group>"; };
 		2E91E94A2981713C00B70C4B /* RentingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentingContentView.swift; sourceTree = "<group>"; };
 		2E91E94D298171DA00B70C4B /* SearchCarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCarsView.swift; sourceTree = "<group>"; };
 		2E91E94F298171EC00B70C4B /* FavoriteCarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCarsView.swift; sourceTree = "<group>"; };
@@ -459,6 +465,9 @@
 				2EC80D1A29ADEF6900244F6D /* Add Car */,
 				2EB9FB05299E23D5007C097E /* PerformanceView.swift */,
 				2EB9FB07299E249A007C097E /* MyCarsView.swift */,
+				2E2D2EBA29B8835B0030F604 /* CarDetailsView.swift */,
+				2E900A2929BDC645007516BA /* CarInfoView.swift */,
+				2E900A2B29BDC7FB007516BA /* CarBasic.swift */,
 			);
 			path = RenterViews;
 			sourceTree = "<group>";
@@ -836,6 +845,7 @@
 				2EF1CB1C298D442E009F8626 /* MultiSelector.swift in Sources */,
 				2E0E219E29B5F15900D10974 /* AddCarProtocol.swift in Sources */,
 				2E733C0429AF6D78000E4F29 /* AddCarViewModel.swift in Sources */,
+				2E900A2C29BDC7FB007516BA /* CarBasic.swift in Sources */,
 				2EB9FB03299E18CD007C097E /* RenterContentView.swift in Sources */,
 				2ED414BC29952571008B5356 /* EmptyProfileImage.swift in Sources */,
 				2EB1A04929B07CB3006E79A8 /* CalendarExtension.swift in Sources */,
@@ -874,8 +884,10 @@
 				2E764144299BDE0F0016E941 /* ChangePhoneNumber.swift in Sources */,
 				2E2D2EB529B7356F0030F604 /* OwnedCarView.swift in Sources */,
 				2EB9FB06299E23D5007C097E /* PerformanceView.swift in Sources */,
+				2E2D2EBB29B8835B0030F604 /* CarDetailsView.swift in Sources */,
 				2E0C3D3C299CCE0F00B67972 /* DeleteAccountService.swift in Sources */,
 				2E2D2EB129B7305E0030F604 /* MyCarsViewModel.swift in Sources */,
+				2E900A2A29BDC645007516BA /* CarInfoView.swift in Sources */,
 				2E0C3D38299CC50B00B67972 /* HTTPURLResponseExtension.swift in Sources */,
 				2E63532A2976A25C0016EC6E /* LoginService.swift in Sources */,
 				2E0C3D31299CBCA100B67972 /* ChangePasswordProtocol.swift in Sources */,
