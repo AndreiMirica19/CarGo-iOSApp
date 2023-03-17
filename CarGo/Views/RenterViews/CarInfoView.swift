@@ -32,15 +32,11 @@ struct CarInfoView: View {
                         .font(.subheadline)
                         .fontWeight(.semibold)
                         .foregroundColor(.gray)
-                    Divider().padding(.bottom, 36)
                 }
                 
+                Divider().padding(.bottom, 16)
+                
                 Section {
-                    Text("Car Basics")
-                        .font(.headline)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                    Divider()
                     
                     HStack {
                         
@@ -60,29 +56,27 @@ struct CarInfoView: View {
                         
                     }
                     
-                    Divider()
-                        .padding(.bottom, 24)
-                }
-                
-                Section {
-                    Text("Descriptions")
+                } header: {
+                    Text("Car Basics")
                         .font(.headline)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                    Divider()
+                }
+                
+                Divider().padding(.bottom, 16)
+                
+                Section {
                     
                     Text(carInfo.description)
                     
-                    Divider()
-                        .padding(.bottom, 24)
-                }
-                
-                Section {
-                    Text("Pickup location")
+                } header: {
+                    Text("Descriptions")
                         .font(.headline)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                    Divider()
+                }
+                
+                Divider().padding(.bottom, 16)
+                
+                Section {
                     
                     Text("\(carInfo.street), \(carInfo.city), \(carInfo.country)")
                     
@@ -97,7 +91,13 @@ struct CarInfoView: View {
                     .onReceive(manager.$updateRegionError) { error in
                         print(error as Any)
                     }
+                } header: {
+                    Text("Pickup location")
+                        .font(.headline)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
+                
+                Divider()
                 
             }.padding()
         }.padding()
