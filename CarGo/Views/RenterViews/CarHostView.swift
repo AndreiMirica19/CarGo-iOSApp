@@ -7,7 +7,10 @@
 
 import SwiftUI
 
-struct HostView: View {
+struct CarHostView: View {
+    
+    @State var isViewProfileActive = false
+
     var body: some View {
         List {
             Section {
@@ -26,7 +29,7 @@ struct HostView: View {
                             StarsView()
                             
                             Button {
-                                
+                                isViewProfileActive = true
                             } label: {
                                 Text("View profile")
                                     .font(.headline)
@@ -34,6 +37,8 @@ struct HostView: View {
                             }
                         }
                     }
+                }.sheet(isPresented: $isViewProfileActive) {
+                    HostProfileView()
                 }
             } header: {
                 Text("The Host")
@@ -54,6 +59,6 @@ struct HostView: View {
 
 struct HostView_Previews: PreviewProvider {
     static var previews: some View {
-        HostView()
+        CarHostView()
     }
 }
