@@ -13,84 +13,75 @@ struct ProfileDetails: View {
     @EnvironmentObject var router: Router<ProfilePaths>
     
     var body: some View {
-            VStack {
-                if let userInfo = profileViewModel.response.0, let accountInfo = profileViewModel.accountResponse.0 {
-                    List {
-                        Section {
-                            HStack {
-                                Spacer()
-                                VStack(alignment: .center) {
-                                    userInfo.profileImage.imageFromData()
-                                        .resizable()
-                                        .frame(width: 128, height: 128)
-                                        .clipShape(Circle())
-                                    
-                                    Text(accountInfo.name)
-                                        .font(.title)
-                                        .fontWeight(.bold)
-                                }
-                                
-                                Spacer()
-                            }.listRowSeparator(.hidden)
-                        }
-                        
-                        Section {
-                            Text(userInfo.about)
+        VStack(alignment: .leading) {
+            if let userInfo = profileViewModel.response.0, let accountInfo = profileViewModel.accountResponse.0 {
+                Section {
+                    HStack {
+                        Spacer()
+                        VStack(alignment: .center) {
+                            userInfo.profileImage.imageFromData()
+                                .resizable()
+                                .frame(width: 128, height: 128)
+                                .clipShape(Circle())
                             
-                        } header: {
-                            Text("About")
+                            Text("Hi, I'm \(accountInfo.name)!")
+                                .font(.title)
                                 .fontWeight(.bold)
                         }
                         
-                        Section {
-                            HStack {
-                                Text("Country")
-                                Spacer()
-                                Text(userInfo.country)
-                            }
-                            
-                            HStack {
-                                Text("City")
-                                Spacer()
-                                Text(userInfo.city)
-                            }
-                            
-                            HStack {
-                                Text("Spoken languages")
-                                Spacer()
-                                Text(userInfo.spokenLanguages.joined(separator: ", "))
-                            }
-                            
-                            HStack {
-                                Text("Job")
-                                Spacer()
-                                Text(userInfo.job)
-                            }
-                        } header: {
-                            Text("Details")
-                                .fontWeight(.bold)
-                        }
+                        Spacer()
                     }
-                    .listStyle(.plain)
-                } else {
-                    IncompleteProfile()
                 }
-            }.toolbar {
-                Button {
-                    router.push(.editProfile)
-                } label: {
-                    Image(systemName: "pencil")
-                }
-            }
-            .onAppear {
-                profileViewModel.userInfo()
-                profileViewModel.accountInfo()
+                
+                Divider()
+                
+                Section {
+                    Text(userInfo.about)
+                        .padding(.top, 4)
+                    
+                } header: {
+                    Text("About")
+                        .fontWeight(.bold)
+                }.padding(.horizontal, 16)
+                
+                Divider()
+                
+                Section {
+                    SymbolLabelView(symbolName: "house", text: "Lives in \(userInfo.city), \(userInfo.country)", symbolColor: .black, textColor: .black)
+                    
+                    SymbolLabelView(symbolName: "bubble.left.and.bubble.right", text: "Speaks \(userInfo.spokenLanguages.joined(separator: ", "))", symbolColor: .black, textColor: .black)
+                    
+                    SymbolLabelView(symbolName: "suitcase", text: userInfo.job, symbolColor: .black, textColor: .black)
+                } header: {
+                    Text("Details")
+                        .fontWeight(.bold)
+                }.padding(.horizontal, 16)
+                
+                Divider()
+                
+                Spacer()
+                
+            } else {
+                IncompleteProfile()
             }
         }
+        .toolbar {
+            Button {
+                router.push(.editProfile)
+            } label: {
+                Image(systemName: "pencil")
+            }
+            .frame(width: .infinity, alignment: .leading)
+        }
+        .onAppear {
+            profileViewModel.userInfo()
+            profileViewModel.accountInfo()
+        }
+    }
 }
 
 struct ViewProfile_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileDetails()
+        EmptyView()
     }
 }
