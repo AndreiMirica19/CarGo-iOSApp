@@ -37,10 +37,22 @@ struct CarDetailsView: View {
                     Text("Car Info").tag(0)
                     Text("Booking Calendar").tag(1)
                     Text("Host").tag(2)
-                }.pickerStyle(SegmentedPickerStyle())
+                }
+                .pickerStyle(SegmentedPickerStyle())
+
                 
-                CarInfoView(carInfo: carData)
+
                 
+                switch selectedOption {
+                case 0:
+                    CarInfoView(carInfo: carData)
+                    
+                case 2:
+                    HostView()
+                    
+                default:
+                    EmptyView()
+                }
             }
         }.edgesIgnoringSafeArea(.top)
     }
