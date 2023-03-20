@@ -9,7 +9,7 @@ import Foundation
 
 struct UserDetailsData: Encodable, Decodable {
     var id: String?
-    var name = "John Doe"
+    var name: String
     var about: String
     var country: String
     var city: String

@@ -242,5 +242,4 @@ class UserRepository: ObservableObject {
             return (nil, .jsonDecoder)
         }
     }
-    
 }

@@ -73,4 +73,25 @@ struct CarRepository {
             }
         }
     }
+    
+    func hostInfo(id: String) async throws -> (HostInfoDTO?, NetworkError?) {
+        do {
+            let (data, error) = try await HostInfoService.hostInfo(id: id)
+            
+            guard let data = data else {
+                guard let error = error else {
+                    return (nil, .unexpectedError)
+                }
+                
+                return (nil, error)
+            }
+            
+            do {
+                let response = try JSONDecoder().decode(HostInfoDTO.self, from: data)
+                return (response, nil)
+            } catch {
+                return (nil, .unexpectedError)
+            }
+        }
+    }
 }

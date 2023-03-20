@@ -8,16 +8,21 @@
 import SwiftUI
 
 struct HostProfileView: View {
+    var hostInfo: HostInfoDTO
+    
     var body: some View {
         ScrollView {
             LazyVStack(alignment: .leading) {
                 Section {
-                    Image("porsche")
-                        .resizable()
-                        .frame(width: 88, height: 88)
-                        .clipShape(Circle())
-                    
-                    Text("Hi, I'm John Doe!")
+
+                    if let profilePictureImage = UIImage(data: hostInfo.hostDetails.profileImage) {
+                            Image(uiImage: profilePictureImage)
+                            .resizable()
+                            .frame(width: 88, height: 88)
+                            .clipShape(Circle())
+                        }
+
+                    Text("Hi, I'm \(hostInfo.hostDetails.name)!")
                         .font(.headline)
                     
                     SymbolLabelView(symbolName: "star.fill", text: "5 stars", symbolColor: .yellow, textColor: .black)
@@ -26,11 +31,11 @@ struct HostProfileView: View {
                 Divider()
                 
                 Section {
-                    Text("Welcome to my car sharing profile! As a car owner and host, I'm dedicated to providing the best experience for my guests. My car is always clean, well-maintained, and ready to hit the road. I take pride in being responsive and accommodating to your needs, whether it's a last-minute booking or a special reques")
+                    Text(hostInfo.hostDetails.about)
                     
-                    SymbolLabelView(symbolName: "house", text: "Lives in Bucharest, Romania", symbolColor: .black, textColor: .black)
+                    SymbolLabelView(symbolName: "house", text: "Lives in \(hostInfo.hostDetails.city), \(hostInfo.hostDetails.country)", symbolColor: .black, textColor: .black)
                     
-                    SymbolLabelView(symbolName: "bubble.left.and.bubble.right", text: "Speaks Romanian, English and French", symbolColor: .black, textColor: .black)
+                    SymbolLabelView(symbolName: "bubble.left.and.bubble.right", text: "Speaks \(hostInfo.hostDetails.spokenLanguages.joined(separator: ", "))", symbolColor: .black, textColor: .black)
                     
                 } header: {
                     Text("About")
@@ -43,15 +48,15 @@ struct HostProfileView: View {
                 Section {
                     ScrollView(.horizontal) {
                         LazyHStack {
-                            ForEach(0...5, id: \.self) { _ in
-                                CarCardView()
+                            ForEach(hostInfo.ownedCars, id: \.id) { car in
+                                CarCardView(carInfo: car)
                                     .frame(width: 248, height: 224)
                                     .padding()
                             }
                         }
                     }
                 } header: {
-                    Text("Doe's listings")
+                    Text("\(hostInfo.hostDetails.name)'s listings")
                         .font(.title3)
                         .fontWeight(.semibold)
                 }
@@ -78,6 +83,6 @@ struct HostProfileView: View {
 
 struct HostProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        HostProfileView()
+        HostProfileView(hostInfo: HostInfoDTO(hostDetails: UserDetailsData(name: "", about: "", country: "", city: "", job: "", profileImage: Data(), spokenLanguages: []), ownedCars: [], reviews: []))
     }
 }

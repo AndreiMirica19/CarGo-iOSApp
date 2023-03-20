@@ -10,19 +10,34 @@ import SwiftUI
 struct CarHostView: View {
     
     @State var isViewProfileActive = false
-
+    @StateObject var hostInfoViewModel = HostViewModel()
+    var ownerId: String
+    @State var hostInfo: HostInfoDTO?
+    @State var errorMessage = ""
+    @State var errorIsShown = false
+    
     var body: some View {
         List {
             Section {
                 VStack(alignment: .leading) {
                     HStack {
-                        Image("porsche")
-                            .resizable()
-                            .frame(width: 88, height: 88)
-                            .clipShape(Circle())
+            
+                        if let hostInfo = hostInfo {
+                            if let profilePictureImage = UIImage(data: hostInfo.hostDetails.profileImage) {
+                                Image(uiImage: profilePictureImage)
+                                    .resizable()
+                                    .frame(width: 88, height: 88)
+                                    .clipShape(Circle())
+                            }
+                        } else {
+                            Image("porsche")
+                                .resizable()
+                                .frame(width: 88, height: 88)
+                                .clipShape(Circle())
+                        }
                         
                         VStack(alignment: .leading) {
-                            Text("Full name")
+                            Text(hostInfo?.hostDetails.name ?? "Full Name")
                                 .font(.headline)
                                 .fontWeight(.bold)
                             
@@ -38,7 +53,11 @@ struct CarHostView: View {
                         }
                     }
                 }.sheet(isPresented: $isViewProfileActive) {
-                    HostProfileView()
+                    if let hostInfo = hostInfo {
+                        HostProfileView(hostInfo: hostInfo)
+                    } else {
+                        EmptyView()
+                    }
                 }
             } header: {
                 Text("The Host")
@@ -53,12 +72,34 @@ struct CarHostView: View {
                 Text("Reviews")
                     .font(.headline)
             }
-        }.listStyle(.insetGrouped)
+        }
+        .listStyle(.insetGrouped)
+        .onAppear {
+            hostInfoViewModel.hostInfo(id: ownerId)
+        }
+        .onReceive(hostInfoViewModel.$hostInfoResponse) { response in
+            guard let hostInfoData = response.0 else {
+                guard let error = response.1 else {
+                    return
+                }
+                
+                self.errorMessage = error.getErrorMessage()
+                self.errorIsShown = true
+                
+                return
+            }
+            
+            self.hostInfo = hostInfoData
+        }
+        .alert(errorMessage, isPresented: $errorIsShown) {
+            Button("OK", role: .cancel) {
+            }
+        }
     }
 }
 
 struct HostView_Previews: PreviewProvider {
     static var previews: some View {
-        CarHostView()
+        CarHostView(ownerId: "")
     }
 }

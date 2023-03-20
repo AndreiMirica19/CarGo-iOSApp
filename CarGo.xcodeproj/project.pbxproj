@@ -84,6 +84,10 @@
 		2EB1A05129B080B0006E79A8 /* CarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB1A05029B080B0006E79A8 /* CarColor.swift */; };
 		2EB1A05329B0945C006E79A8 /* AddCarLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB1A05229B0945C006E79A8 /* AddCarLocation.swift */; };
 		2EB1A05529B09DDF006E79A8 /* CustomInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB1A05429B09DDF006E79A8 /* CustomInputView.swift */; };
+		2EB6086929C845FB0021303C /* HostInfoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB6086829C845FB0021303C /* HostInfoDTO.swift */; };
+		2EB6086B29C846CA0021303C /* HostInfoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB6086A29C846CA0021303C /* HostInfoProtocol.swift */; };
+		2EB6086D29C847320021303C /* HostInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB6086C29C847320021303C /* HostInfoService.swift */; };
+		2EB6086F29C8497E0021303C /* HostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB6086E29C8497E0021303C /* HostViewModel.swift */; };
 		2EB608EF29C3055A00A5DBA6 /* CarHostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB608EE29C3055A00A5DBA6 /* CarHostView.swift */; };
 		2EB9FB03299E18CD007C097E /* RenterContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9FB02299E18CD007C097E /* RenterContentView.swift */; };
 		2EB9FB06299E23D5007C097E /* PerformanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9FB05299E23D5007C097E /* PerformanceView.swift */; };
@@ -222,6 +226,10 @@
 		2EB1A05029B080B0006E79A8 /* CarColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarColor.swift; sourceTree = "<group>"; };
 		2EB1A05229B0945C006E79A8 /* AddCarLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarLocation.swift; sourceTree = "<group>"; };
 		2EB1A05429B09DDF006E79A8 /* CustomInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputView.swift; sourceTree = "<group>"; };
+		2EB6086829C845FB0021303C /* HostInfoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostInfoDTO.swift; sourceTree = "<group>"; };
+		2EB6086A29C846CA0021303C /* HostInfoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostInfoProtocol.swift; sourceTree = "<group>"; };
+		2EB6086C29C847320021303C /* HostInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostInfoService.swift; sourceTree = "<group>"; };
+		2EB6086E29C8497E0021303C /* HostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostViewModel.swift; sourceTree = "<group>"; };
 		2EB608EE29C3055A00A5DBA6 /* CarHostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarHostView.swift; sourceTree = "<group>"; };
 		2EB9FB02299E18CD007C097E /* RenterContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenterContentView.swift; sourceTree = "<group>"; };
 		2EB9FB05299E23D5007C097E /* PerformanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceView.swift; sourceTree = "<group>"; };
@@ -311,6 +319,8 @@
 				2ED414A92994DBA2008B5356 /* EditProfileService.swift */,
 				2ED414B129951CA2008B5356 /* UserInfoProtocol.swift */,
 				2ED414B329951D40008B5356 /* UserInfoService.swift */,
+				2EB6086A29C846CA0021303C /* HostInfoProtocol.swift */,
+				2EB6086C29C847320021303C /* HostInfoService.swift */,
 			);
 			path = UserServices;
 			sourceTree = "<group>";
@@ -529,6 +539,7 @@
 				2ED414B729951F05008B5356 /* ProfileViewModel.swift */,
 				2E733C0329AF6D78000E4F29 /* AddCarViewModel.swift */,
 				2E2D2EB029B7305E0030F604 /* MyCarsViewModel.swift */,
+				2EB6086E29C8497E0021303C /* HostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -541,6 +552,7 @@
 				2EAB174C2980051C001A153F /* ErrorResponse.swift */,
 				2E733C0129AF6C26000E4F29 /* CarDTO.swift */,
 				2E2D2EB229B7333C0030F604 /* CarInfoDTO.swift */,
+				2EB6086829C845FB0021303C /* HostInfoDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -844,6 +856,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EB1A04B29B07ED9006E79A8 /* CarTransmission.swift in Sources */,
+				2EB6086D29C847320021303C /* HostInfoService.swift in Sources */,
 				2E7205BF29964E22006AED35 /* Router.swift in Sources */,
 				2EBC7031299A7EEC00084A48 /* AccountInfo.swift in Sources */,
 				2EBC7017299A0BA600084A48 /* UserRepository.swift in Sources */,
@@ -910,12 +923,14 @@
 				2E0C3D38299CC50B00B67972 /* HTTPURLResponseExtension.swift in Sources */,
 				2E63532A2976A25C0016EC6E /* LoginService.swift in Sources */,
 				2E0C3D31299CBCA100B67972 /* ChangePasswordProtocol.swift in Sources */,
+				2EB6086B29C846CA0021303C /* HostInfoProtocol.swift in Sources */,
 				2E91E94E298171DA00B70C4B /* SearchCarsView.swift in Sources */,
 				2EBC702E299A714000084A48 /* AccountInfoService.swift in Sources */,
 				2E733BFC29AF6A17000E4F29 /* FetchCarsProtocol.swift in Sources */,
 				2E0E21A029B5F1DA00D10974 /* AddCarService.swift in Sources */,
 				2E80ED9B29C452BE005B616F /* SymbolLabelView.swift in Sources */,
 				2E19CE9229937ECE00499162 /* CustomTextField.swift in Sources */,
+				2EB6086929C845FB0021303C /* HostInfoDTO.swift in Sources */,
 				2EB1A04F29B0801B006E79A8 /* CarType.swift in Sources */,
 				2E167863297419DA00184CB9 /* NetworkError.swift in Sources */,
 				2ED414B02994E196008B5356 /* EditProfileViewModel.swift in Sources */,
@@ -943,6 +958,7 @@
 				2E131540298AB04C008ED79D /* TermsAndConditions.swift in Sources */,
 				2E80ED9729C44306005B616F /* ReviewView.swift in Sources */,
 				2E733BFE29AF6A91000E4F29 /* FetchCarsService.swift in Sources */,
+				2EB6086F29C8497E0021303C /* HostViewModel.swift in Sources */,
 				2EC80D2029ADF82A00244F6D /* CarNumberPlateView.swift in Sources */,
 				2EB1A04D29B07F71006E79A8 /* CarFuel.swift in Sources */,
 				2E5CDC5B294F2021001F2524 /* CarGoApp.swift in Sources */,

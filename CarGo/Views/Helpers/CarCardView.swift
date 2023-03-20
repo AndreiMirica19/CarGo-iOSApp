@@ -8,22 +8,28 @@
 import SwiftUI
 
 struct CarCardView: View {
+    
+    var carInfo: CarInfoDTO
     var body: some View {
         VStack(alignment: .leading) {
-            Image("porsche")
-                .resizable()
-                .cornerRadius(24.0)
-                .scaledToFill()
-                .frame(width: .infinity)
+            if let carPhotoData = carInfo.photos.first {
+                if let carPhotoImage = UIImage(data: carPhotoData) {
+                    Image(uiImage: carPhotoImage)
+                        .resizable()
+                        .cornerRadius(24.0)
+                        .scaledToFill()
+                        .frame(width: .infinity)
+                }
+            }
 
-            Text("Manufacturer + model")
+            Text("\(carInfo.model), \(carInfo.manufacturer)")
                 .foregroundColor(.black)
                 .font(.headline)
                 .fontWeight(.bold)
                 .frame(width: .infinity, alignment: .leading)
                 .padding(.horizontal)
             
-            Text("Year")
+            Text(carInfo.manufactureYear)
                 .foregroundColor(.gray)
                 .font(.headline)
                 .fontWeight(.bold)
@@ -35,7 +41,7 @@ struct CarCardView: View {
 
 struct CarCardView_Previews: PreviewProvider {
     static var previews: some View {
-        CarCardView()
+        CarCardView(carInfo: CarInfoDTO(id: "", ownerId: "", numberPlate: "", manufacturer: "", model: "", carType: "", manufactureYear: "", transmission: "", color: "", fuel: "", numberSeats: "", description: "", street: "", city: "", country: "", photos: [], price: "", currency: "", discount: false))
             .frame(width: 248, height: 224)
     }
 }

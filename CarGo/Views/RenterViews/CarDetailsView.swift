@@ -48,7 +48,7 @@ struct CarDetailsView: View {
                     CarInfoView(carInfo: carData)
                     
                 case 2:
-                    CarHostView()
+                    CarHostView(ownerId: carData.ownerId)
                     
                 default:
                     EmptyView()
