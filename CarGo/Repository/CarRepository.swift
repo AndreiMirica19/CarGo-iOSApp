@@ -94,4 +94,25 @@ struct CarRepository {
             }
         }
     }
+    
+    func allCars() async throws -> ([CarInfoDTO]?, NetworkError?) {
+        do {
+            let (data, error) = try await AllCarsService.allCars()
+            
+            guard let data = data else {
+                guard let error = error else {
+                    return (nil, .unexpectedError)
+                }
+                
+                return (nil, error)
+            }
+            
+            do {
+                let response = try JSONDecoder().decode([CarInfoDTO].self, from: data)
+                return (response, nil)
+            } catch {
+                return (nil, .unexpectedError)
+            }
+        }
+    }
 }

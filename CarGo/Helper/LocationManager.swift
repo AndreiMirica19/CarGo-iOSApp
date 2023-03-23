@@ -13,6 +13,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate, ObservableObject {
     private let manager = CLLocationManager()
     @Published var region: MKCoordinateRegion
     @Published var updateRegionError: Error?
+    @Published var distance = "0.0"
     var places: [IdentifiablePlace] = []
     
     override init() {
@@ -64,4 +65,23 @@ class LocationManager: NSObject, CLLocationManagerDelegate, ObservableObject {
             self.region = coordinateRegion
         }
     }
+    
+    func distanceFromAddress(address: String) {
+        manager.stopUpdatingLocation()
+        let geoCoder = CLGeocoder()
+        
+        geoCoder.geocodeAddressString(address) { (placemarks, error) in
+            guard
+                let placemarks = placemarks,
+                let location = placemarks.first?.location
+            else {
+                self.updateRegionError = error
+                return
+            }
+            
+            let currentLocation = CLLocation(latitude: self.region.center.latitude, longitude: self.region.center.longitude)
+            self.distance =  String(format: "%.2f", (currentLocation.distance(from: location) / 1000))
+        }
+    }
+    
 }

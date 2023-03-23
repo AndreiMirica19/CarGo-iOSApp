@@ -8,8 +8,69 @@
 import SwiftUI
 
 struct SearchCarsView: View {
+    @State var address = ""
+    @State var rentPeriod = ""
+    @StateObject var searchCarsViewModel = SearchCarsViewModel()
+    @State var carList: [CarInfoDTO] = []
+    @State var errorMessage = ""
+    @State var isErrorShown = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        NavigationStack {
+            List {
+                Section {
+                    SymbolTextField(text: $address, placeholder: "Address", image: "map")
+                        .listRowSeparator(.hidden)
+                    
+                    SymbolTextField(text: $rentPeriod, placeholder: "Pick Up and Drop Off Dates", image: "calendar")
+                }
+                
+                ForEach(carList, id: \.id) { car in
+                    
+                    ZStack {
+                        NavigationLink {
+                            CarDetailsView(carData: car)
+                        } label: {
+                            EmptyView().opacity(0.0)
+                            
+                        }
+                        
+                        CarInfoCardView(carInfo: car)
+                        
+                    }.padding()
+                    
+                }
+            }.listStyle(.plain)
+                .onAppear {
+                    searchCarsViewModel.getAllCars()
+                }
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button("Filter") {
+                        }
+                    }
+        
+                    ToolbarItem(placement: .navigationBarTrailing) {        Button("Reset") {
+                        
+                    }
+                    }
+                }
+                .navigationTitle("CarGo")
+                .navigationBarTitleDisplayMode(.inline)
+                .onReceive(searchCarsViewModel.$allCarsResponse) { response in
+                    guard let carList = response.0 else {
+                        guard let error = response.1 else {
+                            return
+                        }
+                        
+                        self.errorMessage = error.getErrorMessage()
+                        self.isErrorShown = true
+                        return
+                    }
+                    self.carList = carList
+                }
+        }
     }
 }
 
