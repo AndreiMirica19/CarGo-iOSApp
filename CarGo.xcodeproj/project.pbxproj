@@ -22,9 +22,16 @@
 		2E1678602974180B00184CB9 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E16785F2974180B00184CB9 /* RegisterService.swift */; };
 		2E167863297419DA00184CB9 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E167862297419DA00184CB9 /* NetworkError.swift */; };
 		2E16786629741B5000184CB9 /* RegisterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E16786529741B5000184CB9 /* RegisterData.swift */; };
+		2E16B9A329D3130B006B863C /* FilterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E16B9A229D3130B006B863C /* FilterData.swift */; };
 		2E19CE9229937ECE00499162 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19CE9129937ECE00499162 /* CustomTextField.swift */; };
 		2E19CE96299397EE00499162 /* PhotoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19CE95299397EE00499162 /* PhotoCaptureView.swift */; };
 		2E19CE982993A27900499162 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19CE972993A27900499162 /* ImagePicker.swift */; };
+		2E1D147029D2D6530082A1F1 /* RangeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1D146F29D2D6530082A1F1 /* RangeSliderView.swift */; };
+		2E1D147329D2DBE10082A1F1 /* Sliders in Frameworks */ = {isa = PBXBuildFile; productRef = 2E1D147229D2DBE10082A1F1 /* Sliders */; };
+		2E1D147529D2F08E0082A1F1 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1D147429D2F08E0082A1F1 /* FilterViewModel.swift */; };
+		2E21096929CC5F7D00C0E5E3 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E21096829CC5F7D00C0E5E3 /* FilterView.swift */; };
+		2E21096B29CC61F900C0E5E3 /* CarTypesGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E21096A29CC61F900C0E5E3 /* CarTypesGridView.swift */; };
+		2E21096D29CC66AB00C0E5E3 /* CarTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E21096C29CC66AB00C0E5E3 /* CarTypeCell.swift */; };
 		2E2119B12950A54D0009A0A4 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2119B02950A54D0009A0A4 /* SignUpView.swift */; };
 		2E2119B32950B2620009A0A4 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2119B22950B2620009A0A4 /* CustomTextView.swift */; };
 		2E2119B52950B5130009A0A4 /* PasswordTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2119B42950B5130009A0A4 /* PasswordTextView.swift */; };
@@ -126,6 +133,7 @@
 		2EF1CB1C298D442E009F8626 /* MultiSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF1CB1B298D442E009F8626 /* MultiSelector.swift */; };
 		2EF1CB1E298D46C2009F8626 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF1CB1D298D46C2009F8626 /* Languages.swift */; };
 		2EF1CB20298D4BD9009F8626 /* MultiSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF1CB1F298D4BD9009F8626 /* MultiSelectionView.swift */; };
+		2EF9374B29D4010300F8BD1F /* CarTransmissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF9374A29D4010300F8BD1F /* CarTransmissionView.swift */; };
 		316C7C20DF6A448DD73A33E2 /* Pods_CarGo_CarGoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FB057E3486CB2B0521ED8F /* Pods_CarGo_CarGoUITests.framework */; };
 		BA4021634B83DF14C96DFB9B /* Pods_CarGoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62447F8F3E6A72F776F07F9C /* Pods_CarGoTests.framework */; };
 		D576D3579D86D9091859224B /* Pods_CarGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFBCBA015E8B76AA55FA198 /* Pods_CarGo.framework */; };
@@ -166,9 +174,15 @@
 		2E16785F2974180B00184CB9 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		2E167862297419DA00184CB9 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		2E16786529741B5000184CB9 /* RegisterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterData.swift; sourceTree = "<group>"; };
+		2E16B9A229D3130B006B863C /* FilterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterData.swift; sourceTree = "<group>"; };
 		2E19CE9129937ECE00499162 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		2E19CE95299397EE00499162 /* PhotoCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureView.swift; sourceTree = "<group>"; };
 		2E19CE972993A27900499162 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		2E1D146F29D2D6530082A1F1 /* RangeSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSliderView.swift; sourceTree = "<group>"; };
+		2E1D147429D2F08E0082A1F1 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
+		2E21096829CC5F7D00C0E5E3 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		2E21096A29CC61F900C0E5E3 /* CarTypesGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTypesGridView.swift; sourceTree = "<group>"; };
+		2E21096C29CC66AB00C0E5E3 /* CarTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTypeCell.swift; sourceTree = "<group>"; };
 		2E2119B02950A54D0009A0A4 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		2E2119B22950B2620009A0A4 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		2E2119B42950B5130009A0A4 /* PasswordTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextView.swift; sourceTree = "<group>"; };
@@ -274,6 +288,7 @@
 		2EF1CB1B298D442E009F8626 /* MultiSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelector.swift; sourceTree = "<group>"; };
 		2EF1CB1D298D46C2009F8626 /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		2EF1CB1F298D4BD9009F8626 /* MultiSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectionView.swift; sourceTree = "<group>"; };
+		2EF9374A29D4010300F8BD1F /* CarTransmissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTransmissionView.swift; sourceTree = "<group>"; };
 		54BCF711DE88C9164AD48204 /* Pods-CarGoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarGoTests.release.xcconfig"; path = "Target Support Files/Pods-CarGoTests/Pods-CarGoTests.release.xcconfig"; sourceTree = "<group>"; };
 		62447F8F3E6A72F776F07F9C /* Pods_CarGoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarGoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80FB057E3486CB2B0521ED8F /* Pods_CarGo_CarGoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarGo_CarGoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -289,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D576D3579D86D9091859224B /* Pods_CarGo.framework in Frameworks */,
+				2E1D147329D2DBE10082A1F1 /* Sliders in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +404,7 @@
 				2E6353252976A17F0016EC6E /* LoginData.swift */,
 				2ED414A52994DAA4008B5356 /* UserDetailsData.swift */,
 				2E0E219B29B5E87B00D10974 /* CarData.swift */,
+				2E16B9A229D3130B006B863C /* FilterData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -489,6 +506,7 @@
 				2E91E94F298171EC00B70C4B /* FavoriteCarsView.swift */,
 				2E91E951298171FE00B70C4B /* MyBookingsView.swift */,
 				2EF1CB17298BE2C0009F8626 /* Profile */,
+				2E21096829CC5F7D00C0E5E3 /* FilterView.swift */,
 			);
 			path = RentingViews;
 			sourceTree = "<group>";
@@ -553,6 +571,7 @@
 				2E2D2EB029B7305E0030F604 /* MyCarsViewModel.swift */,
 				2EB6086E29C8497E0021303C /* HostViewModel.swift */,
 				2EB6087A29C8B0390021303C /* SearchCarsViewModel.swift */,
+				2E1D147429D2F08E0082A1F1 /* FilterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -622,6 +641,10 @@
 				2E5E178A29C4B1FE009DB003 /* CarCardView.swift */,
 				2EB6087029C862CA0021303C /* SymbolTextField.swift */,
 				2EB6087429C867D80021303C /* CarInfoCardView.swift */,
+				2E21096A29CC61F900C0E5E3 /* CarTypesGridView.swift */,
+				2E21096C29CC66AB00C0E5E3 /* CarTypeCell.swift */,
+				2E1D146F29D2D6530082A1F1 /* RangeSliderView.swift */,
+				2EF9374A29D4010300F8BD1F /* CarTransmissionView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -667,6 +690,9 @@
 			dependencies = (
 			);
 			name = CarGo;
+			packageProductDependencies = (
+				2E1D147229D2DBE10082A1F1 /* Sliders */,
+			);
 			productName = CarGo;
 			productReference = 2E5CDC57294F2021001F2524 /* CarGo.app */;
 			productType = "com.apple.product-type.application";
@@ -741,6 +767,9 @@
 				Base,
 			);
 			mainGroup = 2E5CDC4E294F2020001F2524;
+			packageReferences = (
+				2E1D147129D2DBE10082A1F1 /* XCRemoteSwiftPackageReference "swiftui-sliders" */,
+			);
 			productRefGroup = 2E5CDC58294F2021001F2524 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -878,11 +907,14 @@
 				2ED414A82994DB3C008B5356 /* EditProfileProtocol.swift in Sources */,
 				2E2119B12950A54D0009A0A4 /* SignUpView.swift in Sources */,
 				2E16785E297417E600184CB9 /* RegisterProtocol.swift in Sources */,
+				2E1D147529D2F08E0082A1F1 /* FilterViewModel.swift in Sources */,
+				2E21096D29CC66AB00C0E5E3 /* CarTypeCell.swift in Sources */,
 				2EB1A05329B0945C006E79A8 /* AddCarLocation.swift in Sources */,
 				2E7205C12996759F006AED35 /* HowCarGoWorks.swift in Sources */,
 				2E2119B32950B2620009A0A4 /* CustomTextView.swift in Sources */,
 				2EC80D1E29ADF0BA00244F6D /* AddCarContentView.swift in Sources */,
 				2EBC7019299A708B00084A48 /* AccountInfoProtocol.swift in Sources */,
+				2E21096929CC5F7D00C0E5E3 /* FilterView.swift in Sources */,
 				2ECC473629B1F6320001AA04 /* AddedCarPhotoCell.swift in Sources */,
 				2E7205BD29964DEC006AED35 /* ProfileContentView.swift in Sources */,
 				2E764142299BBC520016E941 /* ChangeEmailService.swift in Sources */,
@@ -895,6 +927,7 @@
 				2EB6087529C867D80021303C /* CarInfoCardView.swift in Sources */,
 				2E900A2C29BDC7FB007516BA /* CarBasic.swift in Sources */,
 				2EB9FB03299E18CD007C097E /* RenterContentView.swift in Sources */,
+				2E1D147029D2D6530082A1F1 /* RangeSliderView.swift in Sources */,
 				2ED414BC29952571008B5356 /* EmptyProfileImage.swift in Sources */,
 				2EB1A04929B07CB3006E79A8 /* CalendarExtension.swift in Sources */,
 				2ED414B429951D40008B5356 /* UserInfoService.swift in Sources */,
@@ -947,10 +980,12 @@
 				2E733BFC29AF6A17000E4F29 /* FetchCarsProtocol.swift in Sources */,
 				2E0E21A029B5F1DA00D10974 /* AddCarService.swift in Sources */,
 				2E80ED9B29C452BE005B616F /* SymbolLabelView.swift in Sources */,
+				2E16B9A329D3130B006B863C /* FilterData.swift in Sources */,
 				2E19CE9229937ECE00499162 /* CustomTextField.swift in Sources */,
 				2EB6086929C845FB0021303C /* HostInfoDTO.swift in Sources */,
 				2EB1A04F29B0801B006E79A8 /* CarType.swift in Sources */,
 				2E167863297419DA00184CB9 /* NetworkError.swift in Sources */,
+				2EF9374B29D4010300F8BD1F /* CarTransmissionView.swift in Sources */,
 				2ED414B02994E196008B5356 /* EditProfileViewModel.swift in Sources */,
 				2E764140299BBC040016E941 /* ChangeEmailProtocol.swift in Sources */,
 				2E0C3D3A299CCD9D00B67972 /* DeleteAccountProtocol.swift in Sources */,
@@ -970,6 +1005,7 @@
 				2EAB174D2980051C001A153F /* ErrorResponse.swift in Sources */,
 				2E80ED9929C44B14005B616F /* HostProfileView.swift in Sources */,
 				2EB6087129C862CA0021303C /* SymbolTextField.swift in Sources */,
+				2E21096B29CC61F900C0E5E3 /* CarTypesGridView.swift in Sources */,
 				2ED414B229951CA2008B5356 /* UserInfoProtocol.swift in Sources */,
 				2ED414B829951F05008B5356 /* ProfileViewModel.swift in Sources */,
 				2E2D2EB929B862410030F604 /* AddCarDescription.swift in Sources */,
@@ -1321,6 +1357,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2E1D147129D2DBE10082A1F1 /* XCRemoteSwiftPackageReference "swiftui-sliders" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:spacenation/swiftui-sliders.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2E1D147229D2DBE10082A1F1 /* Sliders */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E1D147129D2DBE10082A1F1 /* XCRemoteSwiftPackageReference "swiftui-sliders" */;
+			productName = Sliders;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		2E5CDC65294F2022001F2524 /* CarGo.xcdatamodeld */ = {

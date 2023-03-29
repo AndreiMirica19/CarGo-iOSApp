@@ -38,7 +38,7 @@ struct AddCarDetails: View {
                         .padding(.top, 4)
                         .font(.headline)
                 }
-               
+                
                 Section {
                     PickerAndTitle(selectedItem: $manufacturer, items: addCarViewModel.getCarManufacturers(), title: "Select the car manufacturer")
                         .padding(.top)
@@ -50,7 +50,7 @@ struct AddCarDetails: View {
                     
                     Divider()
                     
-                    PickerAndTitle(selectedItem: $carType, items: CarType.allCases.map { $0.rawValue }, title: "Select the car model")
+                    PickerAndTitle(selectedItem: $carType, items: CarType.allCases.map { $0.rawValue }, title: "Select the car typr")
                         .padding(.top)
                     
                     Divider()
@@ -103,7 +103,7 @@ struct AddCarDetails: View {
                 .cornerRadius(8)
                 .buttonStyle(OutlineBorder(color: checkFormCompletion() ? .blue : .gray))
                 .disabled(!checkFormCompletion())
-               
+                
             }.padding(.horizontal, 24)
         }.padding(.top)
             .onAppear {

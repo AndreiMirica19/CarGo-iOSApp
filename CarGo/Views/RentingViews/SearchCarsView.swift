@@ -14,6 +14,8 @@ struct SearchCarsView: View {
     @State var carList: [CarInfoDTO] = []
     @State var errorMessage = ""
     @State var isErrorShown = false
+    @State var isFilterShown = false
+    @State var filterData: FilterData?
     
     var body: some View {
         
@@ -48,14 +50,22 @@ struct SearchCarsView: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button("Filter") {
+                            isFilterShown = true
                         }
                     }
-        
-                    ToolbarItem(placement: .navigationBarTrailing) {        Button("Reset") {
-                        
-                    }
+                    
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button("Reset") {
+                            
+                        }
                     }
                 }
+                .sheet(isPresented: $isFilterShown, content: {
+                    FilterView { filter in
+                        carList = searchCarsViewModel.filterCars(filterData: filter)
+                        filterData = filter
+                    }
+                })
                 .navigationTitle("CarGo")
                 .navigationBarTitleDisplayMode(.inline)
                 .onReceive(searchCarsViewModel.$allCarsResponse) { response in
@@ -68,6 +78,11 @@ struct SearchCarsView: View {
                         self.isErrorShown = true
                         return
                     }
+                    
+                    if let filterData = filterData {
+                        self.carList = searchCarsViewModel.filterCars(filterData: filterData)
+                    }
+                    
                     self.carList = carList
                 }
         }

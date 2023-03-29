@@ -40,9 +40,6 @@ struct CarDetailsView: View {
                 }
                 .pickerStyle(SegmentedPickerStyle())
 
-                
-
-                
                 switch selectedOption {
                 case 0:
                     CarInfoView(carInfo: carData)
