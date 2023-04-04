@@ -86,4 +86,12 @@ class SearchCarsViewModel: ObservableObject {
         return "\(fromDate.formatted(date: .abbreviated, time: .omitted)) - \(toDate.formatted(date: .abbreviated, time: .omitted))"
         
     }
+    
+    func resetFilters() -> [CarInfoDTO] {
+        guard let allCars = allCarsResponse.0 else {
+            return []
+        }
+        
+        return allCars
+    }
 }

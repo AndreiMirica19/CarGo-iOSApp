@@ -67,7 +67,7 @@ struct SearchCarsView: View {
                     
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button("Reset") {
-                            
+                            reset()
                         }
                     }
                 }
@@ -109,6 +109,14 @@ struct SearchCarsView: View {
                     self.carList = carList
                 }
         }
+    }
+    
+    func reset() {
+        address = ""
+        fromDate = nil
+        toDate = nil
+        
+        carList = searchCarsViewModel.resetFilters()
     }
 }
 
