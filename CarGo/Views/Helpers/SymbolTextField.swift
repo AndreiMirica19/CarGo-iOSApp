@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct SymbolTextField: View {
-    @Binding var text: String
+    var text: String
     var placeholder: String
     var image: String
     
     var body: some View {
         HStack {
             Image(systemName: image)
-            TextField(text: $text) {
-                Text(placeholder)
-            }
+            Text("\(text.isEmpty ? placeholder : text)")
+                .foregroundColor(text.isEmpty ? .gray : .black)
+            Spacer()
         }
+        .frame(maxWidth: .infinity)
         .padding()
         .frame(height: 44)
         .overlay(content: {
@@ -31,6 +32,6 @@ struct SymbolTextField: View {
 
 struct SymbolTextField_Previews: PreviewProvider {
     static var previews: some View {
-        SymbolTextField(text: .constant("address"), placeholder: "address", image: "map")
+        SymbolTextField(text: ("address"), placeholder: "address", image: "map")
     }
 }

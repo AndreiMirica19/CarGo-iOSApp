@@ -65,4 +65,25 @@ class SearchCarsViewModel: ObservableObject {
         
         return allCars.filter { yearRange.contains(Int($0.manufactureYear) ?? 0) }
     }
+    
+    func filterByAddress(address: String) -> [CarInfoDTO] {
+        guard let allCars = allCarsResponse.0 else {
+            return []
+        }
+        
+         return allCars.filter {
+             "\($0.city), \($0.country)" == address.folding(options: .diacriticInsensitive, locale: .current)
+             
+         }
+    }
+    
+    func dateRangeToString(fromDate: Date?, toDate: Date?) -> String {
+        
+        guard let fromDate = fromDate, let toDate = toDate else {
+            return ""
+        }
+        
+        return "\(fromDate.formatted(date: .abbreviated, time: .omitted)) - \(toDate.formatted(date: .abbreviated, time: .omitted))"
+        
+    }
 }

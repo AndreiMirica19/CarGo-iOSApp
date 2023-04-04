@@ -7,6 +7,8 @@ target 'CarGo' do
 
   # Pods for CarGo
   pod 'SwiftLint'
+  pod 'Fastis', '~> 2.0'
+
   target 'CarGoTests' do
     inherit! :search_paths
     # Pods for testing

@@ -1,16 +1,28 @@
 PODS:
-  - SwiftLint (0.50.3)
+  - Fastis (2.2.0):
+    - JTAppleCalendar (~> 8.0.0)
+    - PrettyCards (~> 1.0.0)
+  - JTAppleCalendar (8.0.4)
+  - PrettyCards (1.0.5)
+  - SwiftLint (0.51.0)
 
 DEPENDENCIES:
+  - Fastis (~> 2.0)
   - SwiftLint
 
 SPEC REPOS:
   trunk:
+    - Fastis
+    - JTAppleCalendar
+    - PrettyCards
     - SwiftLint
 
 SPEC CHECKSUMS:
-  SwiftLint: 77f7cb2b9bb81ab4a12fcc86448ba3f11afa50c6
+  Fastis: 54b693d0602243f924f4dfb92d4ed0fb8216bf8e
+  JTAppleCalendar: f95b02c64f56d6f938fbf6582a04dcab9d709ebd
+  PrettyCards: 2b078f2396a42f7f0c4d6624b875149dcb49d3ed
+  SwiftLint: 1b7561918a19e23bfed960e40759086e70f4dba5
 
-PODFILE CHECKSUM: 7483ed709724b8ad50e974c6fd04e32dc68568f5
+PODFILE CHECKSUM: f4f9e56a0d391a13ea4765b7e5562c2cb169383d
 
 COCOAPODS: 1.11.3
