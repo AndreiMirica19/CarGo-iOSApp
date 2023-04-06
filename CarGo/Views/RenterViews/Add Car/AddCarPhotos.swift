@@ -30,7 +30,6 @@ struct AddCarPhotos: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)
-
                     .padding(.top)
                 
                 Text("Please add up to 15 photos of your car.")
@@ -39,6 +38,7 @@ struct AddCarPhotos: View {
                 Spacer(minLength: 32)
                 
                 LazyVGrid(columns: columnGrid) {
+                    
                     ForEach(addedPhotos, id: \.self) { image in
                         AddedCarPhotoCell(image: image) {
                             if let index = addedPhotos.firstIndex(of: image) {
@@ -46,6 +46,7 @@ struct AddCarPhotos: View {
                             }
                         }
                     }
+                    
                     Image(systemName: "plus.square")
                         .resizable()
                         .scaledToFill()

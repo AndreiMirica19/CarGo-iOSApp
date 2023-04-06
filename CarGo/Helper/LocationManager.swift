@@ -80,7 +80,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate, ObservableObject {
             }
             
             let currentLocation = CLLocation(latitude: self.region.center.latitude, longitude: self.region.center.longitude)
-            self.distance =  String(format: "%.2f", (currentLocation.distance(from: location) / 1000))
+            self.distance = String(format: "%.2f", (currentLocation.distance(from: location) / 1000))
         }
     }
     

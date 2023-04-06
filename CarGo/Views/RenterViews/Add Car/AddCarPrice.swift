@@ -46,7 +46,6 @@ struct AddCarPrice: View {
             Spacer()
 
             Button {
-                // router.push(.addCarPrice)
                 carData.price = price
                 carData.currency = currency == 0 ? "RON" : "EUR"
                 carData.discount = durationDiscount

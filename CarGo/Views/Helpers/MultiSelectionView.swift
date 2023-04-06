@@ -4,8 +4,7 @@ struct MultiSelectionView<Selectable: Identifiable & Hashable>: View {
     let options: [Selectable]
     let optionToString: (Selectable) -> String
 
-    @Binding
-    var selected: Set<Selectable>
+    @Binding var selected: Set<Selectable>
     
     var body: some View {
         List {
@@ -18,7 +17,7 @@ struct MultiSelectionView<Selectable: Identifiable & Hashable>: View {
 
                         Spacer()
 
-                        if selected.contains { $0.id == selectable.id } {
+                        if selected.contains(where: { $0.id == selectable.id }) {
                             Image(systemName: "checkmark").foregroundColor(.accentColor)
                         }
                     }

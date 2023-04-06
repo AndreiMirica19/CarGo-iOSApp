@@ -34,7 +34,8 @@ struct CarInfoView: View {
                         .foregroundColor(.gray)
                 }
                 
-                Divider().padding(.bottom, 16)
+                Divider()
+                    .padding(.bottom, 16)
                 
                 Section {
                     
@@ -62,7 +63,8 @@ struct CarInfoView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 
-                Divider().padding(.bottom, 16)
+                Divider()
+                    .padding(.bottom, 16)
                 
                 Section {
                     
@@ -74,7 +76,8 @@ struct CarInfoView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 
-                Divider().padding(.bottom, 16)
+                Divider()
+                    .padding(.bottom, 16)
                 
                 Section {
                     

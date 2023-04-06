@@ -43,8 +43,7 @@ struct MultiSelector_Previews: PreviewProvider {
         var id: String { string }
     }
     
-    @State
-    static var selected: Set<IdentifiableString> = Set(["A", "C"].map { IdentifiableString(string: $0) })
+    @State static var selected: Set<IdentifiableString> = Set(["A", "C"].map { IdentifiableString(string: $0) })
     
     static var previews: some View {
         NavigationView {

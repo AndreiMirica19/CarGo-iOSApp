@@ -19,4 +19,3 @@ extension Date {
         return Date(timeIntervalSince1970: timezoneDateEpochOffset)
     }
 }
-

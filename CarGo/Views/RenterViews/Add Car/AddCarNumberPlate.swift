@@ -11,22 +11,27 @@ struct AddCarNumberPlate: View {
     @EnvironmentObject var router: Router<AddCarPaths>
     @EnvironmentObject var carData: CarData
     @State var numberPlate = ""
-
+    
     var body: some View {
         VStack(alignment: .leading) {
             
-            Text("Number Plate")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding(.leading, 24)
-                .padding(.top)
-            
-            Text("Please enter the number plate of your car. After we verify it, you can go to the next step.")
-                .padding(.horizontal, 24)
-                .padding(.top, 4)
-                .font(.headline)
-            CarNumberPlateView(numberPlate: $numberPlate)
-                .padding(.horizontal, 48)
+            Section {
+                
+                Text("Please enter the number plate of your car. After we verify it, you can go to the next step.")
+                    .padding(.horizontal, 24)
+                    .padding(.top, 4)
+                    .font(.headline)
+                
+                CarNumberPlateView(numberPlate: $numberPlate)
+                    .padding(.horizontal, 48)
+                
+            } header: {
+                Text("Number Plate")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .padding(.leading, 24)
+                    .padding(.top)
+            }
             
             Spacer()
             
