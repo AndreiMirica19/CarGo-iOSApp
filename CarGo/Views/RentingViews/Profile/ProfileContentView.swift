@@ -34,7 +34,7 @@ struct ProfileContentView: View {
                 }
                 .environmentObject(router)
                 .environmentObject(profileViewModel)
-                .onReceive(profileViewModel.$response) { response in
+                .onReceive(profileViewModel.$userDetailsResponse) { response in
                     if let errorResponse = response.1 {
                         displayError = true
                         errorMessage = errorResponse.getErrorMessage()

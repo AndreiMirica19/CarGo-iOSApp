@@ -14,7 +14,7 @@ struct ProfileDetails: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            if let userInfo = profileViewModel.response.0, let accountInfo = profileViewModel.accountResponse.0 {
+            if let userInfo = profileViewModel.userDetailsResponse.0, let accountInfo = profileViewModel.accountResponse.0 {
                 Section {
                     HStack {
                         Spacer()

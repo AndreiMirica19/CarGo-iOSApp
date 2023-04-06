@@ -20,6 +20,7 @@ struct SearchCarsView: View {
     @State var toDate: Date?
     @State var isDateSelectionShown = false
     @State var isCitySelectioShown = false
+    @State var favoriteCars: [CarInfoDTO] = []
     
     var body: some View {
         
@@ -49,7 +50,11 @@ struct SearchCarsView: View {
                             
                         }
                         
-                        CarInfoCardView(carInfo: car)
+                        CarInfoCardView(carInfo: car, addedToFavorite: favoriteCars.contains(where: { carID in
+                            return carID.id == car.id
+                        })) {
+                            searchCarsViewModel.toggleFavoriteCar(carId: car.id)
+                        }
                         
                     }.padding()
                     
@@ -57,6 +62,7 @@ struct SearchCarsView: View {
             }.listStyle(.plain)
                 .onAppear {
                     searchCarsViewModel.getAllCars()
+                    searchCarsViewModel.favoriteCars()
                 }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
@@ -108,6 +114,33 @@ struct SearchCarsView: View {
                     
                     self.carList = carList
                 }
+                .onReceive(searchCarsViewModel.$favoriteCarToggledResponse) { response in
+                    guard let cars = response.0 else {
+                        guard let error = response.1 else {
+                            return
+                        }
+                        
+                        self.errorMessage = error.getErrorMessage()
+                        self.isErrorShown = true
+                        return
+                    }
+                    
+                    self.favoriteCars = cars
+                }
+                .onReceive(searchCarsViewModel.$favoriteCarsResponse) { response in
+                    guard let cars = response.0 else {
+                        guard let error = response.1 else {
+                            return
+                        }
+                        
+                        self.errorMessage = error.getErrorMessage()
+                        self.isErrorShown = true
+                        return
+                    }
+                    
+                    favoriteCars = cars
+                }
+            
         }
     }
     

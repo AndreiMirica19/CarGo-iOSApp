@@ -16,4 +16,5 @@ struct UserDetailsData: Encodable, Decodable {
     var job: String
     var profileImage: Data
     var spokenLanguages: [String]
+    var favoriteCars: [String]
 }

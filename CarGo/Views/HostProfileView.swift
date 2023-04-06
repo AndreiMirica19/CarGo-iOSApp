@@ -83,6 +83,6 @@ struct HostProfileView: View {
 
 struct HostProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        HostProfileView(hostInfo: HostInfoDTO(hostDetails: UserDetailsData(name: "", about: "", country: "", city: "", job: "", profileImage: Data(), spokenLanguages: []), ownedCars: [], reviews: []))
+        HostProfileView(hostInfo: HostInfoDTO(hostDetails: UserDetailsData(name: "", about: "", country: "", city: "", job: "", profileImage: Data(), spokenLanguages: [], favoriteCars: []), ownedCars: [], reviews: []))
     }
 }

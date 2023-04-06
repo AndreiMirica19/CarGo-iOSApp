@@ -9,6 +9,8 @@ import Foundation
 
 class SearchCarsViewModel: ObservableObject {
     @Published var allCarsResponse: ([CarInfoDTO]?, NetworkError?) = (nil, nil)
+    @Published var favoriteCarToggledResponse: ([CarInfoDTO]?, NetworkError?) = (nil, nil)
+    @Published var favoriteCarsResponse: ([CarInfoDTO]?, NetworkError?) = (nil, nil)
     var locationManager = LocationManager()
     
     func getAllCars() {
@@ -93,5 +95,25 @@ class SearchCarsViewModel: ObservableObject {
         }
         
         return allCars
+    }
+    
+    func toggleFavoriteCar(carId: String) {
+        Task {
+            let response = try await UserRepository.shared.toggleFavoriteCar(carId: carId)
+            
+            DispatchQueue.main.async {
+                self.favoriteCarToggledResponse = response
+            }
+        }
+    }
+    
+    func favoriteCars() {
+        Task {
+            let response = try await UserRepository.shared.favoriteCar()
+            
+            DispatchQueue.main.async {
+                self.favoriteCarsResponse = response
+            }
+        }
     }
 }

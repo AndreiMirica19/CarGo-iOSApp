@@ -242,4 +242,40 @@ class UserRepository: ObservableObject {
             return (nil, .jsonDecoder)
         }
     }
+    
+    func toggleFavoriteCar(carId: String) async throws -> ([CarInfoDTO]?, NetworkError?) {
+        let (data, error) = try await ToggleFavoriteCarService.toggleFavoriteCar(userId: userId, carId: carId)
+        
+        guard let data = data else {
+            guard let error = error else {
+                return (nil, .unexpectedError)
+            }
+            
+            return (nil, error)
+        }
+        do {
+            let response = try JSONDecoder().decode([CarInfoDTO].self, from: data)
+            return (response, nil)
+        } catch {
+            return (nil, .jsonDecoder)
+        }
+    }
+    
+    func favoriteCar() async throws -> ([CarInfoDTO]?, NetworkError?) {
+        let (data, error) = try await FavoriteCarsService.favoriteCars(userId: userId)
+        
+        guard let data = data else {
+            guard let error = error else {
+                return (nil, .unexpectedError)
+            }
+            
+            return (nil, error)
+        }
+        do {
+            let response = try JSONDecoder().decode([CarInfoDTO].self, from: data)
+            return (response, nil)
+        } catch {
+            return (nil, .jsonDecoder)
+        }
+    }
 }

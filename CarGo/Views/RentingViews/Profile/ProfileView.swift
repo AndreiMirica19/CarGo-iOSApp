@@ -21,7 +21,7 @@ struct ProfileView: View {
         List {
             Section {
                 HStack {
-                    if let userInfo = profileViewModel.response.0 {
+                    if let userInfo = profileViewModel.userDetailsResponse.0 {
                         userInfo.profileImage.imageFromData()
                             .resizable()
                             .frame(width: 88, height: 88)

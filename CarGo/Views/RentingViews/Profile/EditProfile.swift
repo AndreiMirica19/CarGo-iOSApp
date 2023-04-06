@@ -175,7 +175,7 @@ struct EditProfile: View {
                             
                             if profilePicture != nil, aboutText != aboutPlaceholder, !country.isEmpty, !city.isEmpty, !job.isEmpty, !spokenLanguages.languages.isEmpty {
                                 
-                                let userDetails = UserDetailsData(name: profileViewModel.accountResponse.0?.name ?? "", about: aboutText, country: country, city: city, job: job, profileImage: selectedImageData, spokenLanguages: spokenLanguages.languages.map { $0.name })
+                                let userDetails = UserDetailsData(name: profileViewModel.accountResponse.0?.name ?? "", about: aboutText, country: country, city: city, job: job, profileImage: selectedImageData, spokenLanguages: spokenLanguages.languages.map { $0.name }, favoriteCars: profileViewModel.userDetailsResponse.0?.favoriteCars ?? [])
                                 
                                 profilePicture = nil
                                 self.selectedImageData = nil
@@ -232,7 +232,7 @@ struct EditProfile: View {
             if viewDidLoad == false {
 
                 viewDidLoad = true
-                userInfo = profileViewModel.response.0
+                userInfo = profileViewModel.userDetailsResponse.0
                 
                 guard let userInfo = self.userInfo else {
                     aboutText = aboutPlaceholder

@@ -9,7 +9,7 @@ import Foundation
 
 class ProfileViewModel: ObservableObject {
 
-    @Published var response: (UserDetailsData?, NetworkError?) = (nil, nil)
+    @Published var userDetailsResponse: (UserDetailsData?, NetworkError?) = (nil, nil)
     @Published var accountResponse: (UserDTO?, NetworkError?) = (nil, nil)
     @Published var changeEmailResponse: (Response?, NetworkError?) = (nil, nil)
     @Published var changePhoneNumberResponse: (Response?, NetworkError?) = (nil, nil)
@@ -23,7 +23,7 @@ class ProfileViewModel: ObservableObject {
             let response = try await userRepository.userInfo()
             
             DispatchQueue.main.async {
-                self.response = response
+                self.userDetailsResponse = response
                 
             }
         }

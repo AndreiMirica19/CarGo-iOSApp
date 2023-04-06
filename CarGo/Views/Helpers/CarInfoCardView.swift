@@ -12,10 +12,11 @@ struct CarInfoCardView: View {
     var hostViewModel = HostViewModel()
     @State var profileImageData = Data()
     @State var errorMessage = ""
-    @State var addedToFavorite = false
+    var addedToFavorite: Bool
     @State var isErrorDisplayed = false
     @State var locationManager = LocationManager()
     @State var distance = "0.0"
+    var toggleFavorite: (() -> Void)
     
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
@@ -38,8 +39,11 @@ struct CarInfoCardView: View {
                             .resizable()
                             .padding(8)
                             .foregroundColor(.white)
+                            .scaleEffect(addedToFavorite ? 1.2 : 1)
                             .onTapGesture {
-                                addedToFavorite.toggle()
+                                withAnimation {
+                                    toggleFavorite()
+                                }
                             }
                     }
                     .frame(width: 42, height: 42)
@@ -86,7 +90,7 @@ struct CarInfoCardView: View {
             
             Text("$\(carInfo.price) per day")
                 .font(.headline)
-
+            
         }.frame(maxWidth: .infinity, alignment: .leading)
             .onAppear {
                 hostViewModel.hostInfo(id: carInfo.ownerId)
@@ -119,7 +123,9 @@ struct CarInfoCardView: View {
 
 struct CarInfoCardView_Previews: PreviewProvider {
     static var previews: some View {
-        CarInfoCardView(carInfo: CarInfoDTO(id: "", ownerId: "", numberPlate: "", manufacturer: "", model: "", carType: "", manufactureYear: "", transmission: "", color: "", fuel: "", numberSeats: "", description: "", street: "", city: "", country: "", photos: [], price: "", currency: "", discount: false))
-            .frame(height: 360)
+        CarInfoCardView(carInfo: CarInfoDTO(id: "", ownerId: "", numberPlate: "", manufacturer: "", model: "", carType: "", manufactureYear: "", transmission: "", color: "", fuel: "", numberSeats: "", description: "", street: "", city: "", country: "", photos: [], price: "", currency: "", discount: false), addedToFavorite: (true)) {
+            
+        }
+        .frame(height: 360)
     }
 }
