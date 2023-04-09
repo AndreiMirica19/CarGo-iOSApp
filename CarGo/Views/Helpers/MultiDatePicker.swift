@@ -25,7 +25,7 @@ struct CalendarMultiDatePicker: UIViewControllerRepresentable {
                 return
             }
             
-            dateRange(Date.changeToLocalTimezone(initialDate: resultRange.fromDate), Date.changeToLocalTimezone(initialDate: resultRange.toDate))
+            dateRange(resultRange.fromDate, resultRange.toDate)
         }
         
         let navigationController = UINavigationController(rootViewController: fastisController)

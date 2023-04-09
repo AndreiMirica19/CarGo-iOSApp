@@ -81,6 +81,7 @@
 		2E80ED9729C44306005B616F /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80ED9629C44306005B616F /* ReviewView.swift */; };
 		2E80ED9929C44B14005B616F /* HostProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80ED9829C44B14005B616F /* HostProfileView.swift */; };
 		2E80ED9B29C452BE005B616F /* SymbolLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80ED9A29C452BE005B616F /* SymbolLabelView.swift */; };
+		2E87643129E2A06E00121793 /* BookingBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E87643029E2A06E00121793 /* BookingBanner.swift */; };
 		2E900A2A29BDC645007516BA /* CarInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E900A2929BDC645007516BA /* CarInfoView.swift */; };
 		2E900A2C29BDC7FB007516BA /* CarBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E900A2B29BDC7FB007516BA /* CarBasic.swift */; };
 		2E91E94B2981713C00B70C4B /* RentingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91E94A2981713C00B70C4B /* RentingContentView.swift */; };
@@ -248,6 +249,7 @@
 		2E80ED9629C44306005B616F /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		2E80ED9829C44B14005B616F /* HostProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostProfileView.swift; sourceTree = "<group>"; };
 		2E80ED9A29C452BE005B616F /* SymbolLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolLabelView.swift; sourceTree = "<group>"; };
+		2E87643029E2A06E00121793 /* BookingBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingBanner.swift; sourceTree = "<group>"; };
 		2E900A2929BDC645007516BA /* CarInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoView.swift; sourceTree = "<group>"; };
 		2E900A2B29BDC7FB007516BA /* CarBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBasic.swift; sourceTree = "<group>"; };
 		2E91E94A2981713C00B70C4B /* RentingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentingContentView.swift; sourceTree = "<group>"; };
@@ -692,6 +694,7 @@
 				2E1D146F29D2D6530082A1F1 /* RangeSliderView.swift */,
 				2EF9374A29D4010300F8BD1F /* CarTransmissionView.swift */,
 				2ED23E6929D566F200990849 /* MultiDatePicker.swift */,
+				2E87643029E2A06E00121793 /* BookingBanner.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1073,6 +1076,7 @@
 				2E19CE9229937ECE00499162 /* CustomTextField.swift in Sources */,
 				2EB63C5429DBEB6A00C339E4 /* LocationSearchService.swift in Sources */,
 				2EB6086929C845FB0021303C /* HostInfoDTO.swift in Sources */,
+				2E87643129E2A06E00121793 /* BookingBanner.swift in Sources */,
 				2EB1A04F29B0801B006E79A8 /* CarType.swift in Sources */,
 				2E5B01F629DEA9CE00CB7EF7 /* ToggleFavoriteCarProtocol.swift in Sources */,
 				2E167863297419DA00184CB9 /* NetworkError.swift in Sources */,

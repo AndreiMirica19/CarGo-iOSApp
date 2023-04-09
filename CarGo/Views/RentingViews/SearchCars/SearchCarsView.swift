@@ -52,7 +52,7 @@ struct SearchCarsView: View {
                         
                         CarInfoCardView(carInfo: car, addedToFavorite: favoriteCars.contains(where: { carID in
                             return carID.id == car.id
-                        })) {
+                        }), fromDate: fromDate, toDate: toDate) {
                             searchCarsViewModel.toggleFavoriteCar(carId: car.id)
                         }
                         

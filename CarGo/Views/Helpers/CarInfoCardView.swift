@@ -16,8 +16,10 @@ struct CarInfoCardView: View {
     @State var isErrorDisplayed = false
     @State var locationManager = LocationManager()
     @State var distance = "0.0"
+    var fromDate: Date?
+    var toDate: Date?
     var toggleFavorite: (() -> Void)
-    
+
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             ZStack(alignment: .topTrailing) {
@@ -88,8 +90,16 @@ struct CarInfoCardView: View {
                     .padding(.trailing, 4)
             }
             
-            Text("$\(carInfo.price) per day")
-                .font(.headline)
+            if let fromDate = fromDate, let toDate = toDate {
+                let numberOfDaysComponent = Calendar.current.dateComponents([.day], from: fromDate, to: toDate)
+                if let numberOfDays = numberOfDaysComponent.day, let price = Int(carInfo.price) {
+                    Text("$\(price * numberOfDays) per \(numberOfDays) days")
+                        .font(.headline)
+                }
+            } else {
+                Text("$\(carInfo.price) per day")
+                    .font(.headline)
+            }
             
         }.frame(maxWidth: .infinity, alignment: .leading)
             .onAppear {

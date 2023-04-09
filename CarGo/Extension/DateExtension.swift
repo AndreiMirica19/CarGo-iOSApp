@@ -9,13 +9,14 @@ import Foundation
 
 extension Date {
     
-    static func changeToLocalTimezone(initialDate: Date) -> Date {
+    func changeToLocalTimezone() -> String {
         
-        let timezoneOffset = TimeZone.current.secondsFromGMT()
-        let epochDate = initialDate.timeIntervalSince1970
-        
-        let timezoneDateEpochOffset = (epochDate + Double(timezoneOffset))
-        
-        return Date(timeIntervalSince1970: timezoneDateEpochOffset)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM HH:mm"
+        dateFormatter.timeZone = TimeZone.current
+
+        let formattedDate = dateFormatter.string(from: self)
+
+        return formattedDate
     }
 }

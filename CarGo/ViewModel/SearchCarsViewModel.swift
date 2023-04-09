@@ -85,7 +85,7 @@ class SearchCarsViewModel: ObservableObject {
             return ""
         }
         
-        return "\(fromDate.formatted(date: .abbreviated, time: .omitted)) - \(toDate.formatted(date: .abbreviated, time: .omitted))"
+        return "\(fromDate.changeToLocalTimezone()) - \(toDate.changeToLocalTimezone())"
         
     }
     
