@@ -18,6 +18,8 @@ struct CarInfoView: View {
     @StateObject var manager = LocationManager()
     
     var carInfo: CarInfoDTO
+    var fromDate: Date?
+    var toDate: Date?
     
     var body: some View {
         ScrollView {
@@ -101,6 +103,8 @@ struct CarInfoView: View {
                 }
                 
                 Divider()
+                
+                
                 
             }.padding()
         }.padding()

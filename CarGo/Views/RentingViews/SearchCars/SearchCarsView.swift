@@ -44,7 +44,7 @@ struct SearchCarsView: View {
                     
                     ZStack {
                         NavigationLink {
-                            CarDetailsView(carData: car)
+                            CarDetailsView(carData: car, fromDate: fromDate, toDate: toDate)
                         } label: {
                             EmptyView().opacity(0.0)
                             

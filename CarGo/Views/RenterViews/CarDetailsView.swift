@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct CarDetailsView: View {
+    @State var selectedOption = 0
+    @StateObject var carDetailsViewModel = CarDetailsViewModel()
     var options = ["Car info", "Booking calendar", "Host"]
     var carData: CarInfoDTO
-    @State var selectedOption = 0
+    var fromDate: Date?
+    var toDate: Date?
+    
     var body: some View {
         
         GeometryReader { geometry in
@@ -50,6 +54,26 @@ struct CarDetailsView: View {
                 default:
                     EmptyView()
                 }
+                
+                if !UserRepository.shared.isRenterViewActive {
+                    BookingBanner(fromDate: fromDate, toDate: toDate, price: carData.price) { fromDate, toDate in
+                        
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                        let fromDateString = dateFormatter.string(from: fromDate)
+                        let toDateString = dateFormatter.string(from: toDate)
+                        
+                        carDetailsViewModel.bookCar(bookCarData: BookCarData(ownerId: carData.ownerId, renterId: UserRepository.shared.userId, carId: carData.id, fromDate: fromDateString, toDate: toDateString, status: "Pending"))
+                        
+                    }
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(.gray, lineWidth: 1)
+                        )
+                        .padding()
+                }
+            }.onReceive(carDetailsViewModel.$bookCarResponse) { response in
+                print(response)
             }
         }.edgesIgnoringSafeArea(.top)
     }

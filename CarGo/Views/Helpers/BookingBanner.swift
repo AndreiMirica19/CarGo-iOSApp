@@ -8,13 +8,62 @@
 import SwiftUI
 
 struct BookingBanner: View {
+    
+    @State var fromDate: Date?
+    @State var toDate: Date?
+    @State var price = ""
+    var bookCar: ((_ fromDate: Date, _ toDate: Date) -> Void)
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            if let fromDate = fromDate, let toDate = toDate {
+                VStack {
+                    HStack {
+                        Text(fromDate.changeToLocalTimezone())
+                            .fontWeight(.bold)
+                        Image(systemName: "arrow.right")
+                        Text(toDate.changeToLocalTimezone())
+                            .fontWeight(.bold)
+                        
+                        Spacer()
+                    }
+                    
+                    Divider()
+                    
+                    HStack {
+                        
+                        let numberOfDaysComponent = Calendar.current.dateComponents([.day], from: fromDate, to: toDate)
+                        if let numberOfDays = numberOfDaysComponent.day {
+                            Text("$\((Int(price) ?? 0) * numberOfDays) per \(numberOfDays) days")
+                                .fontWeight(.bold)
+                        }
+                        
+                        Spacer()
+                        
+                        Button {
+                            bookCar(fromDate, toDate)
+                        } label: {
+                            Text("Book Car")
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(RoundedRectangle(cornerRadius: 18).fill())
+                        }
+                    }
+                }.padding()
+            } else {
+                NoDateSelectedBanner { fromDate, toDate in
+                    self.fromDate = fromDate
+                    self.toDate = toDate
+                }
+            }
+        }
     }
 }
 
 struct BookingBanner_Previews: PreviewProvider {
     static var previews: some View {
-        BookingBanner()
+        BookingBanner {fromDate,toDate in
+            
+        }
     }
 }
