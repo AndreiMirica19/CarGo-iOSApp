@@ -28,4 +28,24 @@ struct BookingRepository {
             return (nil, .unexpectedError)
         }
     }
+    
+    func userBookings() async throws -> ([BookingInfo]?, NetworkError?) {
+        let (data, error) = try await UserBookingService.userBookings(userId: UserRepository.shared.userId)
+        
+        guard let data = data else {
+            guard let error = error else {
+                return (nil, .unexpectedError)
+            }
+            
+            return (nil, error)
+        }
+        
+        do {
+            let response = try JSONDecoder().decode([BookingInfo].self, from: data)
+            return (response, nil)
+        } catch let error {
+            print(error)
+            return (nil, .unexpectedError)
+        }
+    }
 }

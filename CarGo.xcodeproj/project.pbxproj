@@ -61,6 +61,7 @@
 		2E5CDC62294F2022001F2524 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E5CDC61294F2022001F2524 /* Preview Assets.xcassets */; };
 		2E5CDC67294F2022001F2524 /* CarGo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CDC65294F2022001F2524 /* CarGo.xcdatamodeld */; };
 		2E5E178B29C4B1FE009DB003 /* CarCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5E178A29C4B1FE009DB003 /* CarCardView.swift */; };
+		2E5F7C1B29E6E3E10000EA43 /* BookingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F7C1A29E6E3E10000EA43 /* BookingCardView.swift */; };
 		2E6353262976A17F0016EC6E /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6353252976A17F0016EC6E /* LoginData.swift */; };
 		2E6353282976A2210016EC6E /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6353272976A2210016EC6E /* LoginProtocol.swift */; };
 		2E63532A2976A25C0016EC6E /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6353292976A25C0016EC6E /* LoginService.swift */; };
@@ -86,6 +87,10 @@
 		2E80ED9729C44306005B616F /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80ED9629C44306005B616F /* ReviewView.swift */; };
 		2E80ED9929C44B14005B616F /* HostProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80ED9829C44B14005B616F /* HostProfileView.swift */; };
 		2E80ED9B29C452BE005B616F /* SymbolLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80ED9A29C452BE005B616F /* SymbolLabelView.swift */; };
+		2E8384AB29E6EBAD00F46A3D /* BookingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8384AA29E6EBAD00F46A3D /* BookingInfo.swift */; };
+		2E8384AD29E6EFFE00F46A3D /* UserBookingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8384AC29E6EFFE00F46A3D /* UserBookingsProtocol.swift */; };
+		2E8384AF29E6F0DE00F46A3D /* UserBookingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8384AE29E6F0DE00F46A3D /* UserBookingService.swift */; };
+		2E8384B129E6F2D600F46A3D /* MyBookingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8384B029E6F2D600F46A3D /* MyBookingsViewModel.swift */; };
 		2E87643129E2A06E00121793 /* BookingBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E87643029E2A06E00121793 /* BookingBanner.swift */; };
 		2E87643329E2C30100121793 /* NoDateSelectedBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E87643229E2C30100121793 /* NoDateSelectedBanner.swift */; };
 		2E900A2A29BDC645007516BA /* CarInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E900A2929BDC645007516BA /* CarInfoView.swift */; };
@@ -235,6 +240,7 @@
 		2E5CDC6C294F2022001F2524 /* CarGoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5CDC76294F2022001F2524 /* CarGoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarGoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5E178A29C4B1FE009DB003 /* CarCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCardView.swift; sourceTree = "<group>"; };
+		2E5F7C1A29E6E3E10000EA43 /* BookingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingCardView.swift; sourceTree = "<group>"; };
 		2E6353252976A17F0016EC6E /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 		2E6353272976A2210016EC6E /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
 		2E6353292976A25C0016EC6E /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
@@ -260,6 +266,10 @@
 		2E80ED9629C44306005B616F /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		2E80ED9829C44B14005B616F /* HostProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostProfileView.swift; sourceTree = "<group>"; };
 		2E80ED9A29C452BE005B616F /* SymbolLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolLabelView.swift; sourceTree = "<group>"; };
+		2E8384AA29E6EBAD00F46A3D /* BookingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingInfo.swift; sourceTree = "<group>"; };
+		2E8384AC29E6EFFE00F46A3D /* UserBookingsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBookingsProtocol.swift; sourceTree = "<group>"; };
+		2E8384AE29E6F0DE00F46A3D /* UserBookingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBookingService.swift; sourceTree = "<group>"; };
+		2E8384B029E6F2D600F46A3D /* MyBookingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsViewModel.swift; sourceTree = "<group>"; };
 		2E87643029E2A06E00121793 /* BookingBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingBanner.swift; sourceTree = "<group>"; };
 		2E87643229E2C30100121793 /* NoDateSelectedBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDateSelectedBanner.swift; sourceTree = "<group>"; };
 		2E900A2929BDC645007516BA /* CarInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoView.swift; sourceTree = "<group>"; };
@@ -372,6 +382,8 @@
 			children = (
 				2E02243D29E55D38003CE69F /* BookCarProtocol.swift */,
 				2E02244129E55E19003CE69F /* BookCarService.swift */,
+				2E8384AC29E6EFFE00F46A3D /* UserBookingsProtocol.swift */,
+				2E8384AE29E6F0DE00F46A3D /* UserBookingService.swift */,
 			);
 			path = BookingService;
 			sourceTree = "<group>";
@@ -645,6 +657,7 @@
 				2EB63C5729DBEE8B00C339E4 /* SearchCityViewModel.swift */,
 				2E2ADA8029DF1A940058FA02 /* FavoriteCarsViewModel.swift */,
 				2E02244329E55FD2003CE69F /* CarDetailsViewModel.swift */,
+				2E8384B029E6F2D600F46A3D /* MyBookingsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -658,6 +671,7 @@
 				2E733C0129AF6C26000E4F29 /* CarDTO.swift */,
 				2E2D2EB229B7333C0030F604 /* CarInfoDTO.swift */,
 				2EB6086829C845FB0021303C /* HostInfoDTO.swift */,
+				2E8384AA29E6EBAD00F46A3D /* BookingInfo.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -721,6 +735,7 @@
 				2ED23E6929D566F200990849 /* MultiDatePicker.swift */,
 				2E87643029E2A06E00121793 /* BookingBanner.swift */,
 				2E87643229E2C30100121793 /* NoDateSelectedBanner.swift */,
+				2E5F7C1A29E6E3E10000EA43 /* BookingCardView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1041,12 +1056,14 @@
 				2EBF0ACD29D46D5000228BCB /* MultiDatePickerView.swift in Sources */,
 				2E91E952298171FE00B70C4B /* MyBookingsView.swift in Sources */,
 				2EF1CB1C298D442E009F8626 /* MultiSelector.swift in Sources */,
+				2E8384B129E6F2D600F46A3D /* MyBookingsViewModel.swift in Sources */,
 				2E0E219E29B5F15900D10974 /* AddCarProtocol.swift in Sources */,
 				2E733C0429AF6D78000E4F29 /* AddCarViewModel.swift in Sources */,
 				2EB6087529C867D80021303C /* CarInfoCardView.swift in Sources */,
 				2E900A2C29BDC7FB007516BA /* CarBasic.swift in Sources */,
 				2EB9FB03299E18CD007C097E /* RenterContentView.swift in Sources */,
 				2E1D147029D2D6530082A1F1 /* RangeSliderView.swift in Sources */,
+				2E8384AD29E6EFFE00F46A3D /* UserBookingsProtocol.swift in Sources */,
 				2ED414BC29952571008B5356 /* EmptyProfileImage.swift in Sources */,
 				2EB1A04929B07CB3006E79A8 /* CalendarExtension.swift in Sources */,
 				2ED414B429951D40008B5356 /* UserInfoService.swift in Sources */,
@@ -1074,6 +1091,7 @@
 				2E91E950298171EC00B70C4B /* FavoriteCarsView.swift in Sources */,
 				2E19CE982993A27900499162 /* ImagePicker.swift in Sources */,
 				2ED414BA299521DD008B5356 /* DataExtension.swift in Sources */,
+				2E8384AB29E6EBAD00F46A3D /* BookingInfo.swift in Sources */,
 				2E91E94B2981713C00B70C4B /* RentingContentView.swift in Sources */,
 				2E0839CB29D5B2B100B2DDFE /* DateExtension.swift in Sources */,
 				2E6353282976A2210016EC6E /* LoginProtocol.swift in Sources */,
@@ -1114,6 +1132,7 @@
 				2ED414B02994E196008B5356 /* EditProfileViewModel.swift in Sources */,
 				2E764140299BBC040016E941 /* ChangeEmailProtocol.swift in Sources */,
 				2EB63C5A29DBEF8100C339E4 /* SearchCityView.swift in Sources */,
+				2E8384AF29E6F0DE00F46A3D /* UserBookingService.swift in Sources */,
 				2E0C3D3A299CCD9D00B67972 /* DeleteAccountProtocol.swift in Sources */,
 				2EB1A05529B09DDF006E79A8 /* CustomInputView.swift in Sources */,
 				2EF1CB1E298D46C2009F8626 /* Languages.swift in Sources */,
@@ -1121,6 +1140,7 @@
 				2EB6087B29C8B0390021303C /* SearchCarsViewModel.swift in Sources */,
 				2ED414AA2994DBA2008B5356 /* EditProfileService.swift in Sources */,
 				2E2D2EAD29B72D640030F604 /* OwnedCarsProtocol.swift in Sources */,
+				2E5F7C1B29E6E3E10000EA43 /* BookingCardView.swift in Sources */,
 				2ECC473829B206C40001AA04 /* AddCarPrice.swift in Sources */,
 				2E764148299BDF6E0016E941 /* ChangePhoneNumberService.swift in Sources */,
 				2E733C0029AF6B94000E4F29 /* CarRepository.swift in Sources */,

@@ -8,8 +8,49 @@
 import SwiftUI
 
 struct MyBookingsView: View {
+    @StateObject var myBookingsViewModel = MyBookingsViewModel()
+    @State var alertIsPresent = false
+    @State var errorMessage = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            Section {
+                ForEach(myBookingsViewModel.getUpcomingBookings(), id: \.id) { booking in
+                    BookingCardView(bookingInfo: booking)
+                }
+            } header: {
+                Text("Upcoming bookings")
+                    .foregroundColor(.black)
+                    .fontWeight(.bold)
+                    .font(.headline)
+            }
+            
+            Section {
+                ForEach(myBookingsViewModel.getCompletedBookings(), id: \.id) { booking in
+                    BookingCardView(bookingInfo: booking)
+                }
+            } header: {
+                Text("Past bookings")
+                    .foregroundColor(.black)
+                    .fontWeight(.bold)
+                    .font(.headline)
+            }
+        }.onAppear {
+            myBookingsViewModel.userBookings()
+        }
+        .onReceive(myBookingsViewModel.$myBookingsResponse) { response in
+            guard let error = response.1 else {
+                return
+            }
+            
+            errorMessage = error.getErrorMessage()
+            alertIsPresent = true
+        }
+        .alert(errorMessage, isPresented: $alertIsPresent) {
+            Button("Ok", role: .cancel) {
+                
+            }
+        }
     }
 }
 

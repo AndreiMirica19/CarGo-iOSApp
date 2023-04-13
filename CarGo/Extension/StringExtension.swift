@@ -49,4 +49,15 @@ extension String {
         
         return (isMatching && isMatchingNumber)
     }
+    
+    func toDate() -> Date? {
+        let dateFormatter = ISO8601DateFormatter()
+        return dateFormatter.date(from: self)
+    }
+    
+    func localTimezoneDateString() -> String {
+        let dateFormatter = ISO8601DateFormatter()
+        let date = dateFormatter.date(from: self)
+        return date?.changeToLocalTimezone() ?? ""
+    }
 }
