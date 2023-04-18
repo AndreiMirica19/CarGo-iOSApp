@@ -62,7 +62,12 @@ struct BookingDetailsView: View {
                 Divider()
                 
                 Section {
-                    CarCardView(carInfo: bookingInfo.carInfo)
+                    NavigationLink {
+                        CarDetailsView(carData: bookingInfo.carInfo)
+                    } label: {
+                        CarCardView(carInfo: bookingInfo.carInfo)
+                    }
+                    
                 } header: {
                     Text("Car Info")
                         .font(.title2)
@@ -72,20 +77,25 @@ struct BookingDetailsView: View {
                 Divider()
                 
                 Section {
-                    VStack(alignment: .center) {
-                        if let profilePictureImage = UIImage(data: bookingInfo.hostInfo.hostDetails.profileImage) {
-                            Image(uiImage: profilePictureImage)
-                                .resizable()
-                                .frame(width: 88, height: 88)
-                                .clipShape(Circle())
-                        }
-                        
-                        Text("Hi, I'm \(bookingInfo.hostInfo.hostDetails.name)!")
-                            .font(.headline)
-                        
-                        SymbolLabelView(symbolName: "star.fill", text: "5 stars", symbolColor: .yellow, textColor: .black)
-                    }.frame(maxWidth: .infinity)
                     
+                    NavigationLink {
+                        HostProfileView(hostInfo: bookingInfo.hostInfo)
+                    } label: {
+                        VStack(alignment: .center) {
+                            if let profilePictureImage = UIImage(data: bookingInfo.hostInfo.hostDetails.profileImage) {
+                                Image(uiImage: profilePictureImage)
+                                    .resizable()
+                                    .frame(width: 88, height: 88)
+                                    .clipShape(Circle())
+                            }
+                            
+                            Text("Hi, I'm \(bookingInfo.hostInfo.hostDetails.name)!")
+                                .font(.headline)
+                                .foregroundColor(.black)
+                            
+                            SymbolLabelView(symbolName: "star.fill", text: "5 stars", symbolColor: .yellow, textColor: .black)
+                        }.frame(maxWidth: .infinity)
+                    }
                 } header: {
                     Text("Host Info")
                         .font(.title2)
@@ -96,7 +106,7 @@ struct BookingDetailsView: View {
                 
             }
             .padding()
-              
+            
         }.navigationTitle(Text("Booking Info"))
             .onAppear {
                 manager.updateLocation(address: bookingInfo.carInfo.fullAddress())
