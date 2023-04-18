@@ -45,7 +45,7 @@ struct BookingBanner: View {
                         } label: {
                             Text("Book Car")
                                 .foregroundColor(.white)
-                                .padding()
+                                .padding(8)
                                 .background(RoundedRectangle(cornerRadius: 18).fill())
                         }
                     }

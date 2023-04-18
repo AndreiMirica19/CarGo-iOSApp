@@ -23,7 +23,7 @@ struct NoDateSelectedBanner: View {
             } label: {
                 Text("Check availability")
                     .foregroundColor(.white)
-                    .padding()
+                    .padding(8)
                     .background(RoundedRectangle(cornerRadius: 18).fill())
             }
             
