@@ -10,6 +10,9 @@ import SwiftUI
 struct CarDetailsView: View {
     @State var selectedOption = 0
     @StateObject var carDetailsViewModel = CarDetailsViewModel()
+    @State var bookingSuccessful = false
+    @State var errorAlertisShown = false
+    @State var errorMessage = ""
     var options = ["Car info", "Booking calendar", "Host"]
     var carData: CarInfoDTO
     var fromDate: Date?
@@ -73,7 +76,28 @@ struct CarDetailsView: View {
                         .padding()
                 }
             }.onReceive(carDetailsViewModel.$bookCarResponse) { response in
-                print(response)
+                guard let successfulResponse = response.0 else {
+                    guard let errorResponse = response.1 else {
+                        return
+                    }
+                    
+                    errorAlertisShown = true
+                    errorMessage = errorResponse.getErrorMessage()
+                    return
+                }
+                
+                if successfulResponse.statusCode == 201 {
+                    bookingSuccessful = true
+                } else {
+                    errorMessage = successfulResponse.message
+                    errorAlertisShown = true
+                }
+            }
+            .alert(errorMessage, isPresented: $errorAlertisShown) {
+                Button("OK", role: .cancel) {}
+            }
+            .alert("Booking successful", isPresented: $bookingSuccessful) {
+                Button("OK", role: .cancel) {}
             }
         }.edgesIgnoringSafeArea(.top)
     }
