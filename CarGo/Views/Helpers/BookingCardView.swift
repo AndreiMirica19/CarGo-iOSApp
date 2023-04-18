@@ -41,9 +41,33 @@ struct BookingCardView: View {
                     .font(.headline)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
-                Text("Pending")
+                Text(bookingInfo.status)
+                    .foregroundColor(bookingStatusColor())
+                    .fontWeight(.semibold)
             }
         }.padding()
+    }
+    
+    func bookingStatusColor() -> Color {
+        let status = BookingStatus(rawValue: bookingInfo.status)
+        
+        switch status {
+            
+        case .cancelled:
+            return .red
+            
+        case .pending:
+            return Color("pendingYellow")
+            
+        case .accepted:
+            return .green
+            
+        case .completed:
+            return .blue
+            
+        case .none:
+            return .black
+        }
     }
 }
 

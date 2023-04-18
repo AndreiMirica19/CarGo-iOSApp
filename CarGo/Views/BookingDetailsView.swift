@@ -13,6 +13,12 @@ struct BookingDetailsView: View {
     var bookingInfo: BookingInfo
     
     @StateObject var manager = LocationManager()
+    @StateObject var bookingDetailsViewModel = BookingDetailsViewModel()
+    @State var cancelConfirmationAlertIsShown = false
+    @State var statusChangedAlertIsShown = false
+    @State var errorAlertIsShown = false
+    @State var errorMessage = ""
+    
     @State var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 45.0, longitude: 25.0),
         span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
@@ -104,10 +110,25 @@ struct BookingDetailsView: View {
                 
                 Divider()
                 
+                if !UserRepository.shared.isRenterViewActive && bookingInfo.status != BookingStatus.cancelled.rawValue {
+                    HStack {
+                        Spacer()
+                        
+                        Button {
+                            cancelConfirmationAlertIsShown = true
+                        } label: {
+                            Text("Cancel booking")
+                        }
+                    .buttonStyle(.borderedProminent)
+                    
+                        Spacer()
+                    }
+                }
             }
             .padding()
             
-        }.navigationTitle(Text("Booking Info"))
+        }
+        .navigationTitle(Text("Booking Info"))
             .onAppear {
                 manager.updateLocation(address: bookingInfo.carInfo.fullAddress())
             }
@@ -116,6 +137,35 @@ struct BookingDetailsView: View {
             }
             .onReceive(manager.$updateRegionError) { error in
                 print(error as Any)
+            }
+            .alert("Cancel Booking", isPresented: $cancelConfirmationAlertIsShown) {
+                Button("Yes", role: .cancel) {
+                    bookingDetailsViewModel.changeBookingStatus(bookingId: bookingInfo.id, status: BookingStatus.cancelled.rawValue)
+                }
+            }
+            .onReceive(bookingDetailsViewModel.$bookingStatusResponse) { response in
+                guard let statusChangedResponse = response.0 else {
+                    guard let errorResponse = response.1 else {
+                        return
+                    }
+                    
+                    errorAlertIsShown = true
+                    errorMessage = errorResponse.getErrorMessage()
+                    return
+                }
+                
+                if statusChangedResponse.statusCode == 200 {
+                    statusChangedAlertIsShown = true
+                } else {
+                    errorAlertIsShown = true
+                    errorMessage = statusChangedResponse.message
+                }
+            }
+            .alert("Status changed", isPresented: $statusChangedAlertIsShown) {
+                Button("Ok", role: .cancel) {}
+            }
+            .alert(errorMessage, isPresented: $errorAlertIsShown) {
+                Button("Ok", role: .cancel) {}
             }
     }
 }

@@ -26,7 +26,7 @@ class MyBookingsViewModel: ObservableObject {
         }
         
         return bookings.filter { booking in
-            return booking.toDate.toDate()?.compare(Date.now) == .orderedAscending
+            return booking.toDate.toDate()?.compare(Date.now) == .orderedDescending && booking.status != BookingStatus.cancelled.rawValue
         }
     }
     
@@ -34,7 +34,7 @@ class MyBookingsViewModel: ObservableObject {
         guard let bookings = myBookingsResponse.0 else {
             return []
         }
-
-        return bookings.filter { $0.toDate.toDate()?.compare(Date.now) == .orderedAscending }
+        
+        return bookings.filter { $0.toDate.toDate()?.compare(Date.now) == .orderedAscending || $0.status == BookingStatus.cancelled.rawValue }
     }
 }
