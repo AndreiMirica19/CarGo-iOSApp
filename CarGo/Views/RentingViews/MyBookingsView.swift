@@ -13,42 +13,54 @@ struct MyBookingsView: View {
     @State var errorMessage = ""
     
     var body: some View {
-        List {
-            Section {
-                ForEach(myBookingsViewModel.getUpcomingBookings(), id: \.id) { booking in
-                    BookingCardView(bookingInfo: booking)
+        NavigationStack {
+            List {
+                Section {
+                    ForEach(myBookingsViewModel.getUpcomingBookings(), id: \.id) { booking in
+                        NavigationLink {
+                            BookingDetailsView(bookingInfo: booking)
+                        } label: {
+                            BookingCardView(bookingInfo: booking)
+                        }
+                    }
+                } header: {
+                    Text("Upcoming bookings")
+                        .foregroundColor(.black)
+                        .fontWeight(.bold)
+                        .font(.headline)
                 }
-            } header: {
-                Text("Upcoming bookings")
-                    .foregroundColor(.black)
-                    .fontWeight(.bold)
-                    .font(.headline)
-            }
-            
-            Section {
-                ForEach(myBookingsViewModel.getCompletedBookings(), id: \.id) { booking in
-                    BookingCardView(bookingInfo: booking)
-                }
-            } header: {
-                Text("Past bookings")
-                    .foregroundColor(.black)
-                    .fontWeight(.bold)
-                    .font(.headline)
-            }
-        }.onAppear {
-            myBookingsViewModel.userBookings()
-        }
-        .onReceive(myBookingsViewModel.$myBookingsResponse) { response in
-            guard let error = response.1 else {
-                return
-            }
-            
-            errorMessage = error.getErrorMessage()
-            alertIsPresent = true
-        }
-        .alert(errorMessage, isPresented: $alertIsPresent) {
-            Button("Ok", role: .cancel) {
                 
+                Section {
+                    ForEach(myBookingsViewModel.getCompletedBookings(), id: \.id) { booking in
+                        
+                        NavigationLink {
+                            BookingDetailsView(bookingInfo: booking)
+                        } label: {
+                            BookingCardView(bookingInfo: booking)
+                        }
+                        
+                    }
+                } header: {
+                    Text("Past bookings")
+                        .foregroundColor(.black)
+                        .fontWeight(.bold)
+                        .font(.headline)
+                }
+            }.onAppear {
+                myBookingsViewModel.userBookings()
+            }
+            .onReceive(myBookingsViewModel.$myBookingsResponse) { response in
+                guard let error = response.1 else {
+                    return
+                }
+                
+                errorMessage = error.getErrorMessage()
+                alertIsPresent = true
+            }
+            .alert(errorMessage, isPresented: $alertIsPresent) {
+                Button("Ok", role: .cancel) {
+                    
+                }
             }
         }
     }

@@ -15,4 +15,21 @@ struct BookingInfo: Decodable {
     let carInfo: CarInfoDTO
     let fromDate: String
     let hostInfo: HostInfoDTO
+
+    func totalPrice() -> String {
+        guard let fromDate = fromDate.toDate(), let toDate = toDate.toDate() else {
+            return ""
+        }
+        
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.day], from: fromDate, to: toDate)
+
+        let numberOfDays = components.day
+        
+        guard let numberOfDays = numberOfDays else {
+            return ""
+        }
+        
+        return ("\(numberOfDays * (Int(carInfo.price) ?? 0))")
+    }
 }

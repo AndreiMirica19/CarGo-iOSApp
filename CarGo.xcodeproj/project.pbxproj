@@ -100,6 +100,7 @@
 		2E91E950298171EC00B70C4B /* FavoriteCarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91E94F298171EC00B70C4B /* FavoriteCarsView.swift */; };
 		2E91E952298171FE00B70C4B /* MyBookingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91E951298171FE00B70C4B /* MyBookingsView.swift */; };
 		2E91E9542981720F00B70C4B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91E9532981720F00B70C4B /* ProfileView.swift */; };
+		2E98327829EE7CB60001C4B8 /* BookingDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E98327729EE7CB60001C4B8 /* BookingDetailsView.swift */; };
 		2EA0D8BB2976CC9F005DE1D9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA0D8BA2976CC9F005DE1D9 /* LoginViewModel.swift */; };
 		2EAB174D2980051C001A153F /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAB174C2980051C001A153F /* ErrorResponse.swift */; };
 		2EB1A04929B07CB3006E79A8 /* CalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB1A04829B07CB3006E79A8 /* CalendarExtension.swift */; };
@@ -279,6 +280,7 @@
 		2E91E94F298171EC00B70C4B /* FavoriteCarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCarsView.swift; sourceTree = "<group>"; };
 		2E91E951298171FE00B70C4B /* MyBookingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsView.swift; sourceTree = "<group>"; };
 		2E91E9532981720F00B70C4B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		2E98327729EE7CB60001C4B8 /* BookingDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsView.swift; sourceTree = "<group>"; };
 		2EA0D8BA2976CC9F005DE1D9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		2EAB174C2980051C001A153F /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		2EB1A04829B07CB3006E79A8 /* CalendarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtension.swift; sourceTree = "<group>"; };
@@ -690,6 +692,7 @@
 				2E13153F298AB04C008ED79D /* TermsAndConditions.swift */,
 				2EB9FB02299E18CD007C097E /* RenterContentView.swift */,
 				2E80ED9829C44B14005B616F /* HostProfileView.swift */,
+				2E98327729EE7CB60001C4B8 /* BookingDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1165,6 +1168,7 @@
 				2E733BFE29AF6A91000E4F29 /* FetchCarsService.swift in Sources */,
 				2EB6086F29C8497E0021303C /* HostViewModel.swift in Sources */,
 				2EC80D2029ADF82A00244F6D /* CarNumberPlateView.swift in Sources */,
+				2E98327829EE7CB60001C4B8 /* BookingDetailsView.swift in Sources */,
 				2EB1A04D29B07F71006E79A8 /* CarFuel.swift in Sources */,
 				2E5CDC5B294F2021001F2524 /* CarGoApp.swift in Sources */,
 				2EA0D8BB2976CC9F005DE1D9 /* LoginViewModel.swift in Sources */,

@@ -27,4 +27,8 @@ struct CarInfoDTO: Codable {
     var price: String
     var currency: String
     var discount: Bool
+    
+    func fullAddress() -> String {
+        return "\(street), \(city), \(country)"
+    }
 }
