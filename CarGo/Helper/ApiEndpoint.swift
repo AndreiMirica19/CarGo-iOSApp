@@ -31,4 +31,5 @@ enum ApiEndpoint: String {
     case bookCar = "/bookCar"
     case userBookings = "/userBookings"
     case bookingStatus = "/updateStatus"
+    case ownerBookings = "/hostBookings"
 }

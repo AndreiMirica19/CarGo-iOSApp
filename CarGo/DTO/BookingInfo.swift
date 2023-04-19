@@ -32,4 +32,28 @@ struct BookingInfo: Decodable {
         
         return ("\(numberOfDays * (Int(carInfo.price) ?? 0))")
     }
+    
+    func getStatus() -> String {
+        let status = BookingStatus(rawValue: status)
+        
+        switch status {
+        case .accepted:
+            if let startDate = fromDate.toDate(), let endDate = toDate.toDate() {
+                if Date.now.isBetween(startDate, and: endDate) {
+                    return BookingStatus.inProgress.rawValue
+                }
+            }
+            
+        case .pending:
+            if let startDate = fromDate.toDate() {
+                if Date.now.isAfter(startDate) {
+                    return BookingStatus.hostCancelled.rawValue
+                }
+            }
+            
+        default:
+            break
+        }
+        return self.status
+    }
 }

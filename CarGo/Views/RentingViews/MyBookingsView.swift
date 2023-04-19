@@ -47,7 +47,7 @@ struct MyBookingsView: View {
                         .font(.headline)
                 }
             }.onAppear {
-                myBookingsViewModel.userBookings()
+                UserRepository.shared.isRenterViewActive ? myBookingsViewModel.ownerBookings() : myBookingsViewModel.userBookings()
             }
             .onReceive(myBookingsViewModel.$myBookingsResponse) { response in
                 guard let error = response.1 else {

@@ -115,13 +115,61 @@ struct BookingDetailsView: View {
                         Spacer()
                         
                         Button {
-                            cancelConfirmationAlertIsShown = true
+                            let status = BookingStatus(rawValue: bookingInfo.getStatus())
+                            
+                            switch status {
+                            case .cancelled, .hostCancelled, .completed, .none:
+                                return
+
+                            case .pending, .accepted:
+                                cancelConfirmationAlertIsShown = true
+                                
+                            case .inProgress:
+                                bookingDetailsViewModel.changeBookingStatus(bookingId: bookingInfo.id, status: BookingStatus.completed.rawValue)
+                                
+                            }
+                           
                         } label: {
-                            Text("Cancel booking")
+                            let status = BookingStatus(rawValue: bookingInfo.getStatus())
+                            
+                            switch status {
+                            case .cancelled, .hostCancelled, .completed, .none:
+                                EmptyView()
+                                
+                            case .pending, .accepted:
+                                Text("Cancel booking")
+                            
+                            case .inProgress:
+                                Text("Finish booking")
+                            }
+                            
                         }
-                    .buttonStyle(.borderedProminent)
-                    
+                        .buttonStyle(.borderedProminent)
+                        .tint(.red)
+              
                         Spacer()
+                    }
+                } else {
+                    if UserRepository.shared.isRenterViewActive && bookingInfo.status == BookingStatus.pending.rawValue {
+                        
+                        HStack {
+                            Button {
+                                bookingDetailsViewModel.changeBookingStatus(bookingId: bookingInfo.id, status: BookingStatus.accepted.rawValue)
+                            } label: {
+                                Text("Accept booking")
+                            }
+                            .buttonStyle(.borderedProminent)
+                            
+                            Spacer()
+                            
+                            Button {
+                                cancelConfirmationAlertIsShown = true
+                            } label: {
+                                Text("Cancel booking")
+                            }
+                            .buttonStyle(.borderedProminent)
+                            .tint(.red)
+                        }
                     }
                 }
             }
@@ -140,7 +188,7 @@ struct BookingDetailsView: View {
             }
             .alert("Cancel Booking", isPresented: $cancelConfirmationAlertIsShown) {
                 Button("Yes", role: .cancel) {
-                    bookingDetailsViewModel.changeBookingStatus(bookingId: bookingInfo.id, status: BookingStatus.cancelled.rawValue)
+                    bookingDetailsViewModel.changeBookingStatus(bookingId: bookingInfo.id, status: UserRepository.shared.isRenterViewActive ? BookingStatus.hostCancelled.rawValue : BookingStatus.cancelled.rawValue)
                 }
             }
             .onReceive(bookingDetailsViewModel.$bookingStatusResponse) { response in

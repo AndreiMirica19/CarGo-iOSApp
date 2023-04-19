@@ -41,7 +41,7 @@ struct BookingCardView: View {
                     .font(.headline)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
-                Text(bookingInfo.status)
+                Text(bookingInfo.getStatus())
                     .foregroundColor(bookingStatusColor())
                     .fontWeight(.semibold)
             }
@@ -49,11 +49,11 @@ struct BookingCardView: View {
     }
     
     func bookingStatusColor() -> Color {
-        let status = BookingStatus(rawValue: bookingInfo.status)
+        let status = BookingStatus(rawValue: bookingInfo.getStatus())
         
         switch status {
             
-        case .cancelled:
+        case .cancelled, .hostCancelled:
             return .red
             
         case .pending:
@@ -63,7 +63,10 @@ struct BookingCardView: View {
             return .green
             
         case .completed:
-            return .blue
+            return Color("darkBlue")
+            
+        case .inProgress:
+            return Color("lightBlue")
             
         case .none:
             return .black

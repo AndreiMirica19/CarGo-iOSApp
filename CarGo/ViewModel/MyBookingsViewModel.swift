@@ -20,13 +20,23 @@ class MyBookingsViewModel: ObservableObject {
         }
     }
     
+    func ownerBookings() {
+        Task {
+            let response = try await BookingRepository.shared.ownerBookings()
+            
+            DispatchQueue.main.async {
+                self.myBookingsResponse = response
+            }
+        }
+    }
+    
     func getUpcomingBookings() -> [BookingInfo] {
         guard let bookings = myBookingsResponse.0 else {
             return []
         }
         
         return bookings.filter { booking in
-            return booking.toDate.toDate()?.compare(Date.now) == .orderedDescending && booking.status != BookingStatus.cancelled.rawValue
+            return booking.toDate.toDate()?.compare(Date.now) == .orderedDescending && booking.status != BookingStatus.cancelled.rawValue && booking.status != BookingStatus.hostCancelled.rawValue && booking.status != BookingStatus.completed.rawValue
         }
     }
     
@@ -35,6 +45,6 @@ class MyBookingsViewModel: ObservableObject {
             return []
         }
         
-        return bookings.filter { $0.toDate.toDate()?.compare(Date.now) == .orderedAscending || $0.status == BookingStatus.cancelled.rawValue }
+        return bookings.filter { $0.toDate.toDate()?.compare(Date.now) == .orderedAscending || $0.status == BookingStatus.cancelled.rawValue || $0.status == BookingStatus.hostCancelled.rawValue || $0.status == BookingStatus.completed.rawValue }
     }
 }

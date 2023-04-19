@@ -49,6 +49,26 @@ struct BookingRepository {
         }
     }
     
+    func ownerBookings() async throws -> ([BookingInfo]?, NetworkError?) {
+        let (data, error) = try await OwnerBookingService.ownerBookings(ownerId: UserRepository.shared.userId)
+        
+        guard let data = data else {
+            guard let error = error else {
+                return (nil, .unexpectedError)
+            }
+            
+            return (nil, error)
+        }
+        
+        do {
+            let response = try JSONDecoder().decode([BookingInfo].self, from: data)
+            return (response, nil)
+        } catch let error {
+            print(error)
+            return (nil, .unexpectedError)
+        }
+    }
+    
     func updateStatus(bookingId: String, status: String)  async throws -> (Response?, NetworkError?) {
         let (data, error) = try await BookingStatusService.bookingStatus(bookingId: bookingId, status: status)
         

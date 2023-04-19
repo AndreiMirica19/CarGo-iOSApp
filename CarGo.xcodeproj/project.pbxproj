@@ -147,6 +147,8 @@
 		2ECC473629B1F6320001AA04 /* AddedCarPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECC473529B1F6320001AA04 /* AddedCarPhotoCell.swift */; };
 		2ECC473829B206C40001AA04 /* AddCarPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECC473729B206C40001AA04 /* AddCarPrice.swift */; };
 		2ED23E6A29D566F200990849 /* MultiDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED23E6929D566F200990849 /* MultiDatePicker.swift */; };
+		2ED3B6DD29EFD14700BED8BE /* OwnerBookingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED3B6DC29EFD14700BED8BE /* OwnerBookingsProtocol.swift */; };
+		2ED3B6DF29EFD1F000BED8BE /* OwnerBookingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED3B6DE29EFD1F000BED8BE /* OwnerBookingService.swift */; };
 		2ED414A62994DAA4008B5356 /* UserDetailsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED414A52994DAA4008B5356 /* UserDetailsData.swift */; };
 		2ED414A82994DB3C008B5356 /* EditProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED414A72994DB3C008B5356 /* EditProfileProtocol.swift */; };
 		2ED414AA2994DBA2008B5356 /* EditProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED414A92994DBA2008B5356 /* EditProfileService.swift */; };
@@ -331,6 +333,8 @@
 		2ECC473529B1F6320001AA04 /* AddedCarPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedCarPhotoCell.swift; sourceTree = "<group>"; };
 		2ECC473729B206C40001AA04 /* AddCarPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarPrice.swift; sourceTree = "<group>"; };
 		2ED23E6929D566F200990849 /* MultiDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDatePicker.swift; sourceTree = "<group>"; };
+		2ED3B6DC29EFD14700BED8BE /* OwnerBookingsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerBookingsProtocol.swift; sourceTree = "<group>"; };
+		2ED3B6DE29EFD1F000BED8BE /* OwnerBookingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerBookingService.swift; sourceTree = "<group>"; };
 		2ED414A52994DAA4008B5356 /* UserDetailsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsData.swift; sourceTree = "<group>"; };
 		2ED414A72994DB3C008B5356 /* EditProfileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileProtocol.swift; sourceTree = "<group>"; };
 		2ED414A92994DBA2008B5356 /* EditProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileService.swift; sourceTree = "<group>"; };
@@ -396,6 +400,8 @@
 				2E8384AE29E6F0DE00F46A3D /* UserBookingService.swift */,
 				2E19CA5D29EED70C003BD8E8 /* BookingStatusProtocol.swift */,
 				2E19CA5F29EED76F003BD8E8 /* BookingStatusService.swift */,
+				2ED3B6DC29EFD14700BED8BE /* OwnerBookingsProtocol.swift */,
+				2ED3B6DE29EFD1F000BED8BE /* OwnerBookingService.swift */,
 			);
 			path = BookingService;
 			sourceTree = "<group>";
@@ -1083,6 +1089,7 @@
 				2EB1A04929B07CB3006E79A8 /* CalendarExtension.swift in Sources */,
 				2ED414B429951D40008B5356 /* UserInfoService.swift in Sources */,
 				2ECC473429B1E0130001AA04 /* AddCarPhotos.swift in Sources */,
+				2ED3B6DF29EFD1F000BED8BE /* OwnerBookingService.swift in Sources */,
 				2E5CDC67294F2022001F2524 /* CarGo.xcdatamodeld in Sources */,
 				2E02244029E55D94003CE69F /* BookCarData.swift in Sources */,
 				2E19CE96299397EE00499162 /* PhotoCaptureView.swift in Sources */,
@@ -1180,6 +1187,7 @@
 				2ED414A62994DAA4008B5356 /* UserDetailsData.swift in Sources */,
 				2EB63C5829DBEE8B00C339E4 /* SearchCityViewModel.swift in Sources */,
 				2E131540298AB04C008ED79D /* TermsAndConditions.swift in Sources */,
+				2ED3B6DD29EFD14700BED8BE /* OwnerBookingsProtocol.swift in Sources */,
 				2E80ED9729C44306005B616F /* ReviewView.swift in Sources */,
 				2E733BFE29AF6A91000E4F29 /* FetchCarsService.swift in Sources */,
 				2EB6086F29C8497E0021303C /* HostViewModel.swift in Sources */,
