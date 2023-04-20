@@ -3686,5 +3686,299 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E27411DD-6550-4011-8FC8-B2EB61F358A7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarGo/ViewModel/MyBookingsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "MyBookingsViewModel"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "E27411DD-6550-4011-8FC8-B2EB61F358A7 - d6d242c1e1d5a7a1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of CarGo.MyBookingsViewModel.myBookingsResponse : (Swift.Optional&lt;Swift.Array&lt;CarGo.BookingInfo&gt;&gt;, Swift.Optional&lt;CarGo.NetworkError&gt;)"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/ViewModel/MyBookingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "E27411DD-6550-4011-8FC8-B2EB61F358A7 - f4d43262736cf7a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarGo.MyBookingsViewModel.myBookingsResponse.getter : (Swift.Optional&lt;Swift.Array&lt;CarGo.BookingInfo&gt;&gt;, Swift.Optional&lt;CarGo.NetworkError&gt;)"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/ViewModel/MyBookingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "E27411DD-6550-4011-8FC8-B2EB61F358A7 - f4d43262736cf7a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarGo.MyBookingsViewModel.myBookingsResponse.setter : (Swift.Optional&lt;Swift.Array&lt;CarGo.BookingInfo&gt;&gt;, Swift.Optional&lt;CarGo.NetworkError&gt;)"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/ViewModel/MyBookingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "E27411DD-6550-4011-8FC8-B2EB61F358A7 - f4d43262736cf7a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarGo.MyBookingsViewModel.myBookingsResponse.modify : (Swift.Optional&lt;Swift.Array&lt;CarGo.BookingInfo&gt;&gt;, Swift.Optional&lt;CarGo.NetworkError&gt;)"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/ViewModel/MyBookingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "E27411DD-6550-4011-8FC8-B2EB61F358A7 - f5cdc5ef811ca01e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarGo.MyBookingsViewModel.myBookingsResponse.modify : (Swift.Optional&lt;Swift.Array&lt;CarGo.BookingInfo&gt;&gt;, Swift.Optional&lt;CarGo.NetworkError&gt;) with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/ViewModel/MyBookingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "E27411DD-6550-4011-8FC8-B2EB61F358A7 - 7669512b76fedfba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarGo.MyBookingsViewModel.$myBookingsResponse.getter : Combine.Published&lt;(Swift.Optional&lt;Swift.Array&lt;CarGo.BookingInfo&gt;&gt;, Swift.Optional&lt;CarGo.NetworkError&gt;)&gt;.Publisher"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/ViewModel/MyBookingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "E27411DD-6550-4011-8FC8-B2EB61F358A7 - 7669512b76fedfba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarGo.MyBookingsViewModel.$myBookingsResponse.setter : Combine.Published&lt;(Swift.Optional&lt;Swift.Array&lt;CarGo.BookingInfo&gt;&gt;, Swift.Optional&lt;CarGo.NetworkError&gt;)&gt;.Publisher"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/ViewModel/MyBookingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  uuid = "E27411DD-6550-4011-8FC8-B2EB61F358A7 - bc3643335133a836"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarGo.MyBookingsViewModel.$myBookingsResponse.modify : Combine.Published&lt;(Swift.Optional&lt;Swift.Array&lt;CarGo.BookingInfo&gt;&gt;, Swift.Optional&lt;CarGo.NetworkError&gt;)&gt;.Publisher"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "E27411DD-6550-4011-8FC8-B2EB61F358A7 - 4391830f0d5ec145"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarGo.MyBookingsViewModel.$myBookingsResponse.modify : Combine.Published&lt;(Swift.Optional&lt;Swift.Array&lt;CarGo.BookingInfo&gt;&gt;, Swift.Optional&lt;CarGo.NetworkError&gt;)&gt;.Publisher with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/ViewModel/MyBookingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "E27411DD-6550-4011-8FC8-B2EB61F358A7 - dbc219eca3fb36a3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarGo.MyBookingsViewModel.init() -&gt; CarGo.MyBookingsViewModel"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/ViewModel/MyBookingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2D233B2-C2D1-4073-982E-476032311D38"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarGo/ViewModel/MyBookingsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "ownerBookings()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D2D233B2-C2D1-4073-982E-476032311D38 - 282dc680b9567d4e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in CarGo.MyBookingsViewModel.ownerBookings() -&gt; ()"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/ViewModel/MyBookingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "D2D233B2-C2D1-4073-982E-476032311D38 - ef0d36d31db8d54d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async throws -&gt; () in CarGo.MyBookingsViewModel.ownerBookings() -&gt; ()"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/ViewModel/MyBookingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "D2D233B2-C2D1-4073-982E-476032311D38 - f9b446161a54b08c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in CarGo.MyBookingsViewModel.ownerBookings() -&gt; ()"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/ViewModel/MyBookingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "470277CF-73A2-4C9A-94E4-43B487AE537A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarGo/ViewModel/MyBookingsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "ownerBookings()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "470277CF-73A2-4C9A-94E4-43B487AE537A - 54e105677e76cd4e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarGo.MyBookingsViewModel.ownerBookings() -&gt; ()"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/ViewModel/MyBookingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "470277CF-73A2-4C9A-94E4-43B487AE537A - 9ed310b322fce4e8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable () async throws -&gt; () in CarGo.MyBookingsViewModel.ownerBookings() -&gt; ()"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/ViewModel/MyBookingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "470277CF-73A2-4C9A-94E4-43B487AE537A - 282dc680b9567d2f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in CarGo.MyBookingsViewModel.ownerBookings() -&gt; ()"
+                  moduleName = "CarGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreimirica/Documents/CarGo/CarGo/ViewModel/MyBookingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

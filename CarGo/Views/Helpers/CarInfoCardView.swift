@@ -32,34 +32,37 @@ struct CarInfoCardView: View {
                     }
                 }
                 
-                VStack {
-                    ZStack {
-                        Circle()
-                            .fill(Color.gray.opacity(0.1))
+                if !UserRepository.shared.isRenterViewActive {
+                    VStack {
                         
-                        Image(systemName: addedToFavorite ? "heart.fill" : "heart")
-                            .resizable()
-                            .padding(8)
-                            .foregroundColor(.white)
-                            .scaleEffect(addedToFavorite ? 1.2 : 1)
-                            .onTapGesture {
-                                withAnimation {
-                                    toggleFavorite()
+                        ZStack {
+                            Circle()
+                                .fill(Color.gray.opacity(0.1))
+                            
+                            Image(systemName: addedToFavorite ? "heart.fill" : "heart")
+                                .resizable()
+                                .padding(8)
+                                .foregroundColor(.white)
+                                .scaleEffect(addedToFavorite ? 1.2 : 1)
+                                .onTapGesture {
+                                    withAnimation {
+                                        toggleFavorite()
+                                    }
                                 }
-                            }
-                    }
-                    .frame(width: 42, height: 42)
-                    .padding(.top)
-                    .padding(.trailing)
-                    
-                    Spacer()
-                    
-                    Image(uiImage: UIImage(data: profileImageData) ?? UIImage())
-                        .resizable()
-                        .frame(width: 48, height: 48)
-                        .clipShape(Circle())
-                        .padding(.bottom)
+                        }
+                        .frame(width: 42, height: 42)
+                        .padding(.top)
                         .padding(.trailing)
+                        
+                        Spacer()
+                        
+                        Image(uiImage: UIImage(data: profileImageData) ?? UIImage())
+                            .resizable()
+                            .frame(width: 48, height: 48)
+                            .clipShape(Circle())
+                            .padding(.bottom)
+                            .padding(.trailing)
+                    }
                 }
             }
             

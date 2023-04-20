@@ -19,6 +19,10 @@
 		2E0C3D38299CC50B00B67972 /* HTTPURLResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C3D37299CC50B00B67972 /* HTTPURLResponseExtension.swift */; };
 		2E0C3D3A299CCD9D00B67972 /* DeleteAccountProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C3D39299CCD9D00B67972 /* DeleteAccountProtocol.swift */; };
 		2E0C3D3C299CCE0F00B67972 /* DeleteAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C3D3B299CCE0F00B67972 /* DeleteAccountService.swift */; };
+		2E0C81A329F148D400C7841A /* HostStatsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C81A229F148D400C7841A /* HostStatsProtocol.swift */; };
+		2E0C81A529F1491600C7841A /* HostStatsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C81A429F1491600C7841A /* HostStatsService.swift */; };
+		2E0C81A729F149E100C7841A /* HostStatsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C81A629F149E100C7841A /* HostStatsDTO.swift */; };
+		2E0C81A929F14A9400C7841A /* HostStatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C81A829F14A9400C7841A /* HostStatsViewModel.swift */; };
 		2E0E219C29B5E87B00D10974 /* CarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E219B29B5E87B00D10974 /* CarData.swift */; };
 		2E0E219E29B5F15900D10974 /* AddCarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E219D29B5F15900D10974 /* AddCarProtocol.swift */; };
 		2E0E21A029B5F1DA00D10974 /* AddCarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E219F29B5F1DA00D10974 /* AddCarService.swift */; };
@@ -203,6 +207,10 @@
 		2E0C3D37299CC50B00B67972 /* HTTPURLResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPURLResponseExtension.swift; sourceTree = "<group>"; };
 		2E0C3D39299CCD9D00B67972 /* DeleteAccountProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountProtocol.swift; sourceTree = "<group>"; };
 		2E0C3D3B299CCE0F00B67972 /* DeleteAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountService.swift; sourceTree = "<group>"; };
+		2E0C81A229F148D400C7841A /* HostStatsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostStatsProtocol.swift; sourceTree = "<group>"; };
+		2E0C81A429F1491600C7841A /* HostStatsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostStatsService.swift; sourceTree = "<group>"; };
+		2E0C81A629F149E100C7841A /* HostStatsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostStatsDTO.swift; sourceTree = "<group>"; };
+		2E0C81A829F14A9400C7841A /* HostStatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostStatsViewModel.swift; sourceTree = "<group>"; };
 		2E0E219B29B5E87B00D10974 /* CarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarData.swift; sourceTree = "<group>"; };
 		2E0E219D29B5F15900D10974 /* AddCarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarProtocol.swift; sourceTree = "<group>"; };
 		2E0E219F29B5F1DA00D10974 /* AddCarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarService.swift; sourceTree = "<group>"; };
@@ -402,6 +410,8 @@
 				2E19CA5F29EED76F003BD8E8 /* BookingStatusService.swift */,
 				2ED3B6DC29EFD14700BED8BE /* OwnerBookingsProtocol.swift */,
 				2ED3B6DE29EFD1F000BED8BE /* OwnerBookingService.swift */,
+				2E0C81A229F148D400C7841A /* HostStatsProtocol.swift */,
+				2E0C81A429F1491600C7841A /* HostStatsService.swift */,
 			);
 			path = BookingService;
 			sourceTree = "<group>";
@@ -678,6 +688,7 @@
 				2E02244329E55FD2003CE69F /* CarDetailsViewModel.swift */,
 				2E8384B029E6F2D600F46A3D /* MyBookingsViewModel.swift */,
 				2E19CA6129EED891003BD8E8 /* BookingDetailsViewModel.swift */,
+				2E0C81A829F14A9400C7841A /* HostStatsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -692,6 +703,7 @@
 				2E2D2EB229B7333C0030F604 /* CarInfoDTO.swift */,
 				2EB6086829C845FB0021303C /* HostInfoDTO.swift */,
 				2E8384AA29E6EBAD00F46A3D /* BookingInfo.swift */,
+				2E0C81A629F149E100C7841A /* HostStatsDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -1070,6 +1082,7 @@
 				2ECC473629B1F6320001AA04 /* AddedCarPhotoCell.swift in Sources */,
 				2E7205BD29964DEC006AED35 /* ProfileContentView.swift in Sources */,
 				2E764142299BBC520016E941 /* ChangeEmailService.swift in Sources */,
+				2E0C81A929F14A9400C7841A /* HostStatsViewModel.swift in Sources */,
 				2E02244429E55FD2003CE69F /* CarDetailsViewModel.swift in Sources */,
 				2EB6087929C8AEFD0021303C /* AllCarsService.swift in Sources */,
 				2EDFD6EA29755F0D00561C6E /* Response.swift in Sources */,
@@ -1082,8 +1095,10 @@
 				2E733C0429AF6D78000E4F29 /* AddCarViewModel.swift in Sources */,
 				2EB6087529C867D80021303C /* CarInfoCardView.swift in Sources */,
 				2E900A2C29BDC7FB007516BA /* CarBasic.swift in Sources */,
+				2E0C81A729F149E100C7841A /* HostStatsDTO.swift in Sources */,
 				2EB9FB03299E18CD007C097E /* RenterContentView.swift in Sources */,
 				2E1D147029D2D6530082A1F1 /* RangeSliderView.swift in Sources */,
+				2E0C81A329F148D400C7841A /* HostStatsProtocol.swift in Sources */,
 				2E8384AD29E6EFFE00F46A3D /* UserBookingsProtocol.swift in Sources */,
 				2ED414BC29952571008B5356 /* EmptyProfileImage.swift in Sources */,
 				2EB1A04929B07CB3006E79A8 /* CalendarExtension.swift in Sources */,
@@ -1134,6 +1149,7 @@
 				2E0C3D3C299CCE0F00B67972 /* DeleteAccountService.swift in Sources */,
 				2E2D2EB129B7305E0030F604 /* MyCarsViewModel.swift in Sources */,
 				2E900A2A29BDC645007516BA /* CarInfoView.swift in Sources */,
+				2E0C81A529F1491600C7841A /* HostStatsService.swift in Sources */,
 				2E0C3D38299CC50B00B67972 /* HTTPURLResponseExtension.swift in Sources */,
 				2E63532A2976A25C0016EC6E /* LoginService.swift in Sources */,
 				2E0C3D31299CBCA100B67972 /* ChangePasswordProtocol.swift in Sources */,
